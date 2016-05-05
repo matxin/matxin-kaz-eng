@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dictionary>
+  <alphabet/>
+  <sdefs>
+    <sdef n='pos'/>
+    <sdef n='def'/>
+    <sdef n='num'/>
+    <sdef n='per'/>
+    <sdef n='cas'/>
+    <sdef n='prep'/>
+    <sdef n='spost'/>
+    <sdef n='tense'/>
+    <sdef n='vpost'/>
+    <sdef n='suf'/>
+    <sdef n='parol'/>
+    <sdef n='sense'/>
+  </sdefs>
+  <pardefs>
+    <pardef n="N1_N">
+      <e><p><l><s n="parol"/>n|nom</l><r><s n="pos"/>n<s n="num"/>sg<s n="cas"/>nom</r></p></e>
+      <e><p><l><s n="parol"/>n|abl</l><r><s n="pos"/>n<s n="num"/>sg<s n="cas"/>abl</r></p></e>
+      <e><p><l><s n="parol"/>n|dat</l><r><s n="pos"/>n<s n="num"/>sg<s n="cas"/>dat</r></p></e>
+      <e><p><l><s n="parol"/>n|attr</l><r><s n="pos"/>n<s n="num"/>sg</r></p></e>
+      <e><p><l><s n="parol"/>n|px3sp|nom</l><r><s n="pos"/>n<s n="num"/>sg<s n="cas"/>nom</r></p></e>
+      <e><p><l><s n="parol"/>n|px3sp|dat</l><r><s n="pos"/>n<s n="num"/>sg<s n="cas"/>dat</r></p></e>
+      <e><p><l><s n="parol"/>n|pl|nom</l><r><s n="pos"/>n<s n="num"/>pl<s n="cas"/>nom</r></p></e>
+    </pardef>
+
+    <pardef n="POST_PREP">
+      <e><p><l><s n="parol"/>post</l><r><s n="pos"/>pr</r></p></e>
+    </pardef>
+
+    <pardef n="ADV_PREADV">
+      <e><p><l><s n="parol"/>adv</l><r><s n="pos"/>preadv</r></p></e>
+    </pardef>
+
+    <pardef n="ADV_ADV">
+      <e><p><l><s n="parol"/>adv</l><r><s n="pos"/>adv</r></p></e>
+    </pardef>
+
+    <pardef n="NP-TOP_NP-TOP">
+      <e><p><l><s n="parol"/>np|top|nom</l><r><s n="pos"/>np|top</r></p></e>
+    </pardef>
+
+    <pardef n="A1_A-SINT">
+      <e><p><l><s n="parol"/>adj</l><r><s n="pos"/>adj|sint</r></p></e>
+    </pardef>
+
+    <pardef n="V-TV_V">
+      <e><p><l><s n="parol"/>v|tv|aor|p2|frm|sg</l><r><s n="pos"/>vblex<s n="tense"/>pres<s n="num"/>sg</r></p></e>
+      <e><p><l><s n="parol"/>v|tv|gna_perf</l><r><s n="pos"/>vblex<s n="tense"/>perf</r></p></e>
+    </pardef>
+
+    <pardef n="V-IV_V">
+      <e><p><l><s n="parol"/>v|iv|prc_impf</l><r><s n="pos"/>vblex<s n="tense"/>impf</r></p></e>
+      <e><p><l><s n="parol"/>v|iv|gna_perf</l><r><s n="pos"/>vblex<s n="tense"/>perf</r></p></e>
+      <e><p><l><s n="parol"/>v|iv|aor|p3|sg</l><r><s n="pos"/>vblex<s n="tense"/>pres<s n="num"/>sg</r></p></e>
+    </pardef>
+
+    <pardef n="SIZ_YOU">
+      <e><p><l><s n="parol"/>prn|pers|p2|sg|frm|nom</l><r><s n="pos"/>prn|pers<s n="num"/>sg</r></p></e>
+    </pardef>
+  </pardefs>
+  <section id="IXA_moldaketak" type="standard">
+	<e><p><l>ма<s n="parol"/>qst</l><r></r></p></e>
+
+	<e><p><l>сіз</l><r>you<s n="sense"/>0</r></p><par n='SIZ_YOU'/></e>
+
+	<e><p><l>бері</l><r>since<s n="sense"/>0</r></p><par n='POST_PREP'/></e>
+
+	<e><p><l>радиан</l><r>radian<s n="sense"/>0</r></p><par n='N1_N'/></e>
+	<e><p><l>орысша</l><r>Russian<s n="sense"/>0</r></p><par n='N1_N'/></e>
+	<e><p><l>жер</l><r>earth<s n="sense"/>0</r></p><par n='N1_N'/></e>
+	<e><p><l>жер</l><r>ground<s n="sense"/>0</r></p><par n='N1_N'/></e>
+	<e><p><l>жер</l><r>land<s n="sense"/>0</r></p><par n='N1_N'/></e>
+	<e><p><l>жер</l><r>place<s n="sense"/>0</r></p><par n='N1_N'/></e>
+	<e><p><l>жер</l><r>site<s n="sense"/>0</r></p><par n='N1_N'/></e>
+	<e><p><l>жер</l><r>spot<s n="sense"/>0</r></p><par n='N1_N'/></e>
+	<e><p><l>заман</l><r>time<s n="sense"/>0</r></p><par n='N1_N'/></e>
+	<e><p><l>заман</l><r>age<s n="sense"/>0</r></p><par n='N1_N'/></e>
+	<e><p><l>актер</l><r>actor<s n="sense"/>0</r></p><par n='N1_N'/></e>
+	<e><p><l>жыл</l><r>year<s n="sense"/>0</r></p><par n='N1_N'/></e>
+	<e><p><l>әйел</l><r>female<s n="sense"/>0</r></p><par n='N1_N'/></e>
+	<e><p><l>әйел</l><r>woman<s n="sense"/>0</r></p><par n='N1_N'/></e>
+	<e><p><l>адам<b/>баласы</l><r>man<s n="sense"/>0</r></p><par n='N1_N'/></e>
+
+	<e><p><l>тым</l><r>though<s n="sense"/>0</r></p><par n='ADV_ADV'/></e>
+	<e><p><l>тым</l><r>overly<s n="sense"/>0</r></p><par n='ADV_PREADV'/></e>
+
+	<e><p><l>ерте</l><r>early<s n="sense"/>0</r></p><par n='A1_A-SINT'/></e>
+
+	<e><p><l>Иран</l><r>Iran<s n="sense"/>0</r></p><par n='NP-TOP_NP-TOP'/></e>
+
+	<e><p><l>сөйле</l><r>speak<s n="sense"/>0</r></p><par n='V-TV_V'/></e>
+	<e><p><l>баста</l><r>start<s n="sense"/>0</r></p><par n='V-TV_V'/></e>
+	<e><p><l>баста</l><r>begin<s n="sense"/>0</r></p><par n='V-TV_V'/></e>
+	<e><p><l>баста</l><r>bind<s n="sense"/>0</r></p><par n='V-TV_V'/></e>
+	<e><p><l>баста</l><r>commence<s n="sense"/>0</r></p><par n='V-TV_V'/></e>
+
+	<e><p><l>көрін</l><r>appear<s n="sense"/>0</r></p><par n='V-IV_V'/></e>
+	<e><p><l>көрін</l><r>seem<s n="sense"/>0</r></p><par n='V-IV_V'/></e>
+
+	<e><p><l>?<s n="parol"/>sent</l><r>?<s n="pos"/>sent</r></p></e>
+  </section>
+</dictionary>

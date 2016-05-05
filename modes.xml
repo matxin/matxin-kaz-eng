@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modes>
+
+  <mode name="kaz-eng-analyser" install="no">
+    <pipeline>
+      <program name="matxin-analyser -f">
+        <file name="kaz-eng.cfg"/>
+      </program>
+    </pipeline>
+
+  </mode>
+
+  <mode name="kaz-eng-xfer-lex" install="no">
+    <pipeline>
+      <program name="matxin-analyser -f">
+        <file name="kaz-eng.cfg"/>
+      </program>
+      <program name="matxin-xfer-lex">
+        <file name="kaz-eng.bilingual.bin"/>
+        <file name="kaz-eng.chunk_type.dat"/> <!-- matxin-kaz-eng.chunk_type.dat -->
+        <file name="kaz-eng.lexical_selection.dat"/> <!-- matxin-kaz-eng.lexical_selection.dat -->
+        <file name="eng.semantic.dat"/> <!-- matxin-eus.semantic.dat -->
+      </program>
+    </pipeline>
+  </mode>
+
+</modes>
