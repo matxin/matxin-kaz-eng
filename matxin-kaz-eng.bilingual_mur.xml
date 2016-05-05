@@ -68,46 +68,56 @@
     </pardef>
   </pardefs>
   <section id="IXA_moldaketak" type="standard">
-	<e><p><l>ма<s n="parol"/>qst</l><r></r></p></e>
+      <!-- SECTION: Miscellaneous -->
+      <e><p><l>ма<s n="parol"/>qst</l><r></r></p></e>
 
-	<e><p><l>сіз</l><r>you<s n="sense"/>0</r></p><par n='SIZ_YOU'/></e>
+      <!-- SECTION: Adpositions -->
+      <e><p><l>бері</l><r>since<s n="sense"/>0</r></p><par n='POST_PREP'/></e>
 
-	<e><p><l>бері</l><r>since<s n="sense"/>0</r></p><par n='POST_PREP'/></e>
+      <!-- SECTION: Pronouns -->
+      <e><p><l>сіз</l><r>you<s n="sense"/>0</r></p><par n='SIZ_YOU'/></e>
 
-	<e><p><l>радиан</l><r>radian<s n="sense"/>0</r></p><par n='N1_N'/></e>
-	<e><p><l>орысша</l><r>Russian<s n="sense"/>0</r></p><par n='N1_N'/></e>
-	<e><p><l>жер</l><r>earth<s n="sense"/>0</r></p><par n='N1_N'/></e>
-	<e><p><l>жер</l><r>ground<s n="sense"/>0</r></p><par n='N1_N'/></e>
-	<e><p><l>жер</l><r>land<s n="sense"/>0</r></p><par n='N1_N'/></e>
-	<e><p><l>жер</l><r>place<s n="sense"/>0</r></p><par n='N1_N'/></e>
-	<e><p><l>жер</l><r>site<s n="sense"/>0</r></p><par n='N1_N'/></e>
-	<e><p><l>жер</l><r>spot<s n="sense"/>0</r></p><par n='N1_N'/></e>
-	<e><p><l>заман</l><r>time<s n="sense"/>0</r></p><par n='N1_N'/></e>
-	<e><p><l>заман</l><r>age<s n="sense"/>0</r></p><par n='N1_N'/></e>
-	<e><p><l>актер</l><r>actor<s n="sense"/>0</r></p><par n='N1_N'/></e>
-	<e><p><l>жыл</l><r>year<s n="sense"/>0</r></p><par n='N1_N'/></e>
-	<e><p><l>әйел</l><r>female<s n="sense"/>0</r></p><par n='N1_N'/></e>
-	<e><p><l>әйел</l><r>woman<s n="sense"/>0</r></p><par n='N1_N'/></e>
-	<e><p><l>адам<b/>баласы</l><r>man<s n="sense"/>0</r></p><par n='N1_N'/></e>
+      <!-- SECTION: Nouns -->
+      <e><p><l>радиан</l><r>radian<s n="sense"/>0</r></p><par n='N1_N'/></e>
+      <e><p><l>орысша</l><r>Russian<s n="sense"/>0</r></p><par n='N1_N'/></e>
+      <e><p><l>жер</l><r>earth<s n="sense"/>0</r></p><par n='N1_N'/></e>
+      <e><p><l>жер</l><r>ground<s n="sense"/>0</r></p><par n='N1_N'/></e>
+      <e><p><l>жер</l><r>land<s n="sense"/>0</r></p><par n='N1_N'/></e>
+      <e><p><l>жер</l><r>place<s n="sense"/>0</r></p><par n='N1_N'/></e>
+      <e><p><l>жер</l><r>site<s n="sense"/>0</r></p><par n='N1_N'/></e>
+      <e><p><l>жер</l><r>spot<s n="sense"/>0</r></p><par n='N1_N'/></e>
+      <e><p><l>заман</l><r>time<s n="sense"/>0</r></p><par n='N1_N'/></e>
+      <e><p><l>заман</l><r>age<s n="sense"/>0</r></p><par n='N1_N'/></e>
+      <e><p><l>актер</l><r>actor<s n="sense"/>0</r></p><par n='N1_N'/></e>
+      <e><p><l>жыл</l><r>year<s n="sense"/>0</r></p><par n='N1_N'/></e>
+      <e><p><l>әйел</l><r>female<s n="sense"/>0</r></p><par n='N1_N'/></e>
+      <e><p><l>әйел</l><r>woman<s n="sense"/>0</r></p><par n='N1_N'/></e>
+      <e><p><l>адам<b/>баласы</l><r>man<s n="sense"/>0</r></p><par n='N1_N'/></e>
 
-	<e><p><l>тым</l><r>though<s n="sense"/>0</r></p><par n='ADV_ADV'/></e>
-	<e><p><l>тым</l><r>overly<s n="sense"/>0</r></p><par n='ADV_PREADV'/></e>
+      <!-- SECTION: Nombres propios -->
+      <e><p><l>Иран</l><r>Iran<s n="sense"/>0</r></p><par n='NP-TOP_NP-TOP'/></e>
 
-	<e><p><l>ерте</l><r>early<s n="sense"/>0</r></p><par n='A1_A-SINT'/></e>
+      <!-- SECTION: Adjectives -->
+      <e><p><l>ерте</l><r>early<s n="sense"/>0</r></p><par n='A1_A-SINT'/></e>
 
-	<e><p><l>Иран</l><r>Iran<s n="sense"/>0</r></p><par n='NP-TOP_NP-TOP'/></e>
+      <!-- SECTION: Adverbs -->
+      <e><p><l>тым</l><r>though<s n="sense"/>0</r></p><par n='ADV_ADV'/></e>
+      <e><p><l>тым</l><r>overly<s n="sense"/>0</r></p><par n='ADV_PREADV'/></e>
 
-	<e><p><l>баста</l><r>start<s n="sense"/>0</r></p><par n='VAUX_VAUX'/></e>
+      <!-- SECTION: Verbos -->
+      <e><p><l>баста</l><r>start<s n="sense"/>0</r></p><par n='VAUX_VAUX'/></e>
 
-	<e><p><l>сөйле</l><r>speak<s n="sense"/>0</r></p><par n='V-TV_V'/></e>
-	<e><p><l>баста</l><r>start<s n="sense"/>0</r></p><par n='V-TV_V'/></e>
-	<e><p><l>баста</l><r>begin<s n="sense"/>0</r></p><par n='V-TV_V'/></e>
-	<e><p><l>баста</l><r>bind<s n="sense"/>0</r></p><par n='V-TV_V'/></e>
-	<e><p><l>баста</l><r>commence<s n="sense"/>0</r></p><par n='V-TV_V'/></e>
+      <e><p><l>сөйле</l><r>speak<s n="sense"/>0</r></p><par n='V-TV_V'/></e>
+      <e><p><l>баста</l><r>start<s n="sense"/>0</r></p><par n='V-TV_V'/></e>
+      <e><p><l>баста</l><r>begin<s n="sense"/>0</r></p><par n='V-TV_V'/></e>
+      <e><p><l>баста</l><r>bind<s n="sense"/>0</r></p><par n='V-TV_V'/></e>
+      <e><p><l>баста</l><r>commence<s n="sense"/>0</r></p><par n='V-TV_V'/></e>
 
-	<e><p><l>көрін</l><r>appear<s n="sense"/>0</r></p><par n='V-IV_V'/></e>
-	<e><p><l>көрін</l><r>seem<s n="sense"/>0</r></p><par n='V-IV_V'/></e>
+      <e><p><l>көрін</l><r>appear<s n="sense"/>0</r></p><par n='V-IV_V'/></e>
+      <e><p><l>көрін</l><r>seem<s n="sense"/>0</r></p><par n='V-IV_V'/></e>
 
-	<e><p><l>?<s n="parol"/>sent</l><r>?<s n="pos"/>sent</r></p></e>
+      <!-- SECTION: Punctuation -->
+      <e><p><l>.<s n="parol"/>sent</l><r>.<s n="pos"/>sent</r></p></e>
+      <e><p><l>?<s n="parol"/>sent</l><r>?<s n="pos"/>sent</r></p></e>
   </section>
 </dictionary>
