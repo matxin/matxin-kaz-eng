@@ -18,8 +18,8 @@
   <pardefs>
     <pardef n="N1_N">
       <e><p><l><s n="parol"/>n|nom</l><r><s n="pos"/>n<s n="num"/>sg<s n="cas"/>nom</r></p></e>
-      <e><p><l><s n="parol"/>n|abl</l><r><s n="pos"/>n<s n="num"/>sg<s n="cas"/>abl</r></p></e>
-      <e><p><l><s n="parol"/>n|dat</l><r><s n="pos"/>n<s n="num"/>sg<s n="cas"/>dat</r></p></e>
+      <e><p><l><s n="parol"/>n|abl</l><r><s n="pos"/>n<s n="num"/>sg<s n="prep"/>abl</r></p></e>
+      <e><p><l><s n="parol"/>n|dat</l><r><s n="pos"/>n<s n="num"/>sg<s n="prep"/>dat</r></p></e>
       <e><p><l><s n="parol"/>n|attr</l><r><s n="pos"/>n<s n="num"/>sg</r></p></e>
       <e><p><l><s n="parol"/>n|px3sp|nom</l><r><s n="pos"/>n<s n="num"/>sg<s n="cas"/>nom</r></p></e>
       <e><p><l><s n="parol"/>n|px3sp|dat</l><r><s n="pos"/>n<s n="num"/>sg<s n="cas"/>dat</r></p></e>
@@ -44,6 +44,12 @@
 
     <pardef n="A1_A-SINT">
       <e><p><l><s n="parol"/>adj</l><r><s n="pos"/>adj|sint</r></p></e>
+    </pardef>
+
+
+    <pardef n="VAUX_VAUX">
+      <e><p><l><s n="parol"/>vaux|aor|p3|sg</l><r><s n="pos"/>vaux<s n="tense"/>pres</r></p></e>
+      <e><p><l><s n="parol"/>vaux|ifi|p3|sg</l><r><s n="pos"/>vaux<s n="tense"/>past</r></p></e>
     </pardef>
 
     <pardef n="V-TV_V">
@@ -90,6 +96,8 @@
 	<e><p><l>ерте</l><r>early<s n="sense"/>0</r></p><par n='A1_A-SINT'/></e>
 
 	<e><p><l>Иран</l><r>Iran<s n="sense"/>0</r></p><par n='NP-TOP_NP-TOP'/></e>
+
+	<e><p><l>баста</l><r>start<s n="sense"/>0</r></p><par n='VAUX_VAUX'/></e>
 
 	<e><p><l>сөйле</l><r>speak<s n="sense"/>0</r></p><par n='V-TV_V'/></e>
 	<e><p><l>баста</l><r>start<s n="sense"/>0</r></p><par n='V-TV_V'/></e>

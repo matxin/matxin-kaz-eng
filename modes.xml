@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <modes>
 
-  <mode name="kaz-eng-analyser" install="no">
+  <mode name="kaz-eng-chunker" install="no">
     <pipeline>
-      <program name="matxin-analyser -f">
-        <file name="kaz-eng.cfg"/>
+      <program name="matxin-chunker">
+        <file name="kaz-eng.chunk_rules.dat"/>
       </program>
     </pipeline>
 
@@ -12,16 +12,34 @@
 
   <mode name="kaz-eng-xfer-lex" install="no">
     <pipeline>
-      <program name="matxin-analyser -f">
-        <file name="kaz-eng.cfg"/>
+      <program name="matxin-chunker">
+        <file name="kaz-eng.chunk_rules.dat"/>
       </program>
       <program name="matxin-xfer-lex">
         <file name="kaz-eng.bilingual.bin"/>
-        <file name="kaz-eng.chunk_type.dat"/> <!-- matxin-kaz-eng.chunk_type.dat -->
-        <file name="kaz-eng.lexical_selection.dat"/> <!-- matxin-kaz-eng.lexical_selection.dat -->
-        <file name="eng.semantic.dat"/> <!-- matxin-eus.semantic.dat -->
+        <file name="kaz-eng.chunk_type.dat"/> 
+        <file name="kaz-eng.lexical_selection.dat"/> 
+        <file name="kaz-eng.semantic.dat"/> 
       </program>
     </pipeline>
   </mode>
+
+  <mode name="kaz-eng-xfer-intra" install="no">
+    <pipeline>
+      <program name="matxin-chunker">
+        <file name="kaz-eng.chunk_rules.dat"/>
+      </program>
+      <program name="matxin-xfer-lex">
+        <file name="kaz-eng.bilingual.bin"/>
+        <file name="kaz-eng.chunk_type.dat"/> 
+        <file name="kaz-eng.lexical_selection.dat"/> 
+        <file name="kaz-eng.semantic.dat"/> 
+      </program>
+      <program name="matxin-xfer-intra"> 
+        <file name="kaz-eng.intrachunk_move.dat"/> 
+      </program>
+    </pipeline>
+  </mode>
+
 
 </modes>
