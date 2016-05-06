@@ -7,8 +7,10 @@
     <sdef n='num'/>
     <sdef n='per'/>
     <sdef n='cas'/>
+    <sdef n='gen'/>
     <sdef n='pers'/>
     <sdef n='tam'/>
+    <sdef n='px'/>
     <sdef n='prep'/>
     <sdef n='spost'/>
     <sdef n='vpost'/>
@@ -17,18 +19,29 @@
     <sdef n='sense'/>
   </sdefs>
   <pardefs>
+    <pardef n="CASE">
+      <e><p><l>|nom</l><r><s n="cas"/>nom</r></p></e>
+      <e><p><l>|gen</l><r><s n="cas"/>gen</r></p></e>
+      <e><p><l>|acc</l><r><s n="cas"/>acc</r></p></e>
+      <e><p><l>|dat</l><r><s n="cas"/>dat</r></p></e>
+      <e><p><l>|loc</l><r><s n="cas"/>loc</r></p></e>
+      <e><p><l>|abl</l><r><s n="cas"/>abl</r></p></e>
+      <e><p><l>|ins</l><r><s n="cas"/>ins</r></p></e>
+    </pardef>
+
+    <pardef n="POSS">
+      <e><p><l></l><r></r></p><par n="CASE"/></e>
+      <e><p><l>|px1sg</l><r><s n="px"/>sg1</r></p><par n="CASE"/></e>
+      <e><p><l>|px2sg</l><r><s n="px"/>sg2</r></p><par n="CASE"/></e>
+      <e><p><l>|px3sp</l><r><s n="px"/>sp3</r></p><par n="CASE"/></e>
+      <e><p><l>|px1pl</l><r><s n="px"/>pl1</r></p><par n="CASE"/></e>
+      <e><p><l>|px2pl</l><r><s n="px"/>pl2</r></p><par n="CASE"/></e>
+    </pardef>
+
     <pardef n="N1_N">
-      <e><p><l><s n="parol"/>n|nom</l><r><s n="pos"/>n<s n="num"/>sg<s n="cas"/>nom</r></p></e>
-      <e><p><l><s n="parol"/>n|gen</l><r><s n="pos"/>n<s n="num"/>sg<s n="prep"/>gen</r></p></e>
-      <e><p><l><s n="parol"/>n|acc</l><r><s n="pos"/>n<s n="num"/>sg<s n="prep"/>acc</r></p></e>
-      <e><p><l><s n="parol"/>n|dat</l><r><s n="pos"/>n<s n="num"/>sg<s n="prep"/>dat</r></p></e>
-      <e><p><l><s n="parol"/>n|loc</l><r><s n="pos"/>n<s n="num"/>sg<s n="prep"/>loc</r></p></e>
-      <e><p><l><s n="parol"/>n|abl</l><r><s n="pos"/>n<s n="num"/>sg<s n="prep"/>abl</r></p></e>
-      <e><p><l><s n="parol"/>n|ins</l><r><s n="pos"/>n<s n="num"/>sg<s n="prep"/>ins</r></p></e>
       <e><p><l><s n="parol"/>n|attr</l><r><s n="pos"/>n<s n="num"/>sg</r></p></e>
-      <e><p><l><s n="parol"/>n|px3sp|nom</l><r><s n="pos"/>n<s n="num"/>sg<s n="cas"/>nom</r></p></e>
-      <e><p><l><s n="parol"/>n|px3sp|dat</l><r><s n="pos"/>n<s n="num"/>sg<s n="cas"/>dat</r></p></e>
-      <e><p><l><s n="parol"/>n|pl|nom</l><r><s n="pos"/>n<s n="num"/>pl<s n="cas"/>nom</r></p></e>
+      <e><p><l><s n="parol"/>n</l><r><s n="pos"/>n<s n="num"/>ND</r></p><par n="POSS"/></e>
+      <e><p><l><s n="parol"/>n|pl</l><r><s n="pos"/>n<s n="num"/>pl</r></p><par n="POSS"/></e>
     </pardef>
 
     <pardef n="POST_PREP">
@@ -44,7 +57,15 @@
     </pardef>
 
     <pardef n="NP-TOP_NP-TOP">
-      <e><p><l><s n="parol"/>np|top|nom</l><r><s n="pos"/>np|top</r></p></e>
+      <e><p><l><s n="parol"/>np|top</l><r><s n="pos"/>np|top</r></p><par n="POSS"/></e>
+    </pardef>
+
+    <pardef n="NP-ANT-M_NP-ANT-M">
+      <e><p><l><s n="parol"/>np|ant|m</l><r><s n="pos"/>np|ant<s n="gen"/>m</r></p><par n="POSS"/></e>
+    </pardef>
+
+    <pardef n="NP-ANT-F_NP-ANT-F">
+      <e><p><l><s n="parol"/>np|ant|f</l><r><s n="pos"/>np|ant<s n="gen"/>f</r></p><par n="POSS"/></e>
     </pardef>
 
     <pardef n="CNJCOO_CNJCOO">
@@ -76,6 +97,21 @@
       <e><p><l>|past</l><r><s n="tam"/>past</r></p><par n="PERS_PERS"/></e>
     </pardef>
 
+    <pardef n="GER_POSS-GER_POSS">
+      <e><p><l>|px1sg</l><r><s n="pers"/>p1<s n="num"/>sg</r></p><par n="CASE"/></e>
+      <e><p><l>|px2sg</l><r><s n="pers"/>p2<s n="num"/>sg</r></p><par n="CASE"/></e>
+      <e><p><l>|px3sp</l><r><s n="pers"/>p3<s n="num"/>ND</r></p><par n="CASE"/></e>
+      <e><p><l>|px1pl</l><r><s n="pers"/>p1<s n="num"/>pl</r></p><par n="CASE"/></e>
+      <e><p><l>|px2pl</l><r><s n="pers"/>p2<s n="num"/>pl</r></p><par n="CASE"/></e>
+    </pardef>
+
+    <pardef n="GER_GER">
+      <e><p><l>|ger_perf</l><r><s n="tam"/>perf</r></p><par n="GER_POSS-GER_POSS"/></e>
+      <e><p><l>|ger_impf</l><r><s n="tam"/>impf</r></p><par n="GER_POSS-GER_POSS"/></e>
+      <e><p><l>|ger_past</l><r><s n="tam"/>past</r></p><par n="GER_POSS-GER_POSS"/></e>
+      <e><p><l>|ger_fut</l><r><s n="tam"/>fut</r></p><par n="GER_POSS-GER_POSS"/></e>
+    </pardef>
+
     <pardef n="GPR_GPR">
       <e><p><l>|gpr_perf</l><r><s n="tam"/>perf</r></p></e>
       <e><p><l>|gpr_impf</l><r><s n="tam"/>impf</r></p></e>
@@ -90,27 +126,50 @@
       <e><p><l>|gna_after</l><r><s n="tam"/>after</r></p></e>
     </pardef>
 
+    <pardef n="PRC_PRC">
+      <e><p><l>|prc_perf</l><r><s n="tam"/>perf</r></p></e>
+      <e><p><l>|prc_cond</l><r><s n="tam"/>cond</r></p></e>
+      <e><p><l>|prc_until</l><r><s n="tam"/>until</r></p></e>
+      <e><p><l>|prc_after</l><r><s n="tam"/>after</r></p></e>
+    </pardef>
+
+
     <pardef n="VAUX_VAUX">
       <e><p><l><s n="parol"/>vaux</l><r><s n="pos"/>vaux</r></p><par n="FIN_FIN"/></e>
       <e><p><l><s n="parol"/>vaux</l><r><s n="pos"/>vaux</r></p><par n="GNA_GNA"/></e>
       <e><p><l><s n="parol"/>vaux</l><r><s n="pos"/>vaux</r></p><par n="GPR_GPR"/></e>
+      <e><p><l><s n="parol"/>vaux</l><r><s n="pos"/>vaux</r></p><par n="PRC_PRC"/></e>
+      <e><p><l><s n="parol"/>vaux</l><r><s n="pos"/>vaux</r></p><par n="GER_GER"/></e>
     </pardef>
 
     <pardef n="V-TV_V">
       <e><p><l><s n="parol"/>v|tv</l><r><s n="pos"/>vblex</r></p><par n="FIN_FIN"/></e>
       <e><p><l><s n="parol"/>v|tv</l><r><s n="pos"/>vblex</r></p><par n="GNA_GNA"/></e>
       <e><p><l><s n="parol"/>v|tv</l><r><s n="pos"/>vblex</r></p><par n="GPR_GPR"/></e>
+      <e><p><l><s n="parol"/>v|tv</l><r><s n="pos"/>vblex</r></p><par n="PRC_PRC"/></e>
+      <e><p><l><s n="parol"/>v|tv</l><r><s n="pos"/>vblex</r></p><par n="GER_GER"/></e>
     </pardef>
 
     <pardef n="V-IV_V">
       <e><p><l><s n="parol"/>v|iv</l><r><s n="pos"/>vblex</r></p><par n="FIN_FIN"/></e>
       <e><p><l><s n="parol"/>v|iv</l><r><s n="pos"/>vblex</r></p><par n="GNA_GNA"/></e>
       <e><p><l><s n="parol"/>v|iv</l><r><s n="pos"/>vblex</r></p><par n="GPR_GPR"/></e>
+      <e><p><l><s n="parol"/>v|iv</l><r><s n="pos"/>vblex</r></p><par n="PRC_PRC"/></e>
+      <e><p><l><s n="parol"/>v|iv</l><r><s n="pos"/>vblex</r></p><par n="GER_GER"/></e>
     </pardef>
 
     <pardef n="SIZ_YOU">
-      <e><p><l><s n="parol"/>prn|pers|p2|sg|frm|nom</l><r><s n="pos"/>prn|pers<s n="num"/>sg</r></p></e>
+      <e><p><l><s n="parol"/>prn|pers|p2|sg|frm</l><r><s n="pos"/>prn|pers<s n="pers"/>p2<s n="num"/>sg</r></p><par n="CASE"/></e>
     </pardef>
+
+    <pardef n="OL_HE/SHE/IT">
+      <e><p><l><s n="parol"/>prn|pers|p3|sg</l><r><s n="pos"/>prn|pers<s n="pers"/>p3<s n="gen"/>GD<s n="num"/>sg</r></p><par n="CASE"/></e>
+    </pardef>
+
+    <pardef n="OLAR_THEY">
+      <e><p><l><s n="parol"/>prn|pers|p3|pl</l><r><s n="pos"/>prn|pers<s n="pers"/>p3<s n="num"/>pl</r></p><par n="CASE"/></e>
+    </pardef>
+
   </pardefs>
   <section id="IXA_moldaketak" type="standard">
       <!-- SECTION: Miscellaneous -->
@@ -126,6 +185,10 @@
 
       <!-- SECTION: Pronouns -->
       <e><p><l>сіз</l><r>you<s n="sense"/>0</r></p><par n='SIZ_YOU'/></e>
+      <e><p><l>ол</l><r>he<s n="sense"/>0</r></p><par n='OL_HE/SHE/IT'/></e>
+      <e><p><l>ол</l><r>she<s n="sense"/>0</r></p><par n='OL_HE/SHE/IT'/></e>
+      <e><p><l>ол</l><r>it<s n="sense"/>0</r></p><par n='OL_HE/SHE/IT'/></e>
+      <e><p><l>олар</l><r>they<s n="sense"/>0</r></p><par n='OLAR_THEY'/></e>
 
       <!-- SECTION: Nouns -->
       <e><p><l>радиан</l><r>radian<s n="sense"/>0</r></p><par n='N1_N'/></e>
@@ -11202,6 +11265,8 @@
 
       <!-- SECTION: Nombres propios -->
       <e><p><l>Иран</l><r>Iran<s n="sense"/>0</r></p><par n='NP-TOP_NP-TOP'/></e>
+      <e><p><l>Азамат</l><r>Azamat<s n="sense"/>0</r></p><par n='NP-ANT-M_NP-ANT-M'/></e>
+      <e><p><l>Айгүл</l><r>Aygul<s n="sense"/>0</r></p><par n='NP-ANT-F_NP-ANT-F'/></e>
 
       <!-- SECTION: Adjectives -->
       <e><p><l>басқа</l><r>other<s n="sense"/>0</r></p><par n='A1_A'/></e>
@@ -11212,9 +11277,781 @@
       <e><p><l>тым</l><r>though<s n="sense"/>0</r></p><par n='ADV_ADV'/></e>
       <e><p><l>тым</l><r>overly<s n="sense"/>0</r></p><par n='ADV_PREADV'/></e>
 
+
+      <e><p><l>аздап</l><r>slightly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>артынша</l><r>then</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>баяғыда</l><r>a_long_time_ago</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>бәрібір</l><r>what_ever</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әзер</l><r>barely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әйтеуір</l><r>ever</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әлдеқайда</l><r>much_more</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ендеше</l><r>so</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>кенет</l><r>suddenly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>мүлдем</l><r>absolutely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>нақ</l><r>exactly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>неліктен</l><r>so_why</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>өмірбақи</l><r>lifelong</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>сәл</l><r>slightly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>соншалық</l><r>so_much</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>соншалықты</l><r>so_much</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>аномальді</l><r>abnormally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>бортта</l><r>aboard</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>шетелге</l><r>abroad</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>кенеттен</l><r>abruptly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>шұғыл</l><r>abruptly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>абсолютті</l><r>absolutely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>мол</l><r>abundantly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>академиялы</l><r>academically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>кездейсоқ</l><r>accidentally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>сәйкесінше</l><r>accordingly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>дәл</l><r>accurately</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>белсене</l><r>actively</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>негізінен</l><r>actually</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>өткір</l><r>acutely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қайтпай</l><r>adamantly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қосымша</l><r>additionally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>сәйкесінше</l><r>adequately</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әкімшілікті</l><r>administratively</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>тамаша</l><r>admirably</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жалпы_ризалықпен</l><r>admittedly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қастықпен</l><r>adversely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>эстетикалы</l><r>aesthetically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>алыста</l><r>afar</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>нәзік</l><r>affectionately</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>кейін</l><r>after</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>түсте</l><r>afternoon</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>кейін</l><r>afterward</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>кейін</l><r>afterwards</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қайтадан</l><r>again</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қарсы</l><r>against</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>агрессивті</l><r>aggressively</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>бұрын</l><r>ago</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>алда</l><r>ahead</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әттеген-ай</l><r>alas</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>секілді</l><r>allegedly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>дерлік</l><r>almost</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жоғары_қарай</l><r>aloft</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жалғызсырап</l><r>alone</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жанында</l><r>alongside</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>дауыстап</l><r>aloud</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әлдеқашан</l><r>already</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>тәртіпте</l><r>alright</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>тағы</l><r>also</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>алма-кезек</l><r>alternately</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>альтернативті</l><r>alternatively</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жалпы_айтқанда</l><r>altogether</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>үнемі</l><r>always</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әрдайым</l><r>always</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>таңқаларлық</l><r>amazingly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>астарлап</l><r>ambiguously</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>уақыт_санында</l><r>amount_of_time</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>біраз</l><r>amply</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>аналитикалы</l><r>analytically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>тағы</l><r>anew</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>бұрқан-талқан</l><r>angrily</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жыл_сайын</l><r>annually</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>тез_арада</l><r>anon</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>анонимді</l><r>anonymously</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қорқынышты</l><r>anxiously</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>олай_немесе_жаңаша</l><r>anyhow</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>көрінген_уақытта</l><r>anytime</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>олай_немесе_жаңаша</l><r>anyway</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>тез</l><r>apace</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>оқшау</l><r>apart</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>айқын</l><r>apparently</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>белгілі</l><r>appreciably</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>сәйкесінше</l><r>appropriately</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>шамамен</l><r>approximately</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ынталы</l><r>aptly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>өзінен-өзі</l><r>arbitrarily</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>төңірегінде</l><r>around</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>асқақтап</l><r>arrogantly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жасанды</l><r>artificially</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>сонымен_қатар</l><r>as_well</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>аулақ</l><r>aside</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>салт</l><r>astride</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>сол_уақытта</l><r>at_the_same_time</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>мұқият</l><r>attentively</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>абыройлы</l><r>authoritatively</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>автоматша</l><r>automatically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ұзақ</l><r>away</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>кереметтей</l><r>awfully</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қымтырылып</l><r>awkwardly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>кейін</l><r>backwards</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жаман</l><r>badly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>зорға</l><r>barely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әрең</l><r>barely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>негізінен</l><r>basically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әдемілеп</l><r>beautifully</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>дейін</l><r>before</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ілгері</l><r>beforehand</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>атынан</l><r>behalf</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>артында</l><r>behind</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>астында</l><r>below</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>төменде</l><r>beneath</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>басқа</l><r>besides</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>арасында_</l><r>between</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ішінара</l><r>beyond</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>екі_жылда</l><r>biennially</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>биологиялы</l><r>biologically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ащы</l><r>bitterly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>күпірлі</l><r>blasphemously</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>айқын</l><r>blatantly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ойламай</l><r>blindly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>батыл</l><r>boldly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қаһарманша</l><r>bravely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қысқа</l><r>briefly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жылтырақтап</l><r>brilliantly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жаядай</l><r>broadly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>айуандарша</l><r>brutally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>абыржымастан</l><r>calmly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ашық</l><r>candidly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ақырын</l><r>carefully</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>байыптап</l><r>carefully</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>зер_сала</l><r>carefully</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>айдақ-сайдақ</l><r>carelessly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>немқұрайлы</l><r>casually</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>үзілді-кесілді</l><r>categorically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>абайлап</l><r>cautiously</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әрине</l><r>certainly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>арзан</l><r>cheaply</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>тың</l><r>cheerfully</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>химиялы</l><r>chemically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>басты_бейнемен</l><r>chiefly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жақындап</l><r>circa</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>циркулярлы</l><r>circularly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>сыпайы</l><r>civilly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ашық</l><r>clearly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ақылды</l><r>cleverly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>клиникалы</l><r>clinically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қоян-қолтық</l><r>close_at_hand</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жақын</l><r>closely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>көптеп-көлемдеп</l><r>collectively</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ыңғайлы</l><r>comfortably</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>коммерциялық</l><r>commercially</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әдетте</l><r>commonly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>салыстырмалы</l><r>comparatively</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>толықтай</l><r>completely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>концептуалды</l><r>conceptually</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>мезгілдес</l><r>concurrently</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>шартты</l><r>conditionally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жасырын</l><r>confidentially</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>нығыз</l><r>confidently</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ниеттілі</l><r>conscientiously</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>есті</l><r>consciously</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>дәйекті_түрде</l><r>consecutively</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>сол_себептен</l><r>consequently</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>бірталай</l><r>considerably</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>дәйекті_түрде</l><r>consistently</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ылғи</l><r>constantly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>конституциялы</l><r>constitutionally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ұдайы</l><r>continually</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>үзіліссіз</l><r>continuously</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ыңғайлы</l><r>conveniently</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>керісінше</l><r>conversely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>нанымды</l><r>convincingly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>дұрыстап</l><r>correctly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жексұрынды</l><r>corruptly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қатал</l><r>cruelly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>мәдениетті</l><r>culturally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қызықты</l><r>curiously</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ағымда</l><r>currently</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>күнделікті</l><r>daily</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қауіпті</l><r>dangerously</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>аяулы</l><r>dearly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>өтірік</l><r>deceitfully</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>табанды</l><r>decisively</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>терең</l><r>deeply</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>айқын</l><r>definitely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>үзілді-кесілді</l><r>definitively</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>есті</l><r>deliberately</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>бұқарашыл</l><r>democratically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>демографиялы</l><r>demographically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жиі</l><r>densely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>еңбек_бойынша</l><r>deservedly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>өткір</l><r>desperately</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>диаметралді</l><r>diametrically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жаңаша</l><r>differently</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>цифрлы</l><r>digitally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ықыласты</l><r>diligently</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>мәмілегерлі</l><r>diplomatically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>тура</l><r>directly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>диспропорциялық</l><r>disproportionately</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>дөрекі</l><r>disrespectfully</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>мәнерлі</l><r>distinctly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>екі_есе</l><r>doubly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әлбетте</l><r>doubtless</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>төмен</l><r>down</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>төмен</l><r>downstairs</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ағыспен_төмен</l><r>downstream</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>төмен_қарай</l><r>downward</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>төмен</l><r>downwards</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>драматикалы</l><r>dramatically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>табанды</l><r>drastically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>бойы</l><r>during</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>күндіз</l><r>during_the_day</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>үдемелі</l><r>dynamically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>сабырсыз</l><r>eagerly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>шын_жүректен</l><r>earnestly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жеңіл</l><r>easily</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>күншығыс_бағытта</l><r>eastwards</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>экологиялы</l><r>ecologically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>экономикалы</l><r>economically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>оқытушылық</l><r>educationally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>тиімді</l><r>effectively</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>өте_жақсы</l><r>efficiently</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әйтпесе</l><r>either</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>электронды</l><r>electronically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>нәзік</l><r>elegantly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>басқа</l><r>else</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>басқа_жерде</l><r>elsewhere</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>біржақта</l><r>elsewhere</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>эмоциялы</l><r>emotionally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>шексіз</l><r>endless</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қарқынмен</l><r>energetically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>төтенше</l><r>enormously</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>біраз</l><r>enough</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>толықтай</l><r>entirely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>аймақты</l><r>environmentally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>бірдей</l><r>equally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әсіресе</l><r>especially</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>негізінен</l><r>essentially</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>бұдан_әрі</l><r>etcetera</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>этикалы</l><r>ethically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>этникалы</l><r>ethnically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>тіпті</l><r>even</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>біркелкі</l><r>evenly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ең_ақырында</l><r>eventually</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әрдайым</l><r>ever</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>басқаша</l><r>otherwise</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>күнде</l><r>everyday</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>барлық_жерде</l><r>everywhere</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>барлық_жерде</l><r>everywhere</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әр_жерде</l><r>everywhere</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>айқын</l><r>evidently</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>дәл</l><r>exactly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>төтенше</l><r>exceedingly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әсірелеп</l><r>excessively</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ылғи</l><r>exclusively</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ашық</l><r>explicitly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қарқынды</l><r>extensively</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>төтенше</l><r>extraordinarily</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әбден</l><r>extremely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>адал</l><r>faithfully</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қу</l><r>falsely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>тез</l><r>fast</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>шапшаң</l><r>fast</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жанталаса</l><r>feverishly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>өткір</l><r>fiercely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>соңында</l><r>finally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>материалдық</l><r>financially</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>тамаша</l><r>fine</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қатты</l><r>firmly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>біріншіден</l><r>firstly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>табанды</l><r>flatly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>мінсіз</l><r>flawlessly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>тегістеп</l><r>fluently</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>нәзік</l><r>fondly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>орынсыз</l><r>foolishly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>уақыт_аралығында</l><r>for_a_period_of_time</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ақиқатты</l><r>forcefully</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>мәңгі</l><r>forever</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>формальды</l><r>formally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>бұрында</l><r>formerly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>алға</l><r>forth</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>бақытқа_орай</l><r>fortunately</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ілгері</l><r>forward</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>төртіншіден</l><r>fourthly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ашық</l><r>frankly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қаһарлы</l><r>frantically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>алдамшы</l><r>fraudulently</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>еркін</l><r>freely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жиі</l><r>frequently</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жас</l><r>freshly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>толықтай</l><r>fully</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>функционалді</l><r>functionally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>іргелі</l><r>fundamentally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>сұрапыл</l><r>furiously</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жалпы</l><r>generally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>түгелдей</l><r>entirely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>кең_пейілді</l><r>generously</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>генетикалы</l><r>genetically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>нәзік</l><r>gently</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ашық</l><r>genuinely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>географиялық</l><r>geographically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ынталана</l><r>gladly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>глобалді</l><r>globally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>біртіндеп</l><r>gradually</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>шындап</l><r>gravely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>өте</l><r>greatly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жартылай</l><r>half</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жарым-жарты</l><r>halfway</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әдемілеп</l><r>handsomely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ойдағыдай</l><r>happily</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>зорға</l><r>hardly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>үйлесімді</l><r>harmoniously</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>шұғыл</l><r>harshly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>байқаусызда</l><r>hastily</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>шын</l><r>heartily</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>абыржыған</l><r>heatedly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қатты</l><r>heavily</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>бұдан_былай</l><r>henceforth</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>мында</l><r>here</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ендігәрі</l><r>hereafter</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ақырында</l><r>hereby</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>бұдан_әрі</l><r>hereinafter</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>алдымен</l><r>heretofore</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>герметикалық</l><r>hermetically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қатты</l><r>highly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>тарихи</l><r>historically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>осы_уақытқа_дейін</l><r>hitherto</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>адал</l><r>honestly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>үмітпен</l><r>hopefully</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>үмітсіз</l><r>hopelessly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>көлденең</l><r>horizontally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>өте</l><r>hugely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>адамша</l><r>humanly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>момын</l><r>humbly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>гипотеза</l><r>hypothetically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>пәк</l><r>ideally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>заңсыз</l><r>illegally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>бірден</l><r>immediately</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>тез</l><r>immediately</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>сөзсіз</l><r>implicitly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>айбарлы</l><r>impressively</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әнтек</l><r>improperly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>салыстырғанда</l><r>in_contrast</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>шынында</l><r>in_fact</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>бұрын</l><r>in_the_past</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>кездейсоқ</l><r>incidentally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>аттамалы</l><r>incompletely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қателі</l><r>incorrectly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>өспелі</l><r>increasingly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>нанғысыз</l><r>incredibly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ақиқатты</l><r>indeed</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>мөлшерсіз</l><r>indefinitely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>өздігінен-өзі</l><r>independently</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>немқұрайлы</l><r>indifferently</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жанама</l><r>indirectly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>анықсыз</l><r>indiscriminately</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>даусыз</l><r>indisputably</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жеке</l><r>individually</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>шарасыз</l><r>inevitably</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>тынымсыз</l><r>inexorably</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ұзақ-сүре</l><r>infinitely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>анайы</l><r>informally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әуелі</l><r>initially</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ең_жақын</l><r>innermost</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>лезде</l><r>instantaneously</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>лезде</l><r>instantly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>орынына</l><r>instead</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жеткіліксіз</l><r>insufficiently</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>интеллектуалды</l><r>intellectually</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>зерделі</l><r>intelligently</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әдейі</l><r>intentionally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қызық</l><r>interestingly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ішкі</l><r>internally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>халықаралық</l><r>internationally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жақын</l><r>intimately</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>адамзаттық</l><r>intrinsically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әрдайым</l><r>invariably</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>кекетінді</l><r>ironically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>үздікті</l><r>irregularly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жауапкершіліксіз</l><r>irresponsibly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жан-тәнімен</l><r>jealously</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>бірлескен</l><r>jointly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жайдан-жай</l><r>just</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жайдарлы</l><r>kindly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>есті</l><r>knowingly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>едәуір</l><r>largely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ақырғы</l><r>lastly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>кеш</l><r>late</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жақында</l><r>lately</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>кейін</l><r>later</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>кейінірек</l><r>later</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жалқаулы</l><r>lazily</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>кемірек</l><r>least</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>солға</l><r>left</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>заңды</l><r>legally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>заңды</l><r>legitimately</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>кіші</l><r>less</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жеңілтек</l><r>lightly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>осы_сияқты</l><r>like_that</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>осы_сияқты</l><r>like_this</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>осы_сияқты</l><r>like_this</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>мүмкін</l><r>likely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>сияқты</l><r>likewise</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>лингвистикалы</l><r>linguistically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>тіпті</l><r>literally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жергілікті</l><r>locally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>логикалы</l><r>logically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қатты</l><r>loudly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>сүйіспеншілікті</l><r>lovingly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>бақытқа_орай</l><r>luckily</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>тамаша</l><r>magnificently</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ең_басты</l><r>mainly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>зәулім</l><r>majestically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>айқын_түрде</l><r>manifestly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қолмен</l><r>manually</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>азғантай</l><r>marginally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>тоқпақтай</l><r>massively</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>толықтай</l><r>maturely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>мүмкін</l><r>maybe</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ана_уақытпен</l><r>meantime</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>сол_уақытта</l><r>meanwhile</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>медициналық</l><r>medically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ұмытылмас</l><r>memorable</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ойша</l><r>mentally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жайдан-жай</l><r>merely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әдістемелі</l><r>methodically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қазымырша</l><r>meticulously</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>орта</l><r>middle</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>орта</l><r>middle</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жолда</l><r>midway</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жұмсақ</l><r>mildly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жаугер</l><r>militarily</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>таңқаларлық</l><r>miraculously</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>желқабаз</l><r>moderately</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>абжауқын</l><r>modestly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>адамгершілікті</l><r>morally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>көбірек</l><r>more_and_more</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>аса</l><r>moreover</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ең</l><r>most</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ең</l><r>most</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>басты_бөлігімен</l><r>mostly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>көбінесе</l><r>mostly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>көбінесе</l><r>mostly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>көп</l><r>much</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>өзара</l><r>mutually</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>сырлы</l><r>mysteriously</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>нақтылы</l><r>namely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жіңішке</l><r>narrowly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ұлттық</l><r>nationally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>табиғи</l><r>naturally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қасында</l><r>near</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жақында</l><r>nearly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>мұқият</l><r>neatly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>сөзсіз</l><r>necessarily</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>пайдасыз</l><r>needlessly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>кері</l><r>negatively</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>да</l><r>neither</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жүйкелі</l><r>nervously</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ешқашан</l><r>never</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ешқашан</l><r>never</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>алайда</l><r>nevertheless</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қайтадан</l><r>newly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>сүйкімді</l><r>nicely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жоқ</l><r>non</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>дегенмен</l><r>nonetheless</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>бірқалыпты</l><r>normally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>солтүстік-шығыс</l><r>northeast</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>солтүстік-батыс</l><r>northwest</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>емес</l><r>not</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ылғи</l><r>notably</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>белгілі</l><r>noticeably</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әйгілі</l><r>notoriously</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>енді</l><r>now</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қазір</l><r>now</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>осы_уақытта</l><r>nowadays</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ешқайда</l><r>nowhere</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>цифрлық_пішінде</l><r>numerically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>сағатта</l><r>o'clock</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>объективті</l><r>objectively</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қисық</l><r>obliquely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қиғаштай</l><r>obliquely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>айқын</l><r>obviously</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>кездейсоқ</l><r>occasionally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әрине</l><r>of_course</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ресми</l><r>officially</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жиі</l><r>often</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>үстінде</l><r>on</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>бірде</l><r>once</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ғана</l><r>only</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>алға</l><r>onwards</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ашық</l><r>openly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қарсы</l><r>opposite</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әншейін</l><r>ordinarily</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әуелгі</l><r>originally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>көрінімді</l><r>ostensibly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ашық_ауада</l><r>outdoors</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ең_алыс</l><r>outermost</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>тұспалсыз</l><r>outright</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>үздік</l><r>outstandingly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>аса</l><r>over</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>барлық</l><r>overall</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>кешқұрым</l><r>overnight</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>шетелдік</l><r>overseas</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>азаптанып</l><r>painstakingly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>парадоксты</l><r>paradoxically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жарым-жартылай</l><r>partially</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>айрықша</l><r>particularly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жарым-жартылай</l><r>partly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>құмарта</l><r>passionately</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>сабырлы</l><r>patiently</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ақырын</l><r>peacefully</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әбден</l><r>perfectly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>мүмкін</l><r>perhaps</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>периодты</l><r>periodically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ылғи</l><r>permanently</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>тұрақты</l><r>perpetually</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қажырлы</l><r>persistently</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ауызекі</l><r>personally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>нанымды</l><r>persuasively</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>физикалы</l><r>physically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>физиологиялы</l><r>physiologically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ізетті</l><r>pleasantly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>сыпайы</l><r>politely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>саяси</l><r>politically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>сорлы</l><r>poorly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>танымал</l><r>popularly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>салмақты</l><r>positively</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>мүмкін</l><r>possibly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әлеуетті</l><r>potentially</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>мықты</l><r>powerfully</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>іс_жүзінде</l><r>practically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>прагматикалы</l><r>pragmatically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қатерлі</l><r>precariously</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ашып-жарып</l><r>precisely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>негізгі</l><r>predominantly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ұнамды</l><r>preferably</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>күні_бұрын</l><r>prematurely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қазірде</l><r>presently</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>болжамды</l><r>presumably</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>алдынғы</l><r>previously</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>алғашқы</l><r>primarily</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қағидалы</l><r>principally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жеке_бейнемен</l><r>privately</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>мардымды</l><r>productively</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>кәсіби</l><r>professionally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>терең</l><r>profoundly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>озық</l><r>progressively</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>дұрыстап</l><r>properly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>пропорционалды</l><r>proportionally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>пропорционалды</l><r>proportionately</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>асқақ</l><r>proudly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>уақытша</l><r>provisionally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>психологиялы</l><r>psychologically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жұрт_алдында</l><r>publicly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ежіктеп</l><r>punctually</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>кіршік</l><r>purely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>өтінішті</l><r>purportedly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әдейі</l><r>purposely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>тез</l><r>quick</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>тез</l><r>quickly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>абыржымастан</l><r>quietly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жеткілікті</l><r>quite</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>негізі</l><r>radically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>астын-үстін</l><r>randomly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>тез</l><r>rapidly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>сирек</l><r>rarely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>тезірек</l><r>rather</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>даярлықпен</l><r>readily</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>өте</l><r>really</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ақылды</l><r>reasonably</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жақында</l><r>recently</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ескерусіз</l><r>regardless</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>өкінішті</l><r>regrettably</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әрдайым</l><r>regularly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қатысты</l><r>relatively</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>зауықсыз</l><r>reluctantly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>керемет</l><r>remarkably</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қайталай</l><r>repeatedly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>хабарлама</l><r>reportedly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>инабатты</l><r>respectfully</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>сәйкесінше</l><r>respectively</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жауапкерлікпен</l><r>responsibly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>дұрыстап</l><r>rightly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қатал</l><r>rigorously</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>айуанша</l><r>roughly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қамықтырғыш</l><r>sadly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қауіпсіз</l><r>safely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>келекелі</l><r>sarcastically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жарытымды</l><r>satisfactorily</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қатал</l><r>savagely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>зорға</l><r>scarcely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ғылыми</l><r>scientifically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>екіншіден</l><r>secondly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>астыртын</l><r>secretly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>көріністі</l><r>seemingly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>адақ</l><r>seldom</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>оқшау</l><r>separately</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қатты</l><r>seriously</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қатал</l><r>severely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>нәпсіқор</l><r>sexually</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>өткір</l><r>sharply</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>тез_арада</l><r>shortly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>олай</l><r>sic</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>бірталай</l><r>significantly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>сөзсіз</l><r>silently</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>секілді</l><r>similarly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жайдан-жай</l><r>simply</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>мезгілдес</l><r>simultaneously</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ашық</l><r>sincerely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>епті</l><r>skilfully</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>азғантай</l><r>slightly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жай</l><r>slowly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>осылайша</l><r>so</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>солай</l><r>so</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>бұлай</l><r>so</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>осылай</l><r>so</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әлеуметтік</l><r>socially</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жұмсақ</l><r>softly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>бірыңғай</l><r>solely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>мерекелі</l><r>solemnly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>біраз</l><r>some</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>олай</l><r>somehow</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>біруақытта</l><r>sometime</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>анда-санда</l><r>sometimes</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>кейбір</l><r>somewhat</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>біржерде</l><r>somewhere</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жақында</l><r>soon</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>көп_ұзамай</l><r>soon_afterward</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>тезірек</l><r>sooner</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>оңтүстік</l><r>southeast</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>оңтүстікке</l><r>southward</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>оңтүстікке</l><r>southwards</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>оңтүстік-батыс</l><r>southwest</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>үнемді</l><r>sparingly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>айрықша</l><r>specially</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>айрықша</l><r>specifically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>эффектілі</l><r>spectacularly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>рухани</l><r>spiritually</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ауызекі</l><r>spontaneously</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>спорадикалы</l><r>sporadically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>отырыңқырап</l><r>squatting</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>төзімді</l><r>steadily</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әлі_де_болса</l><r>still</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>астан-кестең</l><r>strangely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>біртүрлі</l><r>strangely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>стратегиялы</l><r>strategically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қатал</l><r>strictly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қатты</l><r>strongly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>табанды</l><r>stubbornly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ақырында</l><r>subsequently</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>байыпты</l><r>substantially</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жіңішке</l><r>subtly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ойдағыдай</l><r>successfully</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жүйелі</l><r>successively</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>аяқасты</l><r>suddenly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>біраз</l><r>sufficiently</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>тамаша</l><r>superbly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>долбарлы</l><r>supposedly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әлбетте</l><r>surely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>таңқаларлық</l><r>surprisingly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>сезікті</l><r>suspiciously</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>тез</l><r>swiftly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>символикалы</l><r>symbolically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әрдайым</l><r>systematically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жүйелі</l><r>systemic</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>техникалық</l><r>technically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>технологиялық</l><r>technologically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>уақытша</l><r>temporarily</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>нәзік</l><r>tenderly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>масқара</l><r>terribly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>аумақтық</l><r>territorially</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>алғысты</l><r>thankfully</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>сосын</l><r>then</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қағидалы</l><r>theoretically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>анда</l><r>there</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>бұдан_кейін</l><r>thereafter</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ақырында</l><r>thereby</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>себепті</l><r>thereof</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>осында</l><r>thither</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>толықтай</l><r>thoroughly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>тым</l><r>though</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>үш_рет</l><r>thrice</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жаппай</l><r>throughout</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>шиеленісті</l><r>tightly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>бүгін</l><r>today</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>бірге</l><r>together</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ертең</l><r>tomorrow</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>кешке</l><r>tonight</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>өте</l><r>too</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>толықтай</l><r>totally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>дәстүрлі</l><r>traditionally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>трагедиялық</l><r>tragically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>мөлдір</l><r>transparently</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>төтенше</l><r>tremendously</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>шындап</l><r>truly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>екі_ретті</l><r>twice</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қарапайым</l><r>typically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>соңында</l><r>ultimately</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жетімсіз</l><r>unacceptably</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>бірмәнді</l><r>unambiguously</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>бiрауыздан</l><r>unanimously</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ұялмай-қызармай</l><r>unashamedly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>нанғысыз</l><r>unbelievably</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>сөзсіз</l><r>unconditionally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>астында</l><r>under</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>төменде</l><r>underneath</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жұмыс_үстінде</l><r>underway</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әлбетте</l><r>undoubtedly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>тынымсыз</l><r>uneasily</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>кедір-бұдырлы</l><r>unevenly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>абайсызда</l><r>unexpectedly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>заңсыз</l><r>unfairly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>өкінішті</l><r>unfortunately</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>бірыңғай</l><r>uniformly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>біржақты</l><r>unilaterally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әдейсіз</l><r>unintentionally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>бірегей</l><r>uniquely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әмбебапты</l><r>universally</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>артық</l><r>unnecessarily</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>даусыз</l><r>unquestionably</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>таңқаларлық</l><r>unusually</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жоғары</l><r>up</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>маңыздысы</l><r>uppermost</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жоғары_ағысқа</l><r>upstream</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жоғары_қарай</l><r>upward</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жоғары</l><r>upwards</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>шұғыл</l><r>urgently</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>пайдалы</l><r>usefully</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әдетте</l><r>usually</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>шеткі</l><r>utterly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>өлердей</l><r>vehemently</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>тіке</l><r>vertically</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қарқынмен</l><r>vigorously</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қатты</l><r>violently</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>виртуалді</l><r>virtually</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>елеулі</l><r>visibly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ерікті</l><r>voluntarily</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жылы</l><r>warmly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>баяу</l><r>weakly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қалжырап</l><r>wearily</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>апта_сайын</l><r>weekly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жақсы</l><r>well</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жақсы</l><r>wellbeing</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>батысқа_қарай</l><r>westward</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>батысқа</l><r>westwards</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>жалпы</l><r>whatsoever</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>арқылы</l><r>whereby</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>онда</l><r>wherein</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қайда</l><r>whither</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>бүкпесіз</l><r>wholeheartedly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>тұтастай</l><r>wholly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>кеңінен</l><r>widely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ынталана</l><r>willingly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>даналы</l><r>wisely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>ішінара</l><r>within</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>кереметтей</l><r>wonderfully</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>арада</l><r>worldwide</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қателі</l><r>wrong</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қателі</l><r>wrongly</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>кеше</l><r>yesterday</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әзірше</l><r>yet</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әуелі</l><r>yet</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>мүлде</l><r>absolutely</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>барынша</l><r>most</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>еш</l><r>no</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>әрқашан</l><r>always</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>біршама</l><r>relatively</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>бетінше</l><r>independently</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>алғаш</l><r>first</r></p><par n="ADV_ADV"/></e>
+
       <!-- SECTION: Verbos -->
       <e><p><l>баста</l><r>start<s n="sense"/>0</r></p><par n='VAUX_VAUX'/></e>
       <e><p><l>жат</l><r></r></p><par n='VAUX_VAUX'/></e>
+      <e><p><l>тұр</l><r></r></p><par n='VAUX_VAUX'/></e>
 
       <e><p><l>сөйле</l><r>speak<s n="sense"/>0</r></p><par n='V-TV_V'/></e>
       <e><p><l>баста</l><r>start<s n="sense"/>0</r></p><par n='V-TV_V'/></e>
@@ -12025,7 +12862,7 @@
       <e><p><l>ұста</l><r>catch<s n="sense"/>0</r></p><par n="V-TV_V"/></e>
       <e><p><l>түзе</l><r>patch<s n="sense"/>0</r></p><par n="V-TV_V"/></e>
       <e><p><l>тырна</l><r>scratch<s n="sense"/>0</r></p><par n="V-TV_V"/></e>
-      <e><p><l>қара</l><r>watch<s n="sense"/>0</r></p><par n="V-IV_V"/></e>
+      <e><p><l>қара</l><r>watch<s n="sense"/>0</r></p><par n="V-TV_V"/></e>
       <e><p><l>ұна</l><r>fetch<s n="sense"/>0</r></p><par n="V-IV_V"/></e>
       <e><p><l>соз</l><r>stretch<s n="sense"/>0</r></p><par n="V-TV_V"/></e>
       <e><p><l>тік</l><r>stitch<s n="sense"/>0</r></p><par n="V-TV_V"/></e>
