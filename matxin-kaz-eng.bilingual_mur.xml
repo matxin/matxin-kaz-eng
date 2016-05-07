@@ -64,6 +64,10 @@
       <e><p><l><s n="parol"/>adv</l><r><s n="pos"/>preadv</r></p></e>
     </pardef>
 
+    <pardef n="NUM_NUM">
+      <e><p><l><s n="parol"/>num</l><r><s n="pos"/>num<s n="num"/>ND</r></p></e>
+    </pardef>
+
     <pardef n="DET-IND_DET-IND">
       <e><p><l><s n="parol"/>det|ind</l><r><s n="pos"/>det|ind<s n="num"/>sg</r></p></e>
     </pardef>
@@ -88,8 +92,16 @@
       <e><p><l><s n="parol"/>np|ant|f</l><r><s n="pos"/>np|ant<s n="gen"/>f</r></p><par n="POSS"/></e>
     </pardef>
 
+    <pardef n="IJ_IJ">
+      <e><p><l><s n="parol"/>ij</l><r><s n="pos"/>ij</r></p></e>
+    </pardef>
+
     <pardef n="CNJCOO_CNJCOO">
       <e><p><l><s n="parol"/>cnjcoo</l><r><s n="pos"/>cnjcoo</r></p></e>
+    </pardef>
+
+    <pardef n="CNJADV_CNJCOO">
+      <e><p><l><s n="parol"/>cnjadv</l><r><s n="pos"/>cnjcoo</r></p></e>
     </pardef>
 
     <pardef n="A1_A">
@@ -203,6 +215,7 @@
 
       <e><p><l>және</l><r>and<s n="sense"/>0</r></p><par n='CNJCOO_CNJCOO'/></e>
       <e><p><l>мен</l><r>and<s n="sense"/>0</r></p><par n='CNJCOO_CNJCOO'/></e>
+      <e><p><l>бірақ</l><r>but<s n="sense"/>0</r></p><par n='CNJCOO_CNJCOO'/></e>
 
       <!-- SECTION: Adpositions -->
       <e><p><l>бері</l><r>since<s n="sense"/>0</r></p><par n='POST_PREP'/></e>
@@ -217,6 +230,10 @@
       <e><p><l>ол</l><r>she<s n="sense"/>0</r></p><par n='OL_HE/SHE/IT'/></e>
       <e><p><l>ол</l><r>it<s n="sense"/>0</r></p><par n='OL_HE/SHE/IT'/></e>
       <e><p><l>олар</l><r>they<s n="sense"/>0</r></p><par n='OLAR_THEY'/></e>
+
+      <!-- SECTION: Determiners -->
+      <e><p><l>бес</l><r>five<s n="sense"/>0</r></p><par n='NUM_NUM'/></e>
+      <e><p><l>алты</l><r>six<s n="sense"/>0</r></p><par n='NUM_NUM'/></e>
 
       <!-- SECTION: Nouns -->
       <e><p><l>радиан</l><r>radian<s n="sense"/>0</r></p><par n='N1_N'/></e>
@@ -1404,7 +1421,7 @@
       <e><p><l>басист</l><r>bassist<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>фагот</l><r>bassoon<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>бас</l><r>bass<s n="sense"/>0</r></p><par n="N1_N"/></e>
-      <e><p><l>бала</l><r>bastard<s n="sense"/>0</r></p><par n="N1_N"/></e>
+      <!--<e><p><l>бала</l><r>bastard<s n="sense"/>0</r></p><par n="N1_N"/></e>-->
       <e><p><l>бастион</l><r>bastion<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>жөке</l><r>bast<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>батальон</l><r>batallion<s n="sense"/>0</r></p><par n="N1_N"/></e>
@@ -11291,6 +11308,7 @@
 
       <!-- SECTION: Adjectives -->
       <e><p><l>бар</l><r>existing<s n="sense"/>0</r></p><par n='A1_A'/></e>
+      <e><p><l>жоқ</l><r>inexistant<s n="sense"/>0</r></p><par n='A1_A'/></e>
 
       <e><p><l>басқа</l><r>other<s n="sense"/>0</r></p><par n='A1_A'/></e>
       <e><p><l>ерте</l><r>early<s n="sense"/>0</r></p><par n='A1_A-SINT'/></e>
@@ -11298,6 +11316,7 @@
 
 
   
+      <e><p><l>жасар</l><r>years<b/>old<s n="sense"/>0</r></p><par n='A1_A'/></e>
       <e><p><l>қатты</l><r>sound<s n="sense"/>0</r></p><par n="A1_A-SINT"/></e>
       <e><p><l>жақсы</l><r>good<s n="sense"/>0</r></p><par n="A1_A-SINT"/></e>
       <e><p><l>сапалы</l><r>good<s n="sense"/>0</r></p><par n="A1_A-SINT"/></e>
@@ -11507,16 +11526,16 @@
       <e><p><l>жас</l><r>young<s n="sense"/>0</r></p><par n="A1_A-SINT"/></e>
       <e><p><l>үлкен</l><r>great<s n="sense"/>0</r></p><par n="A1_A-SINT"/></e>
       <e><p><l>үлкен</l><r>large<s n="sense"/>0</r></p><par n="A1_A-SINT"/></e>
-      <e><p><l>үлкен</l><r>more<s n="sense"/>0</r></p><par n="A1_A-SINT"/></e>
-      <e><p><l>үлкен</l><r>tremendous<s n="sense"/>0</r></p><par n="A1_A-SINT"/></e>
-      <e><p><l>үлкен</l><r>formidable<s n="sense"/>0</r></p><par n="A1_A-SINT"/></e>
-      <e><p><l>үлкен</l><r>senior<s n="sense"/>0</r></p><par n="A1_A-SINT"/></e>
-      <e><p><l>үлкен</l><r>gigantic<s n="sense"/>0</r></p><par n="A1_A-SINT"/></e>
+      <e><p><l>үлкен</l><r>more<s n="sense"/>0</r></p><par n="A1_A"/></e>
+      <e><p><l>үлкен</l><r>tremendous<s n="sense"/>0</r></p><par n="A1_A"/></e>
+      <e><p><l>үлкен</l><r>formidable<s n="sense"/>0</r></p><par n="A1_A"/></e>
+      <e><p><l>үлкен</l><r>senior<s n="sense"/>0</r></p><par n="A1_A"/></e>
+      <e><p><l>үлкен</l><r>gigantic<s n="sense"/>0</r></p><par n="A1_A"/></e>
       <e><p><l>қатты</l><r>sound<s n="sense"/>0</r></p><par n="A1_A-SINT"/></e>
       <e><p><l>қатты</l><r>firm<s n="sense"/>0</r></p><par n="A1_A-SINT"/></e>
       <e><p><l>үлкен</l><r>more<s n="sense"/>0</r></p><par n="A1_A-SINT"/></e>
       <e><p><l>қатты</l><r>high<s n="sense"/>0</r></p><par n="A1_A-SINT"/></e>
-      <e><p><l>түрлі</l><r>several<s n="sense"/>0</r></p><par n="A1_A-SINT"/></e>
+      <e><p><l>түрлі</l><r>several<s n="sense"/>0</r></p><par n="A1_A"/></e>
 
       <!-- SECTION: Adverbs -->
       <e><p><l>тым</l><r>though<s n="sense"/>0</r></p><par n='ADV_ADV'/></e>
@@ -12312,6 +12331,7 @@
       <e><p><l>көрін</l><r>appear<s n="sense"/>0</r></p><par n='V-IV_V'/></e>
       <e><p><l>көрін</l><r>seem<s n="sense"/>0</r></p><par n='V-IV_V'/></e>
 
+      <e><p><l>жақсы<b/>көр</l><r>like<s n="sense"/>0</r></p><par n="V-TV_V"/></e>
 
       <e><p><l>ұр</l><r>jab<s n="sense"/>0</r></p><par n="V-TV_V"/></e>
       <e><p><l>өрле</l><r>climb<s n="sense"/>0</r></p><par n="V-IV_V"/></e>
@@ -14033,6 +14053,10 @@
       <e><p><l>идентификацияла</l><r>identity<s n="sense"/>0</r></p><par n="V-TV_V"/></e>
       <e><p><l>күнде</l><r>envy<s n="sense"/>0</r></p><par n="V-TV_V"/></e>
       <e><p><l>гуілде</l><r>buzz<s n="sense"/>0</r></p><par n="V-IV_V"/></e>
+
+      <!-- SECTION: Punctuation -->
+
+      <e><p><l>жоқ</l><r>no<s n="sense"/>0</r></p><par n="IJ_IJ"/></e>
 
       <!-- SECTION: Punctuation -->
       <e><re>[.!\?]</re><p><l><s n="parol"/>sent</l><r><s n="pos"/>sent</r></p></e>

@@ -25,8 +25,8 @@
    </template>
 </rule>
 
-<rule comment="Add a daughter node for the clitic genitive, but not if it's a pronoun">
-   <template match="//NODE[@cas='gen' and @pos != 'prn|pers']">
+<rule comment="Add a daughter node for the clitic genitive, but not if it's a pronoun or if it is in an existential construction">
+   <template match="//NODE[@cas='gen' and @pos != 'prn|pers' and ..//CHUNK/NODE[@slem='бар']]">
      <copy>
        <apply-templates select="@* | *"/>
        <NODE lem="'s" pos="gen"/>
@@ -157,6 +157,36 @@
        <apply-templates select="@*[name()!='num'] | *"/>
     </copy>
   </template>
+</rule>
+
+
+<rule comment="The possessor becomes the subject of 'have'">
+ 
+  <template match="//NODE[@slem='бар']">
+    <copy>
+       <apply-templates select="@* | *"/>
+          <copy-of select="parent::CHUNK/CHUNK[@si='subj']//NODE[@cas='gen']"/>
+    </copy>
+  </template>
+
+</rule>
+
+<rule comment="years old">
+
+  <template match="//NODE[@slem='жас' and @smi='n|loc' and NODE/@smi='num']">
+    <copy>
+       <apply-templates select="@* | *"/>
+       <NODE lem='year old' pos='n' num='pl'/>
+    </copy>
+  </template>
+
+  <template match="//NODE[@slem='жасар' and @smi='adj' and NODE/@smi='num']">
+    <copy>
+       <apply-templates select="@* | *"/>
+       <NODE lem='year old' pos='n' num='pl'/>
+    </copy>
+  </template>
+
 
 
 </rule>
