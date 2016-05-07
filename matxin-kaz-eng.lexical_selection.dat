@@ -11,5 +11,5 @@
 #     + : default value for lemmaSRC
 
 
-'final'		'bukaera'	my.smi=~'NCM'	-
-'final'		'final'	my.smi=~'NCF'	+
+'дала'		'field'	my.smi=~'n'	-
+'дала'		'outside'	my.smi='n|loc'	+

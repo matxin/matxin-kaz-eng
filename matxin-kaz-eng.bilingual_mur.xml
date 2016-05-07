@@ -5,6 +5,7 @@
     <sdef n='pos'/>
     <sdef n='def'/>
     <sdef n='num'/>
+    <sdef n='neg'/>
     <sdef n='per'/>
     <sdef n='cas'/>
     <sdef n='gen'/>
@@ -13,6 +14,7 @@
     <sdef n='px'/>
     <sdef n='prep'/>
     <sdef n='spost'/>
+    <sdef n='func'/>
     <sdef n='vpost'/>
     <sdef n='suf'/>
     <sdef n='parol'/>
@@ -25,6 +27,7 @@
       <e><p><l>|acc</l><r><s n="cas"/>acc</r></p></e>
       <e><p><l>|dat</l><r><s n="cas"/>dat</r></p></e>
       <e><p><l>|loc</l><r><s n="cas"/>loc</r></p></e>
+      <e><p><l>|loc|attr</l><r><s n="cas"/>loc<s n="func"/>attr</r></p></e>
       <e><p><l>|abl</l><r><s n="cas"/>abl</r></p></e>
       <e><p><l>|ins</l><r><s n="cas"/>ins</r></p></e>
     </pardef>
@@ -54,6 +57,11 @@
     <pardef n="POST_PREP">
       <e><p><l><s n="parol"/>post</l><r><s n="pos"/>pr</r></p></e>
     </pardef>
+
+    <pardef n="N-LOC_ADV">
+      <e><p><l><s n="parol"/>n|loc</l><r><s n="pos"/>adv</r></p></e>
+    </pardef>
+
 
     <pardef n="POSTADV_ADV">
       <e><p><l><s n="parol"/>postadv</l><r><s n="pos"/>adv</r></p></e>
@@ -100,8 +108,8 @@
       <e><p><l><s n="parol"/>cnjcoo</l><r><s n="pos"/>cnjcoo</r></p></e>
     </pardef>
 
-    <pardef n="CNJADV_CNJCOO">
-      <e><p><l><s n="parol"/>cnjadv</l><r><s n="pos"/>cnjcoo</r></p></e>
+    <pardef n="CNJADV_CNJADV">
+      <e><p><l><s n="parol"/>cnjadv</l><r><s n="pos"/>cnjadv</r></p></e>
     </pardef>
 
     <pardef n="A1_A">
@@ -136,6 +144,7 @@
       <e><p><l>|px3sp</l><r><s n="pers"/>p3<s n="num"/>ND</r></p><par n="CASE"/></e>
       <e><p><l>|px1pl</l><r><s n="pers"/>p1<s n="num"/>pl</r></p><par n="CASE"/></e>
       <e><p><l>|px2pl</l><r><s n="pers"/>p2<s n="num"/>pl</r></p><par n="CASE"/></e>
+      <e><p><l></l><r></r></p><par n="CASE"/></e>
     </pardef>
 
     <pardef n="GER_GER">
@@ -161,6 +170,7 @@
 
     <pardef n="PRC_PRC">
       <e><p><l>|prc_perf</l><r><s n="tam"/>perf</r></p></e>
+      <e><p><l>|prc_impf</l><r><s n="tam"/>impf</r></p></e>
       <e><p><l>|prc_cond</l><r><s n="tam"/>cond</r></p></e>
       <e><p><l>|prc_until</l><r><s n="tam"/>until</r></p></e>
       <e><p><l>|prc_after</l><r><s n="tam"/>after</r></p></e>
@@ -170,40 +180,47 @@
       <e><p><l><s n="parol"/>cop</l><r><s n="pos"/>vbser</r></p><par n="FIN_FIN"/></e>
     </pardef>
 
+    <pardef n="V-MORF_V-MORF">
+      <e><p><l></l><r></r></p><par n="FIN_FIN"/></e>
+      <e><p><l></l><r></r></p><par n="GNA_GNA"/></e>
+      <e><p><l></l><r></r></p><par n="GPR_GPR"/></e>
+      <e><p><l></l><r></r></p><par n="PRC_PRC"/></e>
+      <e><p><l></l><r></r></p><par n="GER_GER"/></e>
+    </pardef>
+
     <pardef n="VAUX_VAUX">
-      <e><p><l><s n="parol"/>vaux</l><r><s n="pos"/>vaux</r></p><par n="FIN_FIN"/></e>
-      <e><p><l><s n="parol"/>vaux</l><r><s n="pos"/>vaux</r></p><par n="GNA_GNA"/></e>
-      <e><p><l><s n="parol"/>vaux</l><r><s n="pos"/>vaux</r></p><par n="GPR_GPR"/></e>
-      <e><p><l><s n="parol"/>vaux</l><r><s n="pos"/>vaux</r></p><par n="PRC_PRC"/></e>
-      <e><p><l><s n="parol"/>vaux</l><r><s n="pos"/>vaux</r></p><par n="GER_GER"/></e>
+      <e><p><l><s n="parol"/>vaux</l><r><s n="pos"/>vaux</r></p><par n="V-MORF_V-MORF"/></e>
+      <e><p><l><s n="parol"/>vaux|neg</l><r><s n="pos"/>vaux<s n="neg"/>neg</r></p><par n="V-MORF_V-MORF"/></e>
     </pardef>
 
     <pardef n="V-TV_V">
-      <e><p><l><s n="parol"/>v|tv</l><r><s n="pos"/>vblex</r></p><par n="FIN_FIN"/></e>
-      <e><p><l><s n="parol"/>v|tv</l><r><s n="pos"/>vblex</r></p><par n="GNA_GNA"/></e>
-      <e><p><l><s n="parol"/>v|tv</l><r><s n="pos"/>vblex</r></p><par n="GPR_GPR"/></e>
-      <e><p><l><s n="parol"/>v|tv</l><r><s n="pos"/>vblex</r></p><par n="PRC_PRC"/></e>
-      <e><p><l><s n="parol"/>v|tv</l><r><s n="pos"/>vblex</r></p><par n="GER_GER"/></e>
+      <e><p><l><s n="parol"/>v|tv</l><r><s n="pos"/>vblex</r></p><par n="V-MORF_V-MORF"/></e>
+      <e><p><l><s n="parol"/>v|tv|neg</l><r><s n="pos"/>vblex<s n="neg"/>neg</r></p><par n="V-MORF_V-MORF"/></e>
     </pardef>
 
     <pardef n="V-IV_V">
-      <e><p><l><s n="parol"/>v|iv</l><r><s n="pos"/>vblex</r></p><par n="FIN_FIN"/></e>
-      <e><p><l><s n="parol"/>v|iv</l><r><s n="pos"/>vblex</r></p><par n="GNA_GNA"/></e>
-      <e><p><l><s n="parol"/>v|iv</l><r><s n="pos"/>vblex</r></p><par n="GPR_GPR"/></e>
-      <e><p><l><s n="parol"/>v|iv</l><r><s n="pos"/>vblex</r></p><par n="PRC_PRC"/></e>
-      <e><p><l><s n="parol"/>v|iv</l><r><s n="pos"/>vblex</r></p><par n="GER_GER"/></e>
+      <e><p><l><s n="parol"/>v|iv</l><r><s n="pos"/>vblex</r></p><par n="V-MORF_V-MORF"/></e>
+      <e><p><l><s n="parol"/>v|iv|neg</l><r><s n="pos"/>vblex<s n="neg"/>neg</r></p><par n="V-MORF_V-MORF"/></e>
     </pardef>
 
     <pardef n="SIZ_YOU">
       <e><p><l><s n="parol"/>prn|pers|p2|sg|frm</l><r><s n="pos"/>prn|pers<s n="pers"/>p2<s n="num"/>sg</r></p><par n="CASE"/></e>
     </pardef>
 
-    <pardef n="OL_HE/SHE/IT">
-      <e><p><l><s n="parol"/>prn|pers|p3|sg</l><r><s n="pos"/>prn|pers<s n="pers"/>p3<s n="gen"/>GD<s n="num"/>sg</r></p><par n="CASE"/></e>
+    <pardef n="OL_HE">
+      <e><p><l><s n="parol"/>prn|pers|p3|sg</l><r><s n="pos"/>prn|pers<s n="pers"/>p3<s n="gen"/>m<s n="num"/>sg</r></p><par n="CASE"/></e>
+    </pardef>
+
+    <pardef n="OL_SHE">
+      <e><p><l><s n="parol"/>prn|pers|p3|sg</l><r><s n="pos"/>prn|pers<s n="pers"/>p3<s n="gen"/>f<s n="num"/>sg</r></p><par n="CASE"/></e>
+    </pardef>
+
+    <pardef n="OL_IT">
+      <e><p><l><s n="parol"/>prn|pers|p3|sg</l><r><s n="pos"/>prn|pers<s n="pers"/>p3<s n="gen"/>nt<s n="num"/>sg</r></p><par n="CASE"/></e>
     </pardef>
 
     <pardef n="OLAR_THEY">
-      <e><p><l><s n="parol"/>prn|pers|p3|pl</l><r><s n="pos"/>prn|pers<s n="pers"/>p3<s n="num"/>pl</r></p><par n="CASE"/></e>
+      <e><p><l><s n="parol"/>prn|pers|p3|pl</l><r><s n="pos"/>prn|pers<s n="pers"/>p3<s n="gen"/>mf<s n="num"/>pl</r></p><par n="CASE"/></e>
     </pardef>
 
   </pardefs>
@@ -216,9 +233,12 @@
       <e><p><l>және</l><r>and<s n="sense"/>0</r></p><par n='CNJCOO_CNJCOO'/></e>
       <e><p><l>мен</l><r>and<s n="sense"/>0</r></p><par n='CNJCOO_CNJCOO'/></e>
       <e><p><l>бірақ</l><r>but<s n="sense"/>0</r></p><par n='CNJCOO_CNJCOO'/></e>
+      <e><p><l>осы<b/>себептен</l><r>therefore<s n="sense"/>0</r></p><par n='CNJADV_CNJADV'/></e>
+      <e><p><l>осы<b/>себептен</l><r>so<s n="sense"/>0</r></p><par n='CNJADV_CNJADV'/></e>
 
       <!-- SECTION: Adpositions -->
       <e><p><l>бері</l><r>since<s n="sense"/>0</r></p><par n='POST_PREP'/></e>
+      <e><p><l>қарай</l><r>towards<s n="sense"/>0</r></p><par n='POST_PREP'/></e>
 
       <!-- SECTION: Determiners -->
 
@@ -226,9 +246,9 @@
 
       <!-- SECTION: Pronouns -->
       <e><p><l>сіз</l><r>you<s n="sense"/>0</r></p><par n='SIZ_YOU'/></e>
-      <e><p><l>ол</l><r>he<s n="sense"/>0</r></p><par n='OL_HE/SHE/IT'/></e>
-      <e><p><l>ол</l><r>she<s n="sense"/>0</r></p><par n='OL_HE/SHE/IT'/></e>
-      <e><p><l>ол</l><r>it<s n="sense"/>0</r></p><par n='OL_HE/SHE/IT'/></e>
+      <e><p><l>ол</l><r>he<s n="sense"/>0</r></p><par n='OL_HE'/></e>
+      <e><p><l>ол</l><r>she<s n="sense"/>0</r></p><par n='OL_SHE'/></e>
+      <e><p><l>ол</l><r>it<s n="sense"/>0</r></p><par n='OL_IT'/></e>
       <e><p><l>олар</l><r>they<s n="sense"/>0</r></p><par n='OLAR_THEY'/></e>
 
       <!-- SECTION: Determiners -->
@@ -236,6 +256,11 @@
       <e><p><l>алты</l><r>six<s n="sense"/>0</r></p><par n='NUM_NUM'/></e>
 
       <!-- SECTION: Nouns -->
+
+      <e><p><l>алд</l><r>front<s n="sense"/>0</r></p><par n="N1_N"/></e>
+      <e><p><l>арт</l><r>back<s n="sense"/>0</r></p><par n="N1_N"/></e>
+
+
       <e><p><l>радиан</l><r>radian<s n="sense"/>0</r></p><par n='N1_N'/></e>
       <e><p><l>орысша</l><r>Russian<s n="sense"/>0</r></p><par n='N1_N'/></e>
       <e><p><l>жер</l><r>earth<s n="sense"/>0</r></p><par n='N1_N'/></e>
@@ -4699,6 +4724,7 @@
       <e><p><l>зімбір</l><r>ginger<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>керік</l><r>giraffe<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>серік</l><r>girlfriend<s n="sense"/>0</r></p><par n="N1_N"/></e>
+      <!--<e><p><l>қыз</l><r>virgin<s n="sense"/>0</r></p><par n="N1_N"/></e>-->
       <e><p><l>қыз</l><r>girl<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>екінші_асқазан</l><r>gizzard<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>мұз_басу</l><r>Glaciation<s n="sense"/>0</r></p><par n="N1_N"/></e>
@@ -10745,7 +10771,6 @@
       <e><p><l>скрипка</l><r>violin<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>ну</l><r>virginity<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>Дева</l><r>Virgin<s n="sense"/>0</r></p><par n="N1_N"/></e>
-      <e><p><l>қыз</l><r>virgin<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>вироид</l><r>viroid<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>вирусология</l><r>virology<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>жақсылық</l><r>virtue<s n="sense"/>0</r></p><par n="N1_N"/></e>
@@ -11317,6 +11342,8 @@
 
   
       <e><p><l>жасар</l><r>years<b/>old<s n="sense"/>0</r></p><par n='A1_A'/></e>
+      <e><p><l>қуанышты</l><r>happy<s n="sense"/>0</r></p><par n="A1_A-SINT"/></e>
+      <e><p><l>қуанышты</l><r>content<s n="sense"/>0</r></p><par n="A1_A"/></e>
       <e><p><l>қатты</l><r>sound<s n="sense"/>0</r></p><par n="A1_A-SINT"/></e>
       <e><p><l>жақсы</l><r>good<s n="sense"/>0</r></p><par n="A1_A-SINT"/></e>
       <e><p><l>сапалы</l><r>good<s n="sense"/>0</r></p><par n="A1_A-SINT"/></e>
@@ -11540,7 +11567,9 @@
       <!-- SECTION: Adverbs -->
       <e><p><l>тым</l><r>though<s n="sense"/>0</r></p><par n='ADV_ADV'/></e>
       <e><p><l>тым</l><r>overly<s n="sense"/>0</r></p><par n='ADV_PREADV'/></e>
+      <e><p><l>әбден</l><r>very</r></p><par n="ADV_PREADV"/></e>
       <e><p><l>да</l><r>also<s n="sense"/>0</r></p><par n='POSTADV_ADV'/></e>
+      <e><p><l>дала</l><r>outside<s n="sense"/>0</r></p><par n='N-LOC_ADV'/></e>
 
       <e><p><l>қайда</l><r>where<s n="sense"/>0</r></p><par n='ADV-ITG_ADV-ITG'/></e>
 
@@ -12321,6 +12350,7 @@
       <e><p><l>баста</l><r>start<s n="sense"/>0</r></p><par n='VAUX_VAUX'/></e>
       <e><p><l>жат</l><r></r></p><par n='VAUX_VAUX'/></e>
       <e><p><l>тұр</l><r></r></p><par n='VAUX_VAUX'/></e>
+      <e><p><l>ал</l><r>can</r></p><par n='VAUX_VAUX'/></e>
 
       <e><p><l>сөйле</l><r>speak<s n="sense"/>0</r></p><par n='V-TV_V'/></e>
       <e><p><l>баста</l><r>start<s n="sense"/>0</r></p><par n='V-TV_V'/></e>

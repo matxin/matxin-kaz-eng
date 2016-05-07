@@ -25,6 +25,28 @@
    </template>
 </rule>
 
+<rule>
+   <template match="//NODE[@neg='neg']">
+     <copy>
+       <apply-templates select="@* | *"/>
+       <NODE lem="not" pos="adv"/>
+     </copy>
+   </template>
+</rule>
+
+
+
+<rule comment="If you have one of the words that takes 'of', e.g. алд, then add a prep 'of' to the dependent noun">
+
+   <template match="//NODE[@cas='gen' and ../NODE/@slem='алд']">
+     <copy>
+       <apply-templates select="@* | *"/>
+       <NODE lem="of" pos="pr"/>
+     </copy>
+   </template>
+
+</rule>
+
 <rule comment="Add a daughter node for the clitic genitive, but not if it's a pronoun or if it is in an existential construction">
    <template match="//NODE[@cas='gen' and @pos != 'prn|pers' and ..//CHUNK/NODE[@slem='бар']]">
      <copy>
@@ -130,6 +152,17 @@
   </template>
 </rule>
 
+<rule comment="Resolve aor to pri">
+  <template match="//NODE[@tam = 'aor']">
+    <copy>
+       <copy-of select="@*[name()!='tam']"/>
+       <attribute name="tam">pri</attribute>
+       <apply-templates select="@*[name()!='tam'] | *"/>
+    </copy>
+  </template>
+</rule>
+
+
 <rule comment="Translate бар with dependent copula to have and drop the copula">
 
   <template match="//NODE[@slem = 'бар' and NODE/@pos = 'vbser']">
@@ -187,9 +220,6 @@
     </copy>
   </template>
 
-
-
 </rule>
-
 
 </transfer>

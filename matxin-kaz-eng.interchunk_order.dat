@@ -4,3 +4,4 @@
 si='root'					si='subj'	.*?	x2.x1
 si='root'					si='punct'	.*?	x1.x2
 si='root'					si='ccomp'	.*?	x1.x2
+si='ccomp'					si='nmod'	.*?	x1.x2
