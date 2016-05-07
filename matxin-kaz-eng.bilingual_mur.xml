@@ -156,6 +156,7 @@
 
     <pardef n="GPR_GPR">
       <e><p><l>|gpr_perf</l><r><s n="tam"/>perf</r></p></e>
+      <e><p><l>|gpr_past</l><r><s n="tam"/>past</r></p></e>
       <e><p><l>|gpr_impf</l><r><s n="tam"/>impf</r></p></e>
       <e><p><l>|gpr_pot</l><r><s n="tam"/>pot</r></p></e>
       <e><p><l>|gpr_fut</l><r><s n="tam"/>fut</r></p></e>
@@ -186,6 +187,11 @@
       <e><p><l></l><r></r></p><par n="GPR_GPR"/></e>
       <e><p><l></l><r></r></p><par n="PRC_PRC"/></e>
       <e><p><l></l><r></r></p><par n="GER_GER"/></e>
+    </pardef>
+
+    <pardef n="VAUX_VBMOD">
+      <e><p><l><s n="parol"/>vaux</l><r><s n="pos"/>vbmod</r></p><par n="V-MORF_V-MORF"/></e>
+      <e><p><l><s n="parol"/>vaux|neg</l><r><s n="pos"/>vbmod<s n="neg"/>neg</r></p><par n="V-MORF_V-MORF"/></e>
     </pardef>
 
     <pardef n="VAUX_VAUX">
@@ -12350,7 +12356,7 @@
       <e><p><l>баста</l><r>start<s n="sense"/>0</r></p><par n='VAUX_VAUX'/></e>
       <e><p><l>жат</l><r></r></p><par n='VAUX_VAUX'/></e>
       <e><p><l>тұр</l><r></r></p><par n='VAUX_VAUX'/></e>
-      <e><p><l>ал</l><r>can</r></p><par n='VAUX_VAUX'/></e>
+      <e><p><l>ал</l><r>can</r></p><par n='VAUX_VBMOD'/></e>
 
       <e><p><l>сөйле</l><r>speak<s n="sense"/>0</r></p><par n='V-TV_V'/></e>
       <e><p><l>баста</l><r>start<s n="sense"/>0</r></p><par n='V-TV_V'/></e>

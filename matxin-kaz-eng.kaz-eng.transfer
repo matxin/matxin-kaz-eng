@@ -90,6 +90,17 @@
 
 </rule>
 
+<rule>
+  <template match="//NODE[contains(@smi, 'gpr_')]">
+    <copy>
+       <copy-of select="@*[name()!='mi']"/>
+       <attribute name="mi">ger</attribute>
+       <apply-templates select="@*[name()!='mi'] | *"/>
+    </copy>
+  </template>
+
+</rule>
+
 
 <rule comment="Set the translation of the verb 'тұр' to 'be' if it is in present tense and there is a previous gerund">
 
