@@ -108,19 +108,6 @@
 
 </rule>
 
-<rule comment="Resolve ND to singular if there is no dependent numeral">
-
-  <template match="//NODE[@num = 'ND' and not(NODE/@pos = 'num')]">
-    <copy>
-       <copy-of select="@*[name()!='num']"/>
-       <attribute name="num">sg</attribute>
-       <apply-templates select="@*[name()!='num'] | *"/>
-    </copy>
-  </template>
-
-
-</rule>
-
 <rule>
 
   <template match="//NODE[@pos = 'vbser' and @tam = 'aor']">
@@ -133,8 +120,7 @@
 
 </rule>
 
-<rule comment="Resolve ifi past">
-
+<rule comment="Resolve ifi to past">
   <template match="//NODE[@tam = 'ifi']">
     <copy>
        <copy-of select="@*[name()!='tam']"/>
@@ -142,10 +128,38 @@
        <apply-templates select="@*[name()!='tam'] | *"/>
     </copy>
   </template>
+</rule>
 
+<rule comment="Translate бар with dependent copula to have and drop the copula">
+
+  <template match="//NODE[@slem = 'бар' and NODE/@pos = 'vbser']">
+    <copy>
+       <copy-of select="@*[name()!='tam' and name()!='lem' and name()!='pos']"/>
+       <attribute name="lem">have</attribute>
+       <attribute name="pos">vblex</attribute>
+       <attribute name="pers"><value-of select="..//CHUNK[@si='subj']/NODE[@px]"/></attribute>
+       <attribute name="num">ND</attribute>
+       <attribute name="tam"><value-of select="NODE/@tam"/></attribute>
+       <apply-templates select="@*[name()!='tam' and name()!='lem' and name()!='pos'] | *"/>
+    </copy>
+  </template>
+
+  <template match="//NODE[@slem = 'е' and ../@slem = 'бар']"/>
 
 </rule>
 
+<rule comment="Resolve ND to singular if there is no dependent numeral">
+
+  <template match="//NODE[@num = 'ND' and not(NODE/@pos = 'num')]">
+    <copy>
+       <copy-of select="@*[name()!='num']"/>
+       <attribute name="num">sg</attribute>
+       <apply-templates select="@*[name()!='num'] | *"/>
+    </copy>
+  </template>
+
+
+</rule>
 
 
 </transfer>

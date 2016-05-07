@@ -55,8 +55,17 @@
       <e><p><l><s n="parol"/>post</l><r><s n="pos"/>pr</r></p></e>
     </pardef>
 
+    <pardef n="POSTADV_ADV">
+      <e><p><l><s n="parol"/>postadv</l><r><s n="pos"/>adv</r></p></e>
+    </pardef>
+
+
     <pardef n="ADV_PREADV">
       <e><p><l><s n="parol"/>adv</l><r><s n="pos"/>preadv</r></p></e>
+    </pardef>
+
+    <pardef n="DET-IND_DET-IND">
+      <e><p><l><s n="parol"/>det|ind</l><r><s n="pos"/>det|ind<s n="num"/>sg</r></p></e>
     </pardef>
 
     <pardef n="ADV-ITG_ADV-ITG">
@@ -85,6 +94,7 @@
 
     <pardef n="A1_A">
       <e><p><l><s n="parol"/>adj</l><r><s n="pos"/>adj</r></p></e>
+      <e><p><l><s n="parol"/>adj|subst|nom</l><r><s n="pos"/>adj</r></p></e>
     </pardef>
 
 
@@ -196,6 +206,10 @@
 
       <!-- SECTION: Adpositions -->
       <e><p><l>бері</l><r>since<s n="sense"/>0</r></p><par n='POST_PREP'/></e>
+
+      <!-- SECTION: Determiners -->
+
+      <e><p><l>бір</l><r>a<s n="sense"/>0</r></p><par n='DET-IND_DET-IND'/></e>
 
       <!-- SECTION: Pronouns -->
       <e><p><l>сіз</l><r>you<s n="sense"/>0</r></p><par n='SIZ_YOU'/></e>
@@ -1370,10 +1384,6 @@
       <e><p><l>баррикада</l><r>barricade<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>бөгет</l><r>barrier<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>зембіл</l><r>barrow<s n="sense"/>0</r></p><par n="N1_N"/></e>
-      <e><p><l>бар</l><r>bar<s n="sense"/>0</r></p><par n="N1_N"/></e>
-      <e><p><l>бар</l><r>bar<s n="sense"/>0</r></p><par n="N1_N"/></e>
-      <e><p><l>бар</l><r>bar<s n="sense"/>0</r></p><par n="N1_N"/></e>
-      <e><p><l>бар</l><r>bar<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>бар</l><r>bar<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>баспабас</l><r>barter<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>бариорталық</l><r>barycenter<s n="sense"/>0</r></p><par n="N1_N"/></e>
@@ -11280,9 +11290,12 @@
       <e><p><l>Айгүл</l><r>Aygul<s n="sense"/>0</r></p><par n='NP-ANT-F_NP-ANT-F'/></e>
 
       <!-- SECTION: Adjectives -->
+      <e><p><l>бар</l><r>existing<s n="sense"/>0</r></p><par n='A1_A'/></e>
+
       <e><p><l>басқа</l><r>other<s n="sense"/>0</r></p><par n='A1_A'/></e>
       <e><p><l>ерте</l><r>early<s n="sense"/>0</r></p><par n='A1_A-SINT'/></e>
       <e><p><l>азат</l><r>free<s n="sense"/>0</r></p><par n='A1_A-SINT'/></e>
+
 
   
       <e><p><l>қатты</l><r>sound<s n="sense"/>0</r></p><par n="A1_A-SINT"/></e>
@@ -11508,6 +11521,7 @@
       <!-- SECTION: Adverbs -->
       <e><p><l>тым</l><r>though<s n="sense"/>0</r></p><par n='ADV_ADV'/></e>
       <e><p><l>тым</l><r>overly<s n="sense"/>0</r></p><par n='ADV_PREADV'/></e>
+      <e><p><l>да</l><r>also<s n="sense"/>0</r></p><par n='POSTADV_ADV'/></e>
 
       <e><p><l>қайда</l><r>where<s n="sense"/>0</r></p><par n='ADV-ITG_ADV-ITG'/></e>
 
