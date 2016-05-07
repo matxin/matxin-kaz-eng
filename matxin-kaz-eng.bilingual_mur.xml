@@ -133,6 +133,9 @@
       <e><p><l>|prc_after</l><r><s n="tam"/>after</r></p></e>
     </pardef>
 
+    <pardef n="COP_VBSER">
+      <e><p><l><s n="parol"/>cop</l><r><s n="pos"/>vbser</r></p><par n="FIN_FIN"/></e>
+    </pardef>
 
     <pardef n="VAUX_VAUX">
       <e><p><l><s n="parol"/>vaux</l><r><s n="pos"/>vaux</r></p><par n="FIN_FIN"/></e>
@@ -334,7 +337,6 @@
       <e><p><l>дәрет</l><r>ablution<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>терістеу</l><r>abnegation<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>аномалия</l><r>abnormality<s n="sense"/>0</r></p><par n="N1_N"/></e>
-      <e><p><l>мекен</l><r>abode<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>аболиционист</l><r>abolitionist<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>орындатпау</l><r>abolition<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>жеркеніш</l><r>abomination<s n="sense"/>0</r></p><par n="N1_N"/></e>
@@ -976,7 +978,6 @@
       <e><p><l>аудан</l><r>area<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>аудан</l><r>area<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>аумақ</l><r>area<s n="sense"/>0</r></p><par n="N1_N"/></e>
-      <e><p><l>мекен</l><r>area<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>сектор</l><r>area<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>арефлексия</l><r>areflexia<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>арена</l><r>arena<s n="sense"/>0</r></p><par n="N1_N"/></e>
@@ -4879,7 +4880,6 @@
       <e><p><l>хабанера</l><r>habanera<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>галантерея</l><r>haberdashery<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>оңалту</l><r>habilitation<s n="sense"/>0</r></p><par n="N1_N"/></e>
-      <e><p><l>мекен</l><r>habitation<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>тұрық</l><r>habitat<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>әдет</l><r>habit<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>гафний</l><r>hafnium<s n="sense"/>0</r></p><par n="N1_N"/></e>
@@ -5108,8 +5108,6 @@
       <e><p><l>гомеоморфизм</l><r>homeomorphism<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>гомеостаз</l><r>homeostasis<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>отанды_сағыну</l><r>homesickness<s n="sense"/>0</r></p><par n="N1_N"/></e>
-      <e><p><l>мекен</l><r>home<s n="sense"/>0</r></p><par n="N1_N"/></e>
-      <e><p><l>үй</l><r>home<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>жақын_қала</l><r>hometown<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>кісі_өлтіру</l><r>homicide<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>гоминид</l><r>hominid<s n="sense"/>0</r></p><par n="N1_N"/></e>
@@ -5185,7 +5183,6 @@
       <e><p><l>ыстық</l><r>hot<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>сағат</l><r>hour<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>отбасы</l><r>household<s n="sense"/>0</r></p><par n="N1_N"/></e>
-      <e><p><l>үй</l><r>house<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>орналастыру</l><r>housing<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>гуигнгнм</l><r>houyhnhnm<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>жастықты_кеме</l><r>hovercraft<s n="sense"/>0</r></p><par n="N1_N"/></e>
@@ -7801,7 +7798,6 @@
       <e><p><l>жай</l><r>place<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>жер</l><r>place<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>орын</l><r>place<s n="sense"/>0</r></p><par n="N1_N"/></e>
-      <e><p><l>мекен</l><r>place<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>тұрақ</l><r>place<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>плагиат</l><r>plagiarism<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>оба</l><r>plague<s n="sense"/>0</r></p><par n="N1_N"/></e>
@@ -8691,7 +8687,12 @@
       <e><p><l>тағы_жүктеу</l><r>reset<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>ауыстыру</l><r>reshuffle<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>ауыстыру</l><r>reshuffling<s n="sense"/>0</r></p><par n="N1_N"/></e>
-      <e><p><l>мекен</l><r>residence<s n="sense"/>0</r></p><par n="N1_N"/></e>
+      <e><p><l>мекен</l><r>home<s n="sense"/>0</r></p><par n="N1_N"/></e>
+      <!--<e><p><l>мекен</l><r>abode<s n="sense"/>0</r></p><par n="N1_N"/></e>-->
+      <!--<e><p><l>мекен</l><r>area<s n="sense"/>0</r></p><par n="N1_N"/></e>-->
+      <!--<e><p><l>мекен</l><r>habitation<s n="sense"/>0</r></p><par n="N1_N"/></e>-->
+      <!--<e><p><l>мекен</l><r>place<s n="sense"/>0</r></p><par n="N1_N"/></e>-->
+      <!--<e><p><l>мекен</l><r>residence<s n="sense"/>0</r></p><par n="N1_N"/></e>-->
       <e><p><l>резиденция</l><r>residence<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>тұрғын</l><r>resident<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>қалдық</l><r>residue<s n="sense"/>0</r></p><par n="N1_N"/></e>
@@ -11041,11 +11042,13 @@
       <e><p><l>түс</l><r>tone<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>түс</l><r>pigment<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>түс</l><r>kind<s n="sense"/>0</r></p><par n="N1_N"/></e>
-      <e><p><l>үй</l><r>dwelling<s n="sense"/>0</r></p><par n="N1_N"/></e>
-      <e><p><l>үй</l><r>hut<s n="sense"/>0</r></p><par n="N1_N"/></e>
-      <e><p><l>үй</l><r>palace<s n="sense"/>0</r></p><par n="N1_N"/></e>
-      <e><p><l>үй</l><r>domestic<s n="sense"/>0</r></p><par n="N1_N"/></e>
-      <e><p><l>үй</l><r>habitation<s n="sense"/>0</r></p><par n="N1_N"/></e>
+      <e><p><l>үй</l><r>home<s n="sense"/>0</r></p><par n="N1_N"/></e>
+      <e><p><l>үй</l><r>house<s n="sense"/>0</r></p><par n="N1_N"/></e>
+      <!--<e><p><l>үй</l><r>dwelling<s n="sense"/>0</r></p><par n="N1_N"/></e>-->
+      <!--<e><p><l>үй</l><r>hut<s n="sense"/>0</r></p><par n="N1_N"/></e>-->
+      <!--<e><p><l>үй</l><r>palace<s n="sense"/>0</r></p><par n="N1_N"/></e>-->
+      <!--<e><p><l>үй</l><r>domestic<s n="sense"/>0</r></p><par n="N1_N"/></e>-->
+      <!--<e><p><l>үй</l><r>habitation<s n="sense"/>0</r></p><par n="N1_N"/></e>-->
       <e><p><l>көз</l><r>eyesight<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>көз</l><r>sight<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>көз</l><r>vision<s n="sense"/>0</r></p><par n="N1_N"/></e>
@@ -11190,9 +11193,6 @@
       <e><p><l>қасиет</l><r>virtue<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>жас</l><r>youth<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>адам</l><r>people<s n="sense"/>0</r></p><par n="N1_N"/></e>
-      <e><p><l>үй</l><r>hut<s n="sense"/>0</r></p><par n="N1_N"/></e>
-      <e><p><l>үй</l><r>palace<s n="sense"/>0</r></p><par n="N1_N"/></e>
-      <e><p><l>үй</l><r>domestic<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>бет</l><r>view<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>жігіт</l><r>man<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>жіп</l><r>string<s n="sense"/>0</r></p><par n="N1_N"/></e>
@@ -12049,6 +12049,9 @@
       <e><p><l>алғаш</l><r>first</r></p><par n="ADV_ADV"/></e>
 
       <!-- SECTION: Verbos -->
+
+      <e><p><l>е</l><r>be<s n="sense"/>0</r></p><par n='COP_VBSER'/></e>
+
       <e><p><l>баста</l><r>start<s n="sense"/>0</r></p><par n='VAUX_VAUX'/></e>
       <e><p><l>жат</l><r></r></p><par n='VAUX_VAUX'/></e>
       <e><p><l>тұр</l><r></r></p><par n='VAUX_VAUX'/></e>
