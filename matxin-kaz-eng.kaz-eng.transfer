@@ -121,4 +121,31 @@
 
 </rule>
 
+<rule>
+
+  <template match="//NODE[@pos = 'vbser' and @tam = 'aor']">
+    <copy>
+       <copy-of select="@*[name()!='tam']"/>
+       <attribute name="tam">pri</attribute>
+       <apply-templates select="@*[name()!='tam'] | *"/>
+    </copy>
+  </template>
+
+</rule>
+
+<rule comment="Resolve ifi past">
+
+  <template match="//NODE[@tam = 'ifi']">
+    <copy>
+       <copy-of select="@*[name()!='tam']"/>
+       <attribute name="tam">past</attribute>
+       <apply-templates select="@*[name()!='tam'] | *"/>
+    </copy>
+  </template>
+
+
+</rule>
+
+
+
 </transfer>
