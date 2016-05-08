@@ -8,7 +8,7 @@
      </copy>
    </template>
 
-   <template match="//NODE[@cas='loc']">
+   <template match="//NODE[@cas='loc' and not(@slem='жас')]">
      <copy>
        <apply-templates select="@* | *"/>
        <NODE lem="in" pos="pr">
@@ -17,7 +17,7 @@
      </copy>
    </template>
 
-   <template match="//NODE[@cas='abl']">
+   <template match="//NODE[@cas='abl' and not(NODE/@slem='кейін')]">
      <copy>
        <apply-templates select="@* | *"/>
        <NODE lem="from" pos="pr"/>
@@ -56,15 +56,6 @@
    </template>
 </rule>
 
-<rule comment="Remove the possessive from a node if a daughter node is in genitive">
-  <template match="//NODE[NODE/@cas = 'gen']">
-    <copy>
-       <copy-of select="@*[name()!='px']"/>
-       <apply-templates select="@*[name()!='px'] | *"/>
-    </copy>
-  </template>
-
-</rule>
 
 <rule comment="Set the morphological information to gerund if there is a dependent which is an auxiliary verb">
 
@@ -102,6 +93,21 @@
 
 </rule>
 
+<rule comment="Set the morphological information to gerund if the chunk is a xcomp, ccomp or advcl">
+
+  <template match="//NODE[@pos = 'vblex' and contains(@smi, 'ger') and ../@si = 'ccomp' or ../@si = 'advcl' or ../@si = 'xcomp']">
+    <copy>
+       <copy-of select="@*[name()!='mi']"/>
+       <attribute name="mi">inf</attribute>
+       <apply-templates select="@*[name()!='mi'] | *"/>
+       <NODE lem="to" pos="to"/>
+    </copy>
+  </template>
+
+</rule>
+
+
+
 <rule>
   <template match="//NODE[contains(@smi, 'gpr_')]">
     <copy>
@@ -114,7 +120,7 @@
 </rule>
 
 
-<rule comment="Set the translation of the verb 'тұр' to 'be' if it is in present tense and there is a previous gerund">
+<rule comment="Set the translation of the verb 'тұр' and 'жат' to 'be' if it is in present tense and there is a previous gerund">
 
   <template match="//NODE[@slem = 'тұр' and @pos = 'vaux' and parent::NODE/@mi = 'ger' ]">
     <copy>
@@ -126,28 +132,13 @@
     </copy>
   </template>
 
-</rule>
-
-<rule comment="Add a possessive determiner if there is a possessive marker and no subnode which is a possessor">
-   <template match="//NODE[@px !='']">
-     <choose>
-       <when test="@px = 'sg1'">
-         <copy>
-           <apply-templates select="@* | *"/><NODE lem="my" pos="det|pos" num="sp"/>
-         </copy>
-       </when>
-       <when test="@px = 'sp3'">
-         <copy>
-           <apply-templates select="@* | *"/><NODE lem="his" pos="det|pos" num="sp"/>
-         </copy>
-       </when>
-     </choose>
-   </template>
-
-  <template match="//NODE[@px != '' and NODE/@cas != 'gen']">
+  <template match="//NODE[@slem = 'жат' and @pos = 'vaux' and parent::NODE/@mi = 'ger' ]">
     <copy>
-       <copy-of select="@*[name()!='px']"/>
-       <apply-templates select="@*[name()!='px'] | *"/>
+       <copy-of select="@*[name()!='lem' and name()!='pos' and name()!='tam']"/>
+       <attribute name="lem">be</attribute>
+       <attribute name="pos">vbser</attribute>
+       <attribute name="tam">pri</attribute>
+       <apply-templates select="@*[name()!='lem' and name()!='pos' and name()!='tam'] | *"/>
     </copy>
   </template>
 
@@ -193,10 +184,28 @@
        <copy-of select="@*[name()!='tam' and name()!='lem' and name()!='pos']"/>
        <attribute name="lem">have</attribute>
        <attribute name="pos">vblex</attribute>
-       <attribute name="pers"><value-of select="..//CHUNK[@si='subj']/NODE[@px]"/></attribute>
+       <choose>
+         <when test="..//CHUNK[@si='subj']/NODE/@px = 'sg1'">
+           <attribute name="pers">p1</attribute><attribute name="num">sg</attribute>
+         </when>
+         <when test="..//CHUNK[@si='subj']/NODE/@px = 'sp3'">
+           <attribute name="pers">p3</attribute><attribute name="num">ND</attribute>
+         </when>
+         <otherwise> 
+           <attribute name="pers">PD</attribute><attribute name="num">ND</attribute>
+         </otherwise>
+       </choose>
        <attribute name="num">ND</attribute>
        <attribute name="tam"><value-of select="NODE/@tam"/></attribute>
        <apply-templates select="@*[name()!='tam' and name()!='lem' and name()!='pos']"/>
+    </copy>
+  </template>
+
+  <template match="CHUNK[@si='subj' and ../CHUNK/NODE/@slem = 'бар']">
+    <copy>
+       <copy-of select="@*[name()!='si']"/>
+       <attribute name="si">obj</attribute>
+       <apply-templates select="@*[name()!='si'] | *"/>
     </copy>
   </template>
 
@@ -209,14 +218,55 @@
        <copy-of select="@*[name()!='tam' and name()!='lem' and name()!='pos']"/>
        <attribute name="lem">have</attribute>
        <attribute name="pos">vblex</attribute>
-       <attribute name="pers"><value-of select="..//CHUNK[@si='subj']/NODE[@px]"/></attribute>
-       <attribute name="num">ND</attribute>
+       <choose>
+         <when test="..//CHUNK[@si='subj']/NODE/@px = 'sp3'">
+           <attribute name="pers">p3</attribute>
+           <attribute name="num">ND</attribute>
+         </when>
+       </choose>
        <attribute name="tam"><value-of select="NODE/@tam"/></attribute>
        <apply-templates select="@*[name()!='tam' and name()!='lem' and name()!='pos']"/>
        <NODE lem="not" pos="adv"/>
     </copy>
   </template>
 </rule>
+
+<rule comment="Remove the possessive from a node if a daughter node is in genitive">
+  <template match="//NODE[NODE/@cas = 'gen']">
+    <copy>
+       <copy-of select="@*[name()!='px']"/>
+       <apply-templates select="@*[name()!='px'] | *"/>
+    </copy>
+  </template>
+
+</rule>
+
+<rule comment="Add a possessive determiner if there is a possessive marker and no subnode which is a possessor">
+   <template match="//NODE[@px !='']">
+     <choose>
+       <when test="@px = 'sg1'">
+         <copy>
+           <apply-templates select="@* | *"/><NODE lem="my" pos="det|pos" num="sp"/>
+         </copy>
+       </when>
+       <when test="@px = 'sp3'">
+         <copy>
+           <apply-templates select="@* | *"/><NODE lem="his" pos="det|pos" num="sp"/>
+         </copy>
+       </when>
+     </choose>
+   </template>
+
+  <template match="//NODE[@px != '' and NODE/@cas != 'gen']">
+    <copy>
+       <copy-of select="@*[name()!='px']"/>
+       <apply-templates select="@*[name()!='px'] | *"/>
+    </copy>
+  </template>
+
+</rule>
+
+
 
 <rule comment="Resolve ND to singular if there is no dependent numeral">
 
@@ -230,40 +280,27 @@
 </rule>
 
 
-<rule comment="The possessor becomes the subject of 'have'">
- 
-  <template match="//NODE[@slem='бар']">
-    <copy>
-       <apply-templates select="@* | *"/>
-          <copy-of select="parent::CHUNK/CHUNK[@si='subj']//NODE[@cas='gen']"/>
-    </copy>
-  </template>
-
-</rule>
-
 <rule comment="years old">
 
   <template match="//NODE[@slem='жас' and @smi='n|loc' and NODE/@smi='num']">
     <copy>
-       <apply-templates select="@* | *"/>
-       <NODE lem='year old' pos='n' num='pl'/>
+       <copy-of select="@*[name()!='lem' and name()!='pos' and name()!='num']"/>
+       <attribute name="lem">year old</attribute>
+       <attribute name="pos">n</attribute>
+       <attribute name="num">pl</attribute>
+       <apply-templates select="@*[name()!='lem' and name()!='pos' and name()!='num'] | *"/>
     </copy>
   </template>
 
   <template match="//NODE[@slem='жасар' and @smi='adj' and NODE/@smi='num']">
     <copy>
-       <apply-templates select=".//*"/>
-       <NODE lem='year old' pos='n' num='pl'/>
+       <copy-of select="@*[name()!='lem' and name()!='pos' and name()!='num']"/>
+       <attribute name="lem">year old</attribute>
+       <attribute name="pos">n</attribute>
+       <attribute name="num">pl</attribute>
+       <apply-templates select="@*[name()!='lem' and name()!='pos' and name()!='num'] | *"/>
     </copy>
   </template>
-
-</rule>
-
-<rule comment="Remove second да">
-
-  <key name="kID" match="NODE" use="slem"/>
-
- <template match="//NODE[@slem = 'да' and parent::NODE/NODE[@slem = 'да'] and not(generate-id() = generate-id(key('kID', NODE)[1])) ]"/>
 
 </rule>
 
@@ -287,5 +324,26 @@
 
 </rule>
 
+<rule comment="Add a subject of there is no other one">
+
+ <template match="//CHUNK[@si='root' and not(CHUNK[@si='subj'])]">
+    <copy>
+       <apply-templates select="@* | *"/>
+       <CHUNK>
+         <attribute name="type">sn</attribute>
+         <attribute name="si">subj</attribute>
+         <NODE>
+           <attribute name="lem"></attribute>
+           <attribute name="pos">prn|pers</attribute>
+           <attribute name="pers">PD</attribute>
+           <attribute name="gen">GD</attribute>
+           <attribute name="num">ND</attribute>
+         </NODE>
+       </CHUNK>
+    </copy>
+
+  </template>
+
+</rule>
 
 </transfer>
