@@ -142,6 +142,16 @@
     </copy>
   </template>
 
+  <template match="//NODE[@slem = 'жүр' and @pos = 'vaux' and parent::NODE/@mi = 'ger' ]">
+    <copy>
+       <copy-of select="@*[name()!='lem' and name()!='pos' and name()!='tam']"/>
+       <attribute name="lem">be</attribute>
+       <attribute name="pos">vbser</attribute>
+       <attribute name="tam">pri</attribute>
+       <apply-templates select="@*[name()!='lem' and name()!='pos' and name()!='tam'] | *"/>
+    </copy>
+  </template>
+
 </rule>
 
 <rule>
@@ -166,8 +176,8 @@
   </template>
 </rule>
 
-<rule comment="Resolve aor to pri">
-  <template match="//NODE[@tam = 'aor']">
+<rule comment="Resolve aor or impf to pri">
+  <template match="//NODE[@tam = 'aor' or @tam = 'impf']">
     <copy>
        <copy-of select="@*[name()!='tam']"/>
        <attribute name="tam">pri</attribute>
