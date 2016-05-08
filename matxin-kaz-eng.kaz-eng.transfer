@@ -90,9 +90,9 @@
 
 </rule>
 
-<rule comment="Set the morphological information to gerund if the chunk is a ccomp">
+<rule comment="Set the morphological information to gerund if the chunk is a ccomp or advcl">
 
-  <template match="//NODE[@pos = 'vblex' and ../@si = 'ccomp']">
+  <template match="//NODE[@pos = 'vblex' and contains(@smi, 'ger_') and ../@si = 'ccomp' or ../@si = 'advcl']">
     <copy>
        <copy-of select="@*[name()!='mi']"/>
        <attribute name="mi">ger</attribute>

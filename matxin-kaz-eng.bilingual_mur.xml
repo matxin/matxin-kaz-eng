@@ -98,11 +98,11 @@
     </pardef>
 
     <pardef n="SEN_YOU">
-      <e><p><l><s n="parol"/>prn|pers|p2|sg</l><r><s n="pos"/>prn|pers<s n="pers"/>p2<s n="num"/>sg</r></p><par n="CASE"/></e>
+      <e><p><l><s n="parol"/>prn|pers|p2|sg</l><r><s n="pos"/>prn|pers<s n="pers"/>p2<s n="gen"/>mf<s n="num"/>sg</r></p><par n="CASE"/></e>
     </pardef>
 
     <pardef n="SIZ_YOU">
-      <e><p><l><s n="parol"/>prn|pers|p2|sg|frm</l><r><s n="pos"/>prn|pers<s n="pers"/>p2<s n="num"/>sg</r></p><par n="CASE"/></e>
+      <e><p><l><s n="parol"/>prn|pers|p2|sg|frm</l><r><s n="pos"/>prn|pers<s n="pers"/>p2<s n="gen"/>mf<s n="num"/>sg</r></p><par n="CASE"/></e>
     </pardef>
 
     <pardef n="OL_HE">
