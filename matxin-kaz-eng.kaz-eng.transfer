@@ -252,7 +252,7 @@
 
   <template match="//NODE[@slem='жасар' and @smi='adj' and NODE/@smi='num']">
     <copy>
-       <apply-templates select="@* | *"/>
+       <apply-templates select=".//*"/>
        <NODE lem='year old' pos='n' num='pl'/>
     </copy>
   </template>
