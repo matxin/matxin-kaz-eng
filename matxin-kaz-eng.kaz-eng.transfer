@@ -78,6 +78,18 @@
 
 </rule>
 
+<rule comment="Set the morphological information to inf if there is a dependent which is an auxiliary verb">
+
+  <template match="//NODE[@pos = 'vblex' and NODE/@pos = 'vbmod' or NODE/@lem = 'can']">
+    <copy>
+       <copy-of select="@*[name()!='mi']"/>
+       <attribute name="mi">inf</attribute>
+       <apply-templates select="@*[name()!='mi'] | *"/>
+    </copy>
+  </template>
+
+</rule>
+
 <rule comment="Set the morphological information to gerund if the chunk is a ccomp">
 
   <template match="//NODE[@pos = 'vblex' and ../@si = 'ccomp']">
@@ -232,5 +244,34 @@
   </template>
 
 </rule>
+
+<rule comment="Remove second да">
+
+  <key name="kID" match="NODE" use="slem"/>
+
+ <template match="//NODE[@slem = 'да' and parent::NODE/NODE[@slem = 'да'] and not(generate-id() = generate-id(key('kID', NODE)[1])) ]"/>
+
+</rule>
+
+<rule comment="Turn question word -ма into 'do'">
+
+
+ <template match="//CHUNK[@si='disc' and NODE[@slem = 'ма' and @smi='qst']]">
+    <copy>
+       <copy-of select="@*[name()!='si']"/>
+       <attribute name="si">do-aux</attribute>
+       <apply-templates select="@*[name()!='si']"/>
+       <NODE>
+         <attribute name="lem">do</attribute>
+         <attribute name="pos">vbdo</attribute>
+         <attribute name="tam"><value-of select="../../CHUNK[@si='root']/NODE[@tam !='']/@tam"/></attribute>
+         <attribute name="pers">PD</attribute>
+         <attribute name="num">ND</attribute>
+       </NODE>
+    </copy>
+  </template>
+
+</rule>
+
 
 </transfer>

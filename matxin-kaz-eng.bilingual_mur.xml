@@ -8,6 +8,7 @@
     <sdef n='neg'/>
     <sdef n='per'/>
     <sdef n='cas'/>
+    <sdef n='trans'/>
     <sdef n='gen'/>
     <sdef n='pers'/>
     <sdef n='tam'/>
@@ -80,6 +81,66 @@
       <e><p><l><s n="parol"/>det|ind</l><r><s n="pos"/>det|ind<s n="num"/>sg</r></p></e>
     </pardef>
 
+    <pardef n="DET-REF_A">
+      <e><p><l><s n="parol"/>det|ref</l><r><s n="pos"/>adj</r></p></e>
+    </pardef>
+
+    <pardef n="DET-QNT_PREDET">
+      <e><p><l><s n="parol"/>det|qnt</l><r><s n="pos"/>predet</r></p></e>
+    </pardef>
+
+    <pardef n="DET-ITG_DET-ITG">
+      <e><p><l><s n="parol"/>det|itg</l><r><s n="pos"/>det|itg<s n="num"/>sp</r></p></e>
+    </pardef>
+
+    <pardef n="DET-DEM_DET-DEM">
+      <e><p><l><s n="parol"/>det|dem</l><r><s n="pos"/>det|dem<s n="num"/>sg</r></p></e>
+    </pardef>
+
+    <pardef n="SEN_YOU">
+      <e><p><l><s n="parol"/>prn|pers|p2|sg</l><r><s n="pos"/>prn|pers<s n="pers"/>p2<s n="num"/>sg</r></p><par n="CASE"/></e>
+    </pardef>
+
+    <pardef n="SIZ_YOU">
+      <e><p><l><s n="parol"/>prn|pers|p2|sg|frm</l><r><s n="pos"/>prn|pers<s n="pers"/>p2<s n="num"/>sg</r></p><par n="CASE"/></e>
+    </pardef>
+
+    <pardef n="OL_HE">
+      <e><p><l><s n="parol"/>prn|pers|p3|sg</l><r><s n="pos"/>prn|pers<s n="pers"/>p3<s n="gen"/>m<s n="num"/>sg</r></p><par n="CASE"/></e>
+    </pardef>
+
+    <pardef n="OL_SHE">
+      <e><p><l><s n="parol"/>prn|pers|p3|sg</l><r><s n="pos"/>prn|pers<s n="pers"/>p3<s n="gen"/>f<s n="num"/>sg</r></p><par n="CASE"/></e>
+    </pardef>
+
+    <pardef n="OL_IT">
+      <e><p><l><s n="parol"/>prn|pers|p3|sg</l><r><s n="pos"/>prn|pers<s n="pers"/>p3<s n="gen"/>nt<s n="num"/>sg</r></p><par n="CASE"/></e>
+    </pardef>
+
+    <pardef n="OLAR_THEY">
+      <e><p><l><s n="parol"/>prn|pers|p3|pl</l><r><s n="pos"/>prn|pers<s n="pers"/>p3<s n="gen"/>mf<s n="num"/>pl</r></p><par n="CASE"/></e>
+    </pardef>
+
+    <pardef n="NUM-COLL_PRN-TN-PL">
+      <e><p><l><s n="parol"/>num|coll|subst</l><r><s n="pos"/>prn|tn<s n="num"/>pl</r></p><par n="POSS"/></e>
+    </pardef>
+
+    <pardef n="PRN-IND_PRN-TN">
+      <e><p><l><s n="parol"/>prn|ind</l><r><s n="pos"/>prn|tn<s n="num"/>sg</r></p><par n="POSS"/></e>
+    </pardef>
+
+    <pardef n="PRN-NEG_PRN-TN">
+      <e><p><l><s n="parol"/>prn|neg</l><r><s n="pos"/>prn|tn<s n="num"/>sg</r></p><par n="POSS"/></e>
+    </pardef>
+
+    <pardef n="PRN-ITG_PRN-ITG">
+      <e><p><l><s n="parol"/>prn|itg</l><r><s n="pos"/>prn|itg<s n="num"/>sp</r></p><par n="POSS"/></e>
+    </pardef>
+
+    <pardef n="PRN-DEM_PRN-DEM">
+      <e><p><l><s n="parol"/>prn|dem</l><r><s n="pos"/>prn|dem<s n="num"/>sg</r></p><par n="POSS"/></e>
+    </pardef>
+
     <pardef n="ADV-ITG_ADV-ITG">
       <e><p><l><s n="parol"/>adv|itg</l><r><s n="pos"/>adv|itg</r></p></e>
     </pardef>
@@ -104,6 +165,10 @@
       <e><p><l><s n="parol"/>ij</l><r><s n="pos"/>ij</r></p></e>
     </pardef>
 
+    <pardef n="CNJCOO_CNJADV">
+      <e><p><l><s n="parol"/>cnjcoo</l><r><s n="pos"/>cnjadv</r></p></e>
+    </pardef>
+
     <pardef n="CNJCOO_CNJCOO">
       <e><p><l><s n="parol"/>cnjcoo</l><r><s n="pos"/>cnjcoo</r></p></e>
     </pardef>
@@ -115,15 +180,21 @@
     <pardef n="A1_A">
       <e><p><l><s n="parol"/>adj</l><r><s n="pos"/>adj</r></p></e>
       <e><p><l><s n="parol"/>adj|subst|nom</l><r><s n="pos"/>adj</r></p></e>
+      <e><p><l><s n="parol"/>adj|advl</l><r><s n="pos"/>adj</r></p></e>
     </pardef>
 
 
     <pardef n="A1_A-SINT">
       <e><p><l><s n="parol"/>adj</l><r><s n="pos"/>adj|sint</r></p></e>
+      <e><p><l><s n="parol"/>adj|subst|nom</l><r><s n="pos"/>adj|sint</r></p></e>
+      <e><p><l><s n="parol"/>adj|advl</l><r><s n="pos"/>adj|sint</r></p></e>
+      <e><p><l><s n="parol"/>adj|comp</l><r><s n="pos"/>adj|sint|comp</r></p></e>
+      <e><p><l><s n="parol"/>adj|comp|advl</l><r><s n="pos"/>adj|sint|comp</r></p></e>
     </pardef>
 
     <pardef n="PERS_PERS">
       <e><p><l>|p1|sg</l><r><s n="pers"/>p1<s n="num"/>sg</r></p></e>
+      <e><p><l>|p2|sg</l><r><s n="pers"/>p2<s n="num"/>sg</r></p></e>
       <e><p><l>|p2|frm|sg</l><r><s n="pers"/>p2<s n="num"/>sg</r></p></e>
       <e><p><l>|p3|sg</l><r><s n="pers"/>p3<s n="num"/>sg</r></p></e>
       <e><p><l>|p1|pl</l><r><s n="pers"/>p1<s n="num"/>pl</r></p></e>
@@ -136,6 +207,7 @@
       <e><p><l>|pres</l><r><s n="tam"/>pres</r></p><par n="PERS_PERS"/></e>
       <e><p><l>|ifi</l><r><s n="tam"/>ifi</r></p><par n="PERS_PERS"/></e>
       <e><p><l>|past</l><r><s n="tam"/>past</r></p><par n="PERS_PERS"/></e>
+      <e><p><l>|imp</l><r><s n="tam"/>imp</r></p><par n="PERS_PERS"/></e>
     </pardef>
 
     <pardef n="GER_POSS-GER_POSS">
@@ -148,6 +220,7 @@
     </pardef>
 
     <pardef n="GER_GER">
+      <e><p><l>|ger</l><r><s n="tam"/>aor</r></p><par n="GER_POSS-GER_POSS"/></e>
       <e><p><l>|ger_perf</l><r><s n="tam"/>perf</r></p><par n="GER_POSS-GER_POSS"/></e>
       <e><p><l>|ger_impf</l><r><s n="tam"/>impf</r></p><par n="GER_POSS-GER_POSS"/></e>
       <e><p><l>|ger_past</l><r><s n="tam"/>past</r></p><par n="GER_POSS-GER_POSS"/></e>
@@ -164,7 +237,7 @@
 
     <pardef n="GNA_GNA">
       <e><p><l>|gna_perf</l><r><s n="tam"/>perf</r></p></e>
-      <e><p><l>|gna_cond</l><r><s n="tam"/>cond</r></p></e>
+      <e><p><l>|gna_cond</l><r><s n="tam"/>cond</r></p><par n="PERS_PERS"/></e>
       <e><p><l>|gna_until</l><r><s n="tam"/>until</r></p></e>
       <e><p><l>|gna_after</l><r><s n="tam"/>after</r></p></e>
     </pardef>
@@ -172,13 +245,17 @@
     <pardef n="PRC_PRC">
       <e><p><l>|prc_perf</l><r><s n="tam"/>perf</r></p></e>
       <e><p><l>|prc_impf</l><r><s n="tam"/>impf</r></p></e>
-      <e><p><l>|prc_cond</l><r><s n="tam"/>cond</r></p></e>
+      <e><p><l>|prc_cond</l><r><s n="tam"/>cond</r></p><par n="PERS_PERS"/></e>
       <e><p><l>|prc_until</l><r><s n="tam"/>until</r></p></e>
       <e><p><l>|prc_after</l><r><s n="tam"/>after</r></p></e>
+      <e><p><l>|prc_vol</l><r><s n="tam"/>vol</r></p><par n="PERS_PERS"/></e>
     </pardef>
 
     <pardef n="COP_VBSER">
       <e><p><l><s n="parol"/>cop</l><r><s n="pos"/>vbser</r></p><par n="FIN_FIN"/></e>
+      <e><p><l><s n="parol"/>cop</l><r><s n="pos"/>vbser</r></p><par n="GER_GER"/></e>
+      <e><p><l><s n="parol"/>cop|neg</l><r><s n="pos"/>vbser<s n="neg"/>neg</r></p><par n="FIN_FIN"/></e>
+      <e><p><l><s n="parol"/>cop|neg</l><r><s n="pos"/>vbser<s n="neg"/>neg</r></p><par n="GER_GER"/></e>
     </pardef>
 
     <pardef n="V-MORF_V-MORF">
@@ -187,6 +264,11 @@
       <e><p><l></l><r></r></p><par n="GPR_GPR"/></e>
       <e><p><l></l><r></r></p><par n="PRC_PRC"/></e>
       <e><p><l></l><r></r></p><par n="GER_GER"/></e>
+    </pardef>
+
+    <pardef n="VAUX_V">
+      <e><p><l><s n="parol"/>vaux</l><r><s n="pos"/>vblex</r></p><par n="V-MORF_V-MORF"/></e>
+      <e><p><l><s n="parol"/>vaux|neg</l><r><s n="pos"/>vblex<s n="neg"/>neg</r></p><par n="V-MORF_V-MORF"/></e>
     </pardef>
 
     <pardef n="VAUX_VBMOD">
@@ -202,6 +284,8 @@
     <pardef n="V-TV_V">
       <e><p><l><s n="parol"/>v|tv</l><r><s n="pos"/>vblex</r></p><par n="V-MORF_V-MORF"/></e>
       <e><p><l><s n="parol"/>v|tv|neg</l><r><s n="pos"/>vblex<s n="neg"/>neg</r></p><par n="V-MORF_V-MORF"/></e>
+      <e><p><l><s n="parol"/>v|tv|pass</l><r><s n="pos"/>vblex<s n="trans"/>pass<s n="neg"/>neg</r></p><par n="V-MORF_V-MORF"/></e>
+      <e><p><l><s n="parol"/>v|tv|pass|neg</l><r><s n="pos"/>vblex<s n="trans"/>pass<s n="neg"/>neg</r></p><par n="V-MORF_V-MORF"/></e>
     </pardef>
 
     <pardef n="V-IV_V">
@@ -209,62 +293,68 @@
       <e><p><l><s n="parol"/>v|iv|neg</l><r><s n="pos"/>vblex<s n="neg"/>neg</r></p><par n="V-MORF_V-MORF"/></e>
     </pardef>
 
-    <pardef n="SIZ_YOU">
-      <e><p><l><s n="parol"/>prn|pers|p2|sg|frm</l><r><s n="pos"/>prn|pers<s n="pers"/>p2<s n="num"/>sg</r></p><par n="CASE"/></e>
-    </pardef>
-
-    <pardef n="OL_HE">
-      <e><p><l><s n="parol"/>prn|pers|p3|sg</l><r><s n="pos"/>prn|pers<s n="pers"/>p3<s n="gen"/>m<s n="num"/>sg</r></p><par n="CASE"/></e>
-    </pardef>
-
-    <pardef n="OL_SHE">
-      <e><p><l><s n="parol"/>prn|pers|p3|sg</l><r><s n="pos"/>prn|pers<s n="pers"/>p3<s n="gen"/>f<s n="num"/>sg</r></p><par n="CASE"/></e>
-    </pardef>
-
-    <pardef n="OL_IT">
-      <e><p><l><s n="parol"/>prn|pers|p3|sg</l><r><s n="pos"/>prn|pers<s n="pers"/>p3<s n="gen"/>nt<s n="num"/>sg</r></p><par n="CASE"/></e>
-    </pardef>
-
-    <pardef n="OLAR_THEY">
-      <e><p><l><s n="parol"/>prn|pers|p3|pl</l><r><s n="pos"/>prn|pers<s n="pers"/>p3<s n="gen"/>mf<s n="num"/>pl</r></p><par n="CASE"/></e>
-    </pardef>
-
   </pardefs>
   <section id="IXA_moldaketak" type="standard">
       <!-- SECTION: Miscellaneous -->
       <e><p><l>ма<s n="parol"/>qst</l><r></r></p></e>
+      <e><p><l>шы<s n="parol"/>emph</l><r></r></p></e>
 
       <!-- SECTION: Conjunctions -->
 
       <e><p><l>және</l><r>and<s n="sense"/>0</r></p><par n='CNJCOO_CNJCOO'/></e>
       <e><p><l>мен</l><r>and<s n="sense"/>0</r></p><par n='CNJCOO_CNJCOO'/></e>
+      <e><p><l>да</l><r>and<s n="sense"/>0</r></p><par n='CNJCOO_CNJCOO'/></e>
+      <e><p><l>ал</l><r>while<s n="sense"/>0</r></p><par n='CNJCOO_CNJADV'/></e>
       <e><p><l>бірақ</l><r>but<s n="sense"/>0</r></p><par n='CNJCOO_CNJCOO'/></e>
       <e><p><l>осы<b/>себептен</l><r>therefore<s n="sense"/>0</r></p><par n='CNJADV_CNJADV'/></e>
       <e><p><l>осы<b/>себептен</l><r>so<s n="sense"/>0</r></p><par n='CNJADV_CNJADV'/></e>
+      <e><p><l>демек</l><r>so<s n="sense"/>0</r></p><par n='CNJADV_CNJADV'/></e>
 
       <!-- SECTION: Adpositions -->
       <e><p><l>бері</l><r>since<s n="sense"/>0</r></p><par n='POST_PREP'/></e>
       <e><p><l>қарай</l><r>towards<s n="sense"/>0</r></p><par n='POST_PREP'/></e>
+      <e><p><l>кейін</l><r>after<s n="sense"/>0</r></p><par n='POST_PREP'/></e>
+      <e><p><l>үшін</l><r>for<s n="sense"/>0</r></p><par n='POST_PREP'/></e>
 
       <!-- SECTION: Determiners -->
 
       <e><p><l>бір</l><r>a<s n="sense"/>0</r></p><par n='DET-IND_DET-IND'/></e>
+      <e><p><l>ол</l><r>that<s n="sense"/>0</r></p><par n='DET-DEM_DET-DEM'/></e>
+      <e><p><l>сол</l><r>that<s n="sense"/>0</r></p><par n='DET-DEM_DET-DEM'/></e>
+      <e><p><l>барлық</l><r>all<s n="sense"/>0</r></p><par n='DET-QNT_PREDET'/></e>
+      <e><p><l>қай</l><r>which<s n="sense"/>0</r></p><par n='DET-ITG_DET-ITG'/></e>
+      <e><p><l>өз</l><r>own<s n="sense"/>0</r></p><par n='DET-REF_A'/></e>
 
       <!-- SECTION: Pronouns -->
+      <e><p><l>сен</l><r>you<s n="sense"/>0</r></p><par n='SEN_YOU'/></e>
       <e><p><l>сіз</l><r>you<s n="sense"/>0</r></p><par n='SIZ_YOU'/></e>
       <e><p><l>ол</l><r>he<s n="sense"/>0</r></p><par n='OL_HE'/></e>
       <e><p><l>ол</l><r>she<s n="sense"/>0</r></p><par n='OL_SHE'/></e>
       <e><p><l>ол</l><r>it<s n="sense"/>0</r></p><par n='OL_IT'/></e>
       <e><p><l>олар</l><r>they<s n="sense"/>0</r></p><par n='OLAR_THEY'/></e>
 
+      <e><p><l>ол</l><r>it<s n="sense"/>0</r></p><par n='PRN-DEM_PRN-DEM'/></e>
+      <e><p><l>ол</l><r>that<s n="sense"/>0</r></p><par n='PRN-DEM_PRN-DEM'/></e>
+      <e><p><l>бұл</l><r>it<s n="sense"/>0</r></p><par n='PRN-DEM_PRN-DEM'/></e>
+      <e><p><l>бұл</l><r>that<s n="sense"/>0</r></p><par n='PRN-DEM_PRN-DEM'/></e>
+
+      <e><p><l>бір<b/>нәрсе</l><r>something<s n="sense"/>0</r></p><par n='PRN-IND_PRN-TN'/></e>
+      <e><p><l>ешнәрсе</l><r>anything<s n="sense"/>0</r></p><par n='PRN-NEG_PRN-TN'/></e>
+      <e><p><l>ешнәрсе</l><r>nothing<s n="sense"/>0</r></p><par n='PRN-NEG_PRN-TN'/></e>
+
+      <e><p><l>не</l><r>what<s n="sense"/>0</r></p><par n='PRN-ITG_PRN-ITG'/></e>
+
       <!-- SECTION: Determiners -->
       <e><p><l>бес</l><r>five<s n="sense"/>0</r></p><par n='NUM_NUM'/></e>
       <e><p><l>алты</l><r>six<s n="sense"/>0</r></p><par n='NUM_NUM'/></e>
+
+      <e><p><l>екеу</l><r>both<s n="sense"/>0</r></p><par n='NUM-COLL_PRN-TN-PL'/></e>
 
       <!-- SECTION: Nouns -->
 
       <e><p><l>алд</l><r>front<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>арт</l><r>back<s n="sense"/>0</r></p><par n="N1_N"/></e>
+      <e><p><l>аст</l><r>underside<s n="sense"/>0</r></p><par n="N1_N"/></e>
 
 
       <e><p><l>радиан</l><r>radian<s n="sense"/>0</r></p><par n='N1_N'/></e>
@@ -1080,7 +1170,7 @@
       <e><p><l>жарақ</l><r>arms<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>армия</l><r>army<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>хош_иіс</l><r>aroma<s n="sense"/>0</r></p><par n="N1_N"/></e>
-      <e><p><l>айнала</l><r>around<s n="sense"/>0</r></p><par n="N1_N"/></e>
+      <e><p><l>айнала</l><r>vicinity<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>төңірек</l><r>around<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>келісім</l><r>arrangement<s n="sense"/>0</r></p><par n="N1_N"/></e>
       <e><p><l>келісім</l><r>arrangement<s n="sense"/>0</r></p><par n="N1_N"/></e>
@@ -11338,8 +11428,12 @@
       <e><p><l>Айгүл</l><r>Aygul<s n="sense"/>0</r></p><par n='NP-ANT-F_NP-ANT-F'/></e>
 
       <!-- SECTION: Adjectives -->
+
       <e><p><l>бар</l><r>existing<s n="sense"/>0</r></p><par n='A1_A'/></e>
       <e><p><l>жоқ</l><r>inexistant<s n="sense"/>0</r></p><par n='A1_A'/></e>
+
+      <e><p><l>мүмкін</l><r>possible<s n="sense"/>0</r></p><par n='A1_A'/></e>
+      <e><p><l>керек</l><r>necessary<s n="sense"/>0</r></p><par n='A1_A'/></e>
 
       <e><p><l>басқа</l><r>other<s n="sense"/>0</r></p><par n='A1_A'/></e>
       <e><p><l>ерте</l><r>early<s n="sense"/>0</r></p><par n='A1_A-SINT'/></e>
@@ -11579,6 +11673,8 @@
 
       <e><p><l>қайда</l><r>where<s n="sense"/>0</r></p><par n='ADV-ITG_ADV-ITG'/></e>
 
+      <e><p><l>әлі<b/>де<b/>болса</l><r>still</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>еш<b/>қашан</l><r>never</r></p><par n="ADV_ADV"/></e>
       <e><p><l>аздап</l><r>slightly</r></p><par n="ADV_ADV"/></e>
       <e><p><l>артынша</l><r>then</r></p><par n="ADV_ADV"/></e>
       <e><p><l>баяғыда</l><r>a_long_time_ago</r></p><par n="ADV_ADV"/></e>
@@ -11624,6 +11720,7 @@
       <e><p><l>кейін</l><r>afterward</r></p><par n="ADV_ADV"/></e>
       <e><p><l>кейін</l><r>afterwards</r></p><par n="ADV_ADV"/></e>
       <e><p><l>қайтадан</l><r>again</r></p><par n="ADV_ADV"/></e>
+      <e><p><l>қайта</l><r>again</r></p><par n="ADV_ADV"/></e>
       <e><p><l>қарсы</l><r>against</r></p><par n="ADV_ADV"/></e>
       <e><p><l>агрессивті</l><r>aggressively</r></p><par n="ADV_ADV"/></e>
       <e><p><l>бұрын</l><r>ago</r></p><par n="ADV_ADV"/></e>
@@ -12353,12 +12450,18 @@
 
       <e><p><l>е</l><r>be<s n="sense"/>0</r></p><par n='COP_VBSER'/></e>
 
-      <e><p><l>баста</l><r>start<s n="sense"/>0</r></p><par n='VAUX_VAUX'/></e>
       <e><p><l>жат</l><r></r></p><par n='VAUX_VAUX'/></e>
+      <e><p><l>кел</l><r></r></p><par n='VAUX_VAUX'/></e>
+      <e><p><l>отыр</l><r></r></p><par n='VAUX_VAUX'/></e>
+      <e><p><l>біт</l><r></r></p><par n='VAUX_VAUX'/></e>
       <e><p><l>тұр</l><r></r></p><par n='VAUX_VAUX'/></e>
+      <e><p><l>жүр</l><r></r></p><par n='VAUX_VAUX'/></e>
+
+      <e><p><l>баста</l><r>start<s n="sense"/>0</r></p><par n='VAUX_V'/></e>
       <e><p><l>ал</l><r>can</r></p><par n='VAUX_VBMOD'/></e>
 
       <e><p><l>сөйле</l><r>speak<s n="sense"/>0</r></p><par n='V-TV_V'/></e>
+      <e><p><l>де</l><r>speak<s n="sense"/>0</r></p><par n='V-TV_V'/></e>
       <e><p><l>баста</l><r>start<s n="sense"/>0</r></p><par n='V-TV_V'/></e>
       <e><p><l>баста</l><r>begin<s n="sense"/>0</r></p><par n='V-TV_V'/></e>
       <e><p><l>баста</l><r>bind<s n="sense"/>0</r></p><par n='V-TV_V'/></e>
@@ -13277,7 +13380,6 @@
       <e><p><l>қара</l><r>look<s n="sense"/>0</r></p><par n="V-IV_V"/></e>
       <e><p><l>ұқса</l><r>look<s n="sense"/>0</r></p><par n="V-IV_V"/></e>
       <e><p><l>көр</l><r>look<s n="sense"/>0</r></p><par n="V-TV_V"/></e>
-      <e><p><l>көр</l><r>look<s n="sense"/>0</r></p><par n="V-TV_V"/></e>
       <e><p><l>үр</l><r>bark<s n="sense"/>0</r></p><par n="V-IV_V"/></e>
       <e><p><l>ескерт</l><r>remark<s n="sense"/>0</r></p><par n="V-TV_V"/></e>
       <e><p><l>белгіле</l><r>mark<s n="sense"/>0</r></p><par n="V-TV_V"/></e>
@@ -13370,7 +13472,6 @@
       <e><p><l>қаңғыр</l><r>roam<s n="sense"/>0</r></p><par n="V-IV_V"/></e>
       <e><p><l>программала</l><r>program<s n="sense"/>0</r></p><par n="V-TV_V"/></e>
       <e><p><l>көрін</l><r>seem<s n="sense"/>0</r></p><par n="V-IV_V"/></e>
-      <e><p><l>көр</l><r>seem<s n="sense"/>0</r></p><par n="V-TV_V"/></e>
       <e><p><l>көр</l><r>seem<s n="sense"/>0</r></p><par n="V-TV_V"/></e>
       <e><p><l>амандас</l><r>acclaim<s n="sense"/>0</r></p><par n="V-IV_V"/></e>
       <e><p><l>жарияла</l><r>proclaim<s n="sense"/>0</r></p><par n="V-TV_V"/></e>
@@ -14082,6 +14183,7 @@
       <e><p><l>мазала</l><r>worry<s n="sense"/>0</r></p><par n="V-TV_V"/></e>
       <e><p><l>асық</l><r>hurry<s n="sense"/>0</r></p><par n="V-IV_V"/></e>
       <e><p><l>тырыс</l><r>try<s n="sense"/>0</r></p><par n="V-IV_V"/></e>
+      <e><p><l>әрекет<b/>ет</l><r>try<s n="sense"/>0</r></p><par n="V-IV_V"/></e>
       <e><p><l>өткіз</l><r>try<s n="sense"/>0</r></p><par n="V-TV_V"/></e>
       <e><p><l>тат</l><r>try<s n="sense"/>0</r></p><par n="V-TV_V"/></e>
       <e><p><l>жерле</l><r>bury<s n="sense"/>0</r></p><par n="V-TV_V"/></e>
@@ -14089,6 +14191,11 @@
       <e><p><l>идентификацияла</l><r>identity<s n="sense"/>0</r></p><par n="V-TV_V"/></e>
       <e><p><l>күнде</l><r>envy<s n="sense"/>0</r></p><par n="V-TV_V"/></e>
       <e><p><l>гуілде</l><r>buzz<s n="sense"/>0</r></p><par n="V-IV_V"/></e>
+
+      <e><p><l>жауап<b/>бер</l><r>reply<s n="sense"/>0</r></p><par n="V-IV_V"/></e>
+      <e><p><l>жауап<b/>бер</l><r>respond<s n="sense"/>0</r></p><par n="V-IV_V"/></e>
+      <e><p><l>жауап<b/>ал</l><r>interrogate<s n="sense"/>0</r></p><par n="V-TV_V"/></e>
+      <e><p><l>жауап<b/>ал</l><r>ask<s n="sense"/>0</r></p><par n="V-TV_V"/></e>
 
       <!-- SECTION: Punctuation -->
 

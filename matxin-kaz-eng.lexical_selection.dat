@@ -13,3 +13,4 @@
 
 'дала'		'field'	my.smi=~'n'	-
 'дала'		'outside'	my.smi='n|loc'	+
+'әрдайым'	'always'		+
