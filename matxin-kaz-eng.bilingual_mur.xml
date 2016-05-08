@@ -177,6 +177,10 @@
       <e><p><l><s n="parol"/>cnjadv</l><r><s n="pos"/>cnjadv</r></p></e>
     </pardef>
 
+    <pardef n="A1-ADVL_ADV">
+      <e><p><l><s n="parol"/>adj|advl</l><r><s n="pos"/>adv</r></p></e>
+    </pardef>
+
     <pardef n="A1_A">
       <e><p><l><s n="parol"/>adj</l><r><s n="pos"/>adj</r></p></e>
       <e><p><l><s n="parol"/>adj|subst|nom</l><r><s n="pos"/>adj</r></p></e>
@@ -298,6 +302,7 @@
       <!-- SECTION: Miscellaneous -->
       <e><p><l>ма<s n="parol"/>qst</l><r></r></p></e>
       <e><p><l>шы<s n="parol"/>emph</l><r></r></p></e>
+      <e><p><l>шығар<s n="parol"/>mod</l><r></r></p></e>
 
       <!-- SECTION: Conjunctions -->
 
@@ -11433,6 +11438,7 @@
       <e><p><l>жоқ</l><r>inexistant<s n="sense"/>0</r></p><par n='A1_A'/></e>
 
       <e><p><l>мүмкін</l><r>possible<s n="sense"/>0</r></p><par n='A1_A'/></e>
+      <e><p><l>мүмкін</l><r>possibly<s n="sense"/>0</r></p><par n='A1-ADVL_ADV'/></e>
       <e><p><l>керек</l><r>necessary<s n="sense"/>0</r></p><par n='A1_A'/></e>
 
       <e><p><l>басқа</l><r>other<s n="sense"/>0</r></p><par n='A1_A'/></e>
