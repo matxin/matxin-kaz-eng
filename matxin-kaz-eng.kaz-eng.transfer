@@ -211,11 +211,29 @@
     </copy>
   </template>
 
-  <template match="CHUNK[@si='subj' and ../CHUNK/NODE/@slem = 'бар']">
+  <template match="CHUNK[@si='subj' and ../NODE/@slem = 'бар']">
     <copy>
        <copy-of select="@*[name()!='si']"/>
        <attribute name="si">obj</attribute>
        <apply-templates select="@*[name()!='si'] | *"/>
+    </copy>
+  </template>
+
+  <template match="CHUNK[@si='root' and NODE[@slem = 'бар' and NODE/@pos = 'vbser']]">
+    <copy>
+       <apply-templates select="@* | *"/>
+       <CHUNK>
+       <attribute name="si">subj</attribute>
+       <copy-of select="CHUNK[@si='subj']/NODE/NODE[@cas='gen']"/>
+       </CHUNK>
+    </copy>
+  </template>
+
+  <template match="NODE[@cas='gen' and ..//CHUNK/NODE/@slem = 'бар']">
+    <copy>
+       <copy-of select="@*[name()!='cas']"/>
+       <attribute name="cas">nom</attribute>
+       <apply-templates select="@*[name()!='cas'] | *"/>
     </copy>
   </template>
 
@@ -325,9 +343,9 @@
        <NODE>
          <attribute name="lem">do</attribute>
          <attribute name="pos">vbdo</attribute>
-         <attribute name="tam"><value-of select="../../CHUNK[@si='root']/NODE[@tam !='']/@tam"/></attribute>
-         <attribute name="pers">PD</attribute>
-         <attribute name="num">ND</attribute>
+         <attribute name="tam"><value-of select="../../CHUNK[@si='root' or @si='ccomp']/NODE[@tam !='']/@tam"/></attribute>
+         <attribute name="pers"><value-of select="../../CHUNK[@si='root' or @si='ccomp']/NODE[@pers !='']/@pers"/></attribute>
+         <attribute name="num"><value-of select="../../CHUNK[@si='root' or @si='ccomp']/NODE[@num!='']/@num"/></attribute>
        </NODE>
     </copy>
   </template>
