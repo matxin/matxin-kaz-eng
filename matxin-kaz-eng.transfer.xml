@@ -366,6 +366,7 @@
            <attr name="pers">PD</attr>
            <attr name="gen">GD</attr>
            <attr name="num">ND</attr>
+           <attr name="cas">CD</attr>
          </NODE>
        </CHUNK>
     </copy>
