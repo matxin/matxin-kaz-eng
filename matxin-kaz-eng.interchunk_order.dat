@@ -24,4 +24,5 @@ si='ccomp'					si='obj'	.*?	x1.x2
 si='xcomp'					si='obj'	.*?	x1.x2
 si='acl'					si='nmod'	.*?	x1.x2
 si='obj'					si='acl'	.*?	x1.x2
+si='obj'					si='nmod'	.*?	x2.x1
 si='advcl'					si='ccomp'	.*?	x1.x2

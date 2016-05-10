@@ -24,7 +24,7 @@
     </pipeline>
   </mode>
 
-  <mode name="kaz-eng-xfer-intra" install="no">
+  <mode name="kaz-eng-transfer" install="no">
     <pipeline>
       <program name="matxin-chunker">
         <file name="kaz-eng.chunk_rules.dat"/>
@@ -35,8 +35,8 @@
         <file name="kaz-eng.lexical_selection.dat"/> 
         <file name="kaz-eng.semantic.dat"/> 
       </program>
-      <program name="matxin-xfer-intra"> 
-        <file name="kaz-eng.intrachunk_move.dat"/> 
+      <program name="matxin-transfer"> 
+        <file name="kaz-eng.transfer.bin"/> 
       </program>
     </pipeline>
   </mode>
