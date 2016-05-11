@@ -15,12 +15,22 @@ TARGETS_COMMON=$(PREFIX1).bilingual.bin \
 	$(PREFIX1).generation.bin \
 	$(PREFIX1).morph_gen.bin \
 	$(PREFIX1).semantic.dat \
+	$(PREFIX1).autopgen.bin \
 	$(PREFIX1).chunk_rules.dat 
 
 
 @ap_include@
 
 ###############################################################################
+
+
+$(PREFIX1).chunk_rules.dat: $(AP_SRC1)/matxin-$(LANG1).chunk_rules.dat
+	cat $<  > $@
+
+#
+#
+#
+
 
 $(PREFIX1).bilingual.bin: $(BASENAME).bilingual_mur.xml 
 	lt-comp lr $< $@
@@ -49,12 +59,8 @@ $(PREFIX1).morph_gen.bin: $(AP_SRC2)/$(LANG2).morph_gen.bin
 $(PREFIX1).semantic.dat: $(AP_SRC2)/matxin-$(LANG2).semantic.dat
 	cat $<  > $@
 
-#
-#
-#
-
-$(PREFIX1).chunk_rules.dat: $(AP_SRC1)/matxin-$(LANG1).chunk_rules.dat
-	cat $<  > $@
+$(PREFIX1).autopgen.bin: $(AP_SRC2a)/$(LANG2).autopgen.bin
+	cp $< $@
 
 ###############################################################################
 

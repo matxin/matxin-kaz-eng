@@ -69,18 +69,6 @@ else
 fi
 
 
-AC_ARG_WITH(foma,
-            [AS_HELP_STRING([--with-foma=DIR],
-                            [Look for foma include/libs in DIR])],
-            [ case "$withval" in
-               no)
-                 ;;
-               *)
-                 CPPFLAGS="-I$withval/include $CPPFLAGS"
-                 LDFLAGS="-L$withval/lib $LDFLAGS"
-                 ;;
-              esac ])
-
 AC_ARG_WITH(lttoolbox,
             [AS_HELP_STRING([--with-lttoolbox=DIR],
                             [Look for lttoolbox include/libs in DIR])],
@@ -206,32 +194,15 @@ then
   AC_MSG_ERROR([lt-comp not found. You may want to adjust your PATH.])
 fi
 
-AC_PATH_PROG(FOMA, foma, no)
-if test x$ac_cv_path_FOMA = x
-then
-  AC_MSG_ERROR([foma not found. You may want to adjust your PATH.])
-fi
-if test x$ac_cv_path_FOMA = xno
-then
-  AC_MSG_ERROR([foma not found. You may want to adjust your PATH.])
-fi
-
-
-#
-# Checks for libraries.
-#
-AC_CHECK_LIB(foma, main, [true],AC_MSG_ERROR([foma found]))
-
-# Todo: depend on matxin-eus / matxin-eng
-
 PKG_CHECK_MODULES(MATXIN, [dnl
  lttoolbox >= required_lttoolbox_version dnl
   matxin >= required_matxin_version], CPPFLAGS="$CPPFLAGS $MATXIN_CPPFLAGS $MATXIN_CFLAGS"; LIBS="$LIBS $MATXIN_LIBS")
 
 m4_ifdef([AP_CHECK_LING],[],[AC_MSG_ERROR([AP_CHECK_LING not defined, is matxin.m4 in ACLOCAL_PATH? See: http://wiki.apertium.org/wiki/Installation_troubleshooting])])
 
-AP_CHECK_LING([1], [matxin-eng])
-AP_CHECK_LING([2], [matxin-eus])
+AP_CHECK_LING([1], [matxin-kaz])
+AP_CHECK_LING([2], [matxin-eng])
+AP_CHECK_LING([2a], [apertium-eng])
 
 AP_MKINCLUDE
 
