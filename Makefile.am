@@ -12,6 +12,8 @@ TARGETS_COMMON=$(PREFIX1).bilingual.bin \
 	$(PREFIX1).chunk_type.dat \
 	$(PREFIX1).lexical_selection.dat \
 	$(PREFIX1).transfer.bin \
+	$(PREFIX1).generation.bin \
+	$(PREFIX1).morph_gen.bin \
 	$(PREFIX1).semantic.dat \
 	$(PREFIX1).chunk_rules.dat 
 
@@ -31,6 +33,13 @@ $(PREFIX1).lexical_selection.dat: $(BASENAME).lexical_selection.dat
 
 $(PREFIX1).transfer.bin: $(BASENAME).transfer.xml
 	matxin-preprocess-transfer $< $@
+
+$(PREFIX1).generation.bin: $(AP_SRC2)/$(LANG2).generation.bin
+	cp $< $@
+
+$(PREFIX1).morph_gen.bin: $(AP_SRC2)/$(LANG2).morph_gen.bin
+	cp $< $@
+
 
 #
 #

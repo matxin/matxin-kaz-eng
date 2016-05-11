@@ -6,6 +6,7 @@
     <sdef n='def'/>
     <sdef n='num'/>
     <sdef n='neg'/>
+    <sdef n='grau'/>
     <sdef n='per'/>
     <sdef n='cas'/>
     <sdef n='trans'/>
@@ -192,8 +193,8 @@
       <e><p><l><s n="parol"/>adj</l><r><s n="pos"/>adj|sint</r></p></e>
       <e><p><l><s n="parol"/>adj|subst|nom</l><r><s n="pos"/>adj|sint</r></p></e>
       <e><p><l><s n="parol"/>adj|advl</l><r><s n="pos"/>adj|sint</r></p></e>
-      <e><p><l><s n="parol"/>adj|comp</l><r><s n="pos"/>adj|sint|comp</r></p></e>
-      <e><p><l><s n="parol"/>adj|comp|advl</l><r><s n="pos"/>adj|sint|comp</r></p></e>
+      <e><p><l><s n="parol"/>adj|comp</l><r><s n="pos"/>adj|sint<s n="grau"/>comp</r></p></e>
+      <e><p><l><s n="parol"/>adj|comp|advl</l><r><s n="pos"/>adj|sint<s n="grau"/>comp</r></p></e>
     </pardef>
 
     <pardef n="PERS_PERS">

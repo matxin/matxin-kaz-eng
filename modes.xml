@@ -42,4 +42,56 @@
   </mode>
 
 
+  <mode name="kaz-eng-linearise" install="no">
+    <pipeline>
+      <program name="matxin-chunker">
+        <file name="kaz-eng.chunk_rules.dat"/>
+      </program>
+      <program name="matxin-xfer-lex">
+        <file name="kaz-eng.bilingual.bin"/>
+        <file name="kaz-eng.chunk_type.dat"/> 
+        <file name="kaz-eng.lexical_selection.dat"/> 
+        <file name="kaz-eng.semantic.dat"/> 
+      </program>
+      <program name="matxin-transfer"> 
+        <file name="kaz-eng.transfer.bin"/> 
+      </program>
+      <program name="matxin-gen-inter"> 
+        <file name="matxin-kaz-eng.interchunk_order.dat"/>
+      </program>
+      <program name="matxin-gen-intra"> 
+        <file name="kaz-eng.intrachunk_order.dat"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="kaz-eng-generation" install="no">
+    <pipeline>
+      <program name="matxin-chunker">
+        <file name="kaz-eng.chunk_rules.dat"/>
+      </program>
+      <program name="matxin-xfer-lex">
+        <file name="kaz-eng.bilingual.bin"/>
+        <file name="kaz-eng.chunk_type.dat"/> 
+        <file name="kaz-eng.lexical_selection.dat"/> 
+        <file name="kaz-eng.semantic.dat"/> 
+      </program>
+      <program name="matxin-transfer"> 
+        <file name="kaz-eng.transfer.bin"/> 
+      </program>
+      <program name="matxin-gen-inter"> 
+        <file name="matxin-kaz-eng.interchunk_order.dat"/>
+      </program>
+      <program name="matxin-gen-intra"> 
+        <file name="kaz-eng.intrachunk_order.dat"/>
+      </program>
+      <program name="matxin-generate"> 
+        <file name="kaz-eng.generation.bin"/> 
+        <file name="kaz-eng.morph_gen.bin"/> 
+      </program>
+    </pipeline>
+  </mode>
+
+
+
 </modes>
