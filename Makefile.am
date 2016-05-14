@@ -8,15 +8,11 @@ PREFIX1=$(LANG1)-$(LANG2)
 
 BASENAME=matxin-$(PREFIX1)
 
-TARGETS_COMMON=$(PREFIX1).bilingual.bin \
-	$(PREFIX1).chunk_type.dat \
-	$(PREFIX1).lexical_selection.dat \
-	$(PREFIX1).transfer.bin \
-	$(PREFIX1).generation.bin \
-	$(PREFIX1).morph_gen.bin \
-	$(PREFIX1).semantic.dat \
-	$(PREFIX1).autopgen.bin \
-	$(PREFIX1).chunk_rules.dat 
+TARGETS_COMMON=$(PREFIX1).autobil.bin \
+	$(PREFIX1).t1x.bin \
+	$(PREFIX1).gnx.bin \
+	$(PREFIX1).autogen.bin \
+	$(PREFIX1).autopgen.bin 
 
 
 @ap_include@
@@ -24,30 +20,24 @@ TARGETS_COMMON=$(PREFIX1).bilingual.bin \
 ###############################################################################
 
 
-$(PREFIX1).chunk_rules.dat: $(AP_SRC1)/matxin-$(LANG1).chunk_rules.dat
-	cat $<  > $@
-
 #
 #
 #
 
 
-$(PREFIX1).bilingual.bin: $(BASENAME).bilingual_mur.xml 
+$(PREFIX1).autobil.bin: $(BASENAME).$(PREFIX1).dix
 	lt-comp lr $< $@
 
-$(PREFIX1).chunk_type.dat:  $(BASENAME).chunk_type.dat
-	cp $< $@
-
-$(PREFIX1).lexical_selection.dat: $(BASENAME).lexical_selection.dat
-	cp $< $@
-
-$(PREFIX1).transfer.bin: $(BASENAME).transfer.xml
+$(PREFIX1).t1x.bin: $(BASENAME).$(PREFIX1).t1x
 	matxin-preprocess-transfer $< $@
 
-$(PREFIX1).generation.bin: $(AP_SRC2)/$(LANG2).generation.bin
+$(PREFIX1).l1x.dat: $(BASENAME).$(PREFIX1).l1x
 	cp $< $@
 
-$(PREFIX1).morph_gen.bin: $(AP_SRC2)/$(LANG2).morph_gen.bin
+$(PREFIX1).gnx.bin: $(AP_SRC2)/$(LANG2).gnx.bin
+	cp $< $@
+
+$(PREFIX1).autogen.bin: $(AP_SRC2)/$(LANG2).autogen.bin
 	cp $< $@
 
 
@@ -55,19 +45,13 @@ $(PREFIX1).morph_gen.bin: $(AP_SRC2)/$(LANG2).morph_gen.bin
 #
 #
 
-
-$(PREFIX1).semantic.dat: $(AP_SRC2)/matxin-$(LANG2).semantic.dat
-	cat $<  > $@
 
 $(PREFIX1).autopgen.bin: $(AP_SRC2a)/$(LANG2).autopgen.bin
 	cp $< $@
 
 ###############################################################################
 
-EXTRA_DIST=$(BASENAME).bilingual_mur.xml \
-	$(BASENAME).chunk_type.dat \
-	$(BASENAME).intrachunk_move.dat \
-	$(BASENAME).lexical_selection.dat
+EXTRA_DIST=$(BASENAME).$(PREFIX1).dix
 
 matxin_kaz_engdir=$(prefix)/share/matxin/$(BASENAME)
 matxin_kaz_eng_srcdir=$(prefix)/share/matxin/$(BASENAME)
