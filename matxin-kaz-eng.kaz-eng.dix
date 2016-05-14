@@ -155,11 +155,11 @@
     </pardef>
 
     <pardef n="NP-ANT-M_NP-ANT-M">
-      <e><p><l><s n="mi"/>np|ant|m</l><r><s n="pos"/>np|ant<s n="gen"/>m</r></p><par n="POSS"/></e>
+      <e><p><l><s n="mi"/>np|ant|m</l><r><s n="pos"/>np|ant<s n="gen"/>m<s n="num"/>sg</r></p><par n="POSS"/></e>
     </pardef>
 
     <pardef n="NP-ANT-F_NP-ANT-F">
-      <e><p><l><s n="mi"/>np|ant|f</l><r><s n="pos"/>np|ant<s n="gen"/>f</r></p><par n="POSS"/></e>
+      <e><p><l><s n="mi"/>np|ant|f</l><r><s n="pos"/>np|ant<s n="gen"/>f<s n="num"/>sg</r></p><par n="POSS"/></e>
     </pardef>
 
     <pardef n="IJ_IJ">
