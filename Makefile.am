@@ -10,6 +10,7 @@ BASENAME=matxin-$(PREFIX1)
 
 TARGETS_COMMON=$(PREFIX1).autobil.bin \
 	$(PREFIX1).t1x.bin \
+	$(PREFIX1).l1x.dat \
 	$(PREFIX1).gnx.bin \
 	$(PREFIX1).autogen.bin \
 	$(PREFIX1).autopgen.bin 

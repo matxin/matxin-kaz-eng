@@ -15,7 +15,7 @@
         <file name="kaz-eng.autobil.bin"/>
       </program>
       <program name="matxin-transfer"> 
-        <file name="kaz-eng.transfer.bin"/> 
+        <file name="kaz-eng.t1x.bin"/> 
       </program>
     </pipeline>
   </mode>
@@ -27,7 +27,7 @@
         <file name="kaz-eng.autobil.bin"/>
       </program>
       <program name="matxin-transfer"> 
-        <file name="kaz-eng.transfer.bin"/> 
+        <file name="kaz-eng.t1x.bin"/> 
       </program>
       <program name="matxin-linearise"> 
         <file name="kaz-eng.l1x.dat"/>
@@ -35,13 +35,13 @@
     </pipeline>
   </mode>
 
-  <mode name="kaz-eng-generation" install="no">
+  <mode name="kaz-eng-generate" install="no">
     <pipeline>
       <program name="matxin-xfer-lex">
         <file name="kaz-eng.autobil.bin"/>
       </program>
       <program name="matxin-transfer"> 
-        <file name="kaz-eng.transfer.bin"/> 
+        <file name="kaz-eng.t1x.bin"/> 
       </program>
       <program name="matxin-linearise"> 
         <file name="kaz-eng.l1x.dat"/>

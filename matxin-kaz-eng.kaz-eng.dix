@@ -19,7 +19,7 @@
     <sdef n='func'/>
     <sdef n='vpost'/>
     <sdef n='suf'/>
-    <sdef n='parol'/>
+    <sdef n='mi'/>
     <sdef n='sense'/>
   </sdefs>
   <pardefs>
@@ -44,157 +44,157 @@
     </pardef>
 
     <pardef n="N1_N">
-      <e><p><l><s n="parol"/>n|attr</l><r><s n="pos"/>n<s n="num"/>sg</r></p></e>
-      <e><p><l><s n="parol"/>n</l><r><s n="pos"/>n<s n="num"/>ND</r></p><par n="POSS"/></e>
-      <e><p><l><s n="parol"/>n|pl</l><r><s n="pos"/>n<s n="num"/>pl</r></p><par n="POSS"/></e>
+      <e><p><l><s n="mi"/>n|attr</l><r><s n="pos"/>n<s n="num"/>sg</r></p></e>
+      <e><p><l><s n="mi"/>n</l><r><s n="pos"/>n<s n="num"/>ND</r></p><par n="POSS"/></e>
+      <e><p><l><s n="mi"/>n|pl</l><r><s n="pos"/>n<s n="num"/>pl</r></p><par n="POSS"/></e>
     </pardef>
 
     <pardef n="NPX_N">
-      <e><p><l><s n="parol"/>n|px3sp|attr</l><r><s n="pos"/>n<s n="num"/>sg</r></p></e>
-      <e><p><l><s n="parol"/>n|px3sp|</l><r><s n="pos"/>n<s n="num"/>ND</r></p><par n="CASE"/></e>
-      <e><p><l><s n="parol"/>n|pl</l><r><s n="pos"/>n<s n="num"/>pl</r></p><par n="POSS"/></e>
+      <e><p><l><s n="mi"/>n|px3sp|attr</l><r><s n="pos"/>n<s n="num"/>sg</r></p></e>
+      <e><p><l><s n="mi"/>n|px3sp|</l><r><s n="pos"/>n<s n="num"/>ND</r></p><par n="CASE"/></e>
+      <e><p><l><s n="mi"/>n|pl</l><r><s n="pos"/>n<s n="num"/>pl</r></p><par n="POSS"/></e>
     </pardef>
 
 
     <pardef n="POST_PREP">
-      <e><p><l><s n="parol"/>post</l><r><s n="pos"/>pr</r></p></e>
+      <e><p><l><s n="mi"/>post</l><r><s n="pos"/>pr</r></p></e>
     </pardef>
 
     <pardef n="N-LOC_ADV">
-      <e><p><l><s n="parol"/>n|loc</l><r><s n="pos"/>adv</r></p></e>
+      <e><p><l><s n="mi"/>n|loc</l><r><s n="pos"/>adv</r></p></e>
     </pardef>
 
 
     <pardef n="POSTADV_ADV">
-      <e><p><l><s n="parol"/>postadv</l><r><s n="pos"/>adv</r></p></e>
+      <e><p><l><s n="mi"/>postadv</l><r><s n="pos"/>adv</r></p></e>
     </pardef>
 
 
     <pardef n="ADV_PREADV">
-      <e><p><l><s n="parol"/>adv</l><r><s n="pos"/>preadv</r></p></e>
+      <e><p><l><s n="mi"/>adv</l><r><s n="pos"/>preadv</r></p></e>
     </pardef>
 
     <pardef n="NUM_NUM">
-      <e><p><l><s n="parol"/>num</l><r><s n="pos"/>num<s n="num"/>sp</r></p></e>
+      <e><p><l><s n="mi"/>num</l><r><s n="pos"/>num<s n="num"/>sp</r></p></e>
     </pardef>
 
     <pardef n="DET-IND_DET-IND">
-      <e><p><l><s n="parol"/>det|ind</l><r><s n="pos"/>det|ind<s n="num"/>sg</r></p></e>
+      <e><p><l><s n="mi"/>det|ind</l><r><s n="pos"/>det|ind<s n="num"/>sg</r></p></e>
     </pardef>
 
     <pardef n="DET-REF_A">
-      <e><p><l><s n="parol"/>det|ref</l><r><s n="pos"/>adj</r></p></e>
+      <e><p><l><s n="mi"/>det|ref</l><r><s n="pos"/>adj</r></p></e>
     </pardef>
 
     <pardef n="DET-QNT_PREDET">
-      <e><p><l><s n="parol"/>det|qnt</l><r><s n="pos"/>predet<s n="num"/>sp</r></p></e>
+      <e><p><l><s n="mi"/>det|qnt</l><r><s n="pos"/>predet<s n="num"/>sp</r></p></e>
     </pardef>
 
     <pardef n="DET-ITG_DET-ITG">
-      <e><p><l><s n="parol"/>det|itg</l><r><s n="pos"/>det|itg<s n="num"/>sp</r></p></e>
+      <e><p><l><s n="mi"/>det|itg</l><r><s n="pos"/>det|itg<s n="num"/>sp</r></p></e>
     </pardef>
 
     <pardef n="DET-DEM_DET-DEM">
-      <e><p><l><s n="parol"/>det|dem</l><r><s n="pos"/>det|dem<s n="num"/>sg</r></p></e>
+      <e><p><l><s n="mi"/>det|dem</l><r><s n="pos"/>det|dem<s n="num"/>sg</r></p></e>
     </pardef>
 
     <pardef n="SEN_YOU">
-      <e><p><l><s n="parol"/>prn|pers|p2|sg</l><r><s n="pos"/>prn|pers<s n="pers"/>p2<s n="gen"/>mf<s n="num"/>sg</r></p><par n="CASE"/></e>
+      <e><p><l><s n="mi"/>prn|pers|p2|sg</l><r><s n="pos"/>prn|pers<s n="pers"/>p2<s n="gen"/>mf<s n="num"/>sg</r></p><par n="CASE"/></e>
     </pardef>
 
     <pardef n="SIZ_YOU">
-      <e><p><l><s n="parol"/>prn|pers|p2|sg|frm</l><r><s n="pos"/>prn|pers<s n="pers"/>p2<s n="gen"/>mf<s n="num"/>sg</r></p><par n="CASE"/></e>
+      <e><p><l><s n="mi"/>prn|pers|p2|sg|frm</l><r><s n="pos"/>prn|pers<s n="pers"/>p2<s n="gen"/>mf<s n="num"/>sg</r></p><par n="CASE"/></e>
     </pardef>
 
     <pardef n="OL_HE">
-      <e><p><l><s n="parol"/>prn|pers|p3|sg</l><r><s n="pos"/>prn|pers<s n="pers"/>p3<s n="gen"/>m<s n="num"/>sg</r></p><par n="CASE"/></e>
+      <e><p><l><s n="mi"/>prn|pers|p3|sg</l><r><s n="pos"/>prn|pers<s n="pers"/>p3<s n="gen"/>m<s n="num"/>sg</r></p><par n="CASE"/></e>
     </pardef>
 
     <pardef n="OL_SHE">
-      <e><p><l><s n="parol"/>prn|pers|p3|sg</l><r><s n="pos"/>prn|pers<s n="pers"/>p3<s n="gen"/>f<s n="num"/>sg</r></p><par n="CASE"/></e>
+      <e><p><l><s n="mi"/>prn|pers|p3|sg</l><r><s n="pos"/>prn|pers<s n="pers"/>p3<s n="gen"/>f<s n="num"/>sg</r></p><par n="CASE"/></e>
     </pardef>
 
     <pardef n="OL_IT">
-      <e><p><l><s n="parol"/>prn|pers|p3|sg</l><r><s n="pos"/>prn|pers<s n="pers"/>p3<s n="gen"/>nt<s n="num"/>sg</r></p><par n="CASE"/></e>
+      <e><p><l><s n="mi"/>prn|pers|p3|sg</l><r><s n="pos"/>prn|pers<s n="pers"/>p3<s n="gen"/>nt<s n="num"/>sg</r></p><par n="CASE"/></e>
     </pardef>
 
     <pardef n="OLAR_THEY">
-      <e><p><l><s n="parol"/>prn|pers|p3|pl</l><r><s n="pos"/>prn|pers<s n="pers"/>p3<s n="gen"/>mf<s n="num"/>pl</r></p><par n="CASE"/></e>
+      <e><p><l><s n="mi"/>prn|pers|p3|pl</l><r><s n="pos"/>prn|pers<s n="pers"/>p3<s n="gen"/>mf<s n="num"/>pl</r></p><par n="CASE"/></e>
     </pardef>
 
     <pardef n="NUM-COLL_PRN-TN-PL">
-      <e><p><l><s n="parol"/>num|coll|subst</l><r><s n="pos"/>prn|tn<s n="num"/>pl</r></p><par n="POSS"/></e>
+      <e><p><l><s n="mi"/>num|coll|subst</l><r><s n="pos"/>prn|tn<s n="num"/>pl</r></p><par n="POSS"/></e>
     </pardef>
 
     <pardef n="PRN-IND_PRN-TN">
-      <e><p><l><s n="parol"/>prn|ind</l><r><s n="pos"/>prn|tn<s n="num"/>sg</r></p><par n="POSS"/></e>
+      <e><p><l><s n="mi"/>prn|ind</l><r><s n="pos"/>prn|tn<s n="num"/>sg</r></p><par n="POSS"/></e>
     </pardef>
 
     <pardef n="PRN-NEG_PRN-TN">
-      <e><p><l><s n="parol"/>prn|neg</l><r><s n="pos"/>prn|tn<s n="num"/>sg</r></p><par n="POSS"/></e>
+      <e><p><l><s n="mi"/>prn|neg</l><r><s n="pos"/>prn|tn<s n="num"/>sg</r></p><par n="POSS"/></e>
     </pardef>
 
     <pardef n="PRN-ITG_PRN-ITG">
-      <e><p><l><s n="parol"/>prn|itg</l><r><s n="pos"/>prn|itg<s n="num"/>sp</r></p><par n="POSS"/></e>
+      <e><p><l><s n="mi"/>prn|itg</l><r><s n="pos"/>prn|itg<s n="num"/>sp</r></p><par n="POSS"/></e>
     </pardef>
 
     <pardef n="PRN-DEM_PRN-DEM">
-      <e><p><l><s n="parol"/>prn|dem</l><r><s n="pos"/>prn|dem<s n="num"/>sg</r></p><par n="POSS"/></e>
+      <e><p><l><s n="mi"/>prn|dem</l><r><s n="pos"/>prn|dem<s n="num"/>sg</r></p><par n="POSS"/></e>
     </pardef>
 
     <pardef n="ADV-ITG_ADV-ITG">
-      <e><p><l><s n="parol"/>adv|itg</l><r><s n="pos"/>adv|itg</r></p></e>
+      <e><p><l><s n="mi"/>adv|itg</l><r><s n="pos"/>adv|itg</r></p></e>
     </pardef>
 
     <pardef n="ADV_ADV">
-      <e><p><l><s n="parol"/>adv</l><r><s n="pos"/>adv</r></p></e>
+      <e><p><l><s n="mi"/>adv</l><r><s n="pos"/>adv</r></p></e>
     </pardef>
 
     <pardef n="NP-TOP_NP-TOP">
-      <e><p><l><s n="parol"/>np|top</l><r><s n="pos"/>np|top</r></p><par n="POSS"/></e>
+      <e><p><l><s n="mi"/>np|top</l><r><s n="pos"/>np|top</r></p><par n="POSS"/></e>
     </pardef>
 
     <pardef n="NP-ANT-M_NP-ANT-M">
-      <e><p><l><s n="parol"/>np|ant|m</l><r><s n="pos"/>np|ant<s n="gen"/>m</r></p><par n="POSS"/></e>
+      <e><p><l><s n="mi"/>np|ant|m</l><r><s n="pos"/>np|ant<s n="gen"/>m</r></p><par n="POSS"/></e>
     </pardef>
 
     <pardef n="NP-ANT-F_NP-ANT-F">
-      <e><p><l><s n="parol"/>np|ant|f</l><r><s n="pos"/>np|ant<s n="gen"/>f</r></p><par n="POSS"/></e>
+      <e><p><l><s n="mi"/>np|ant|f</l><r><s n="pos"/>np|ant<s n="gen"/>f</r></p><par n="POSS"/></e>
     </pardef>
 
     <pardef n="IJ_IJ">
-      <e><p><l><s n="parol"/>ij</l><r><s n="pos"/>ij</r></p></e>
+      <e><p><l><s n="mi"/>ij</l><r><s n="pos"/>ij</r></p></e>
     </pardef>
 
     <pardef n="CNJCOO_CNJADV">
-      <e><p><l><s n="parol"/>cnjcoo</l><r><s n="pos"/>cnjadv</r></p></e>
+      <e><p><l><s n="mi"/>cnjcoo</l><r><s n="pos"/>cnjadv</r></p></e>
     </pardef>
 
     <pardef n="CNJCOO_CNJCOO">
-      <e><p><l><s n="parol"/>cnjcoo</l><r><s n="pos"/>cnjcoo</r></p></e>
+      <e><p><l><s n="mi"/>cnjcoo</l><r><s n="pos"/>cnjcoo</r></p></e>
     </pardef>
 
     <pardef n="CNJADV_CNJADV">
-      <e><p><l><s n="parol"/>cnjadv</l><r><s n="pos"/>cnjadv</r></p></e>
+      <e><p><l><s n="mi"/>cnjadv</l><r><s n="pos"/>cnjadv</r></p></e>
     </pardef>
 
     <pardef n="A1-ADVL_ADV">
-      <e><p><l><s n="parol"/>adj|advl</l><r><s n="pos"/>adv</r></p></e>
+      <e><p><l><s n="mi"/>adj|advl</l><r><s n="pos"/>adv</r></p></e>
     </pardef>
 
     <pardef n="A1_A">
-      <e><p><l><s n="parol"/>adj</l><r><s n="pos"/>adj</r></p></e>
-      <e><p><l><s n="parol"/>adj|subst|nom</l><r><s n="pos"/>adj</r></p></e>
-      <e><p><l><s n="parol"/>adj|advl</l><r><s n="pos"/>adj</r></p></e>
+      <e><p><l><s n="mi"/>adj</l><r><s n="pos"/>adj</r></p></e>
+      <e><p><l><s n="mi"/>adj|subst|nom</l><r><s n="pos"/>adj</r></p></e>
+      <e><p><l><s n="mi"/>adj|advl</l><r><s n="pos"/>adj</r></p></e>
     </pardef>
 
 
     <pardef n="A1_A-SINT">
-      <e><p><l><s n="parol"/>adj</l><r><s n="pos"/>adj|sint</r></p></e>
-      <e><p><l><s n="parol"/>adj|subst|nom</l><r><s n="pos"/>adj|sint</r></p></e>
-      <e><p><l><s n="parol"/>adj|advl</l><r><s n="pos"/>adj|sint</r></p></e>
-      <e><p><l><s n="parol"/>adj|comp</l><r><s n="pos"/>adj|sint<s n="grau"/>comp</r></p></e>
-      <e><p><l><s n="parol"/>adj|comp|advl</l><r><s n="pos"/>adj|sint<s n="grau"/>comp</r></p></e>
+      <e><p><l><s n="mi"/>adj</l><r><s n="pos"/>adj|sint</r></p></e>
+      <e><p><l><s n="mi"/>adj|subst|nom</l><r><s n="pos"/>adj|sint</r></p></e>
+      <e><p><l><s n="mi"/>adj|advl</l><r><s n="pos"/>adj|sint</r></p></e>
+      <e><p><l><s n="mi"/>adj|comp</l><r><s n="pos"/>adj|sint<s n="grau"/>comp</r></p></e>
+      <e><p><l><s n="mi"/>adj|comp|advl</l><r><s n="pos"/>adj|sint<s n="grau"/>comp</r></p></e>
     </pardef>
 
     <pardef n="PERS_PERS">
@@ -257,10 +257,10 @@
     </pardef>
 
     <pardef n="COP_VBSER">
-      <e><p><l><s n="parol"/>cop</l><r><s n="pos"/>vbser</r></p><par n="FIN_FIN"/></e>
-      <e><p><l><s n="parol"/>cop</l><r><s n="pos"/>vbser</r></p><par n="GER_GER"/></e>
-      <e><p><l><s n="parol"/>cop|neg</l><r><s n="pos"/>vbser<s n="neg"/>neg</r></p><par n="FIN_FIN"/></e>
-      <e><p><l><s n="parol"/>cop|neg</l><r><s n="pos"/>vbser<s n="neg"/>neg</r></p><par n="GER_GER"/></e>
+      <e><p><l><s n="mi"/>cop</l><r><s n="pos"/>vbser</r></p><par n="FIN_FIN"/></e>
+      <e><p><l><s n="mi"/>cop</l><r><s n="pos"/>vbser</r></p><par n="GER_GER"/></e>
+      <e><p><l><s n="mi"/>cop|neg</l><r><s n="pos"/>vbser<s n="neg"/>neg</r></p><par n="FIN_FIN"/></e>
+      <e><p><l><s n="mi"/>cop|neg</l><r><s n="pos"/>vbser<s n="neg"/>neg</r></p><par n="GER_GER"/></e>
     </pardef>
 
     <pardef n="V-MORF_V-MORF">
@@ -272,38 +272,38 @@
     </pardef>
 
     <pardef n="VAUX_V">
-      <e><p><l><s n="parol"/>vaux</l><r><s n="pos"/>vblex</r></p><par n="V-MORF_V-MORF"/></e>
-      <e><p><l><s n="parol"/>vaux|neg</l><r><s n="pos"/>vblex<s n="neg"/>neg</r></p><par n="V-MORF_V-MORF"/></e>
+      <e><p><l><s n="mi"/>vaux</l><r><s n="pos"/>vblex</r></p><par n="V-MORF_V-MORF"/></e>
+      <e><p><l><s n="mi"/>vaux|neg</l><r><s n="pos"/>vblex<s n="neg"/>neg</r></p><par n="V-MORF_V-MORF"/></e>
     </pardef>
 
     <pardef n="VAUX_VBMOD">
-      <e><p><l><s n="parol"/>vaux</l><r><s n="pos"/>vbmod</r></p><par n="V-MORF_V-MORF"/></e>
-      <e><p><l><s n="parol"/>vaux|neg</l><r><s n="pos"/>vbmod<s n="neg"/>neg</r></p><par n="V-MORF_V-MORF"/></e>
+      <e><p><l><s n="mi"/>vaux</l><r><s n="pos"/>vbmod</r></p><par n="V-MORF_V-MORF"/></e>
+      <e><p><l><s n="mi"/>vaux|neg</l><r><s n="pos"/>vbmod<s n="neg"/>neg</r></p><par n="V-MORF_V-MORF"/></e>
     </pardef>
 
     <pardef n="VAUX_VAUX">
-      <e><p><l><s n="parol"/>vaux</l><r><s n="pos"/>vaux</r></p><par n="V-MORF_V-MORF"/></e>
-      <e><p><l><s n="parol"/>vaux|neg</l><r><s n="pos"/>vaux<s n="neg"/>neg</r></p><par n="V-MORF_V-MORF"/></e>
+      <e><p><l><s n="mi"/>vaux</l><r><s n="pos"/>vaux</r></p><par n="V-MORF_V-MORF"/></e>
+      <e><p><l><s n="mi"/>vaux|neg</l><r><s n="pos"/>vaux<s n="neg"/>neg</r></p><par n="V-MORF_V-MORF"/></e>
     </pardef>
 
     <pardef n="V-TV_V">
-      <e><p><l><s n="parol"/>v|tv</l><r><s n="pos"/>vblex</r></p><par n="V-MORF_V-MORF"/></e>
-      <e><p><l><s n="parol"/>v|tv|neg</l><r><s n="pos"/>vblex<s n="neg"/>neg</r></p><par n="V-MORF_V-MORF"/></e>
-      <e><p><l><s n="parol"/>v|tv|pass</l><r><s n="pos"/>vblex<s n="trans"/>pass<s n="neg"/>neg</r></p><par n="V-MORF_V-MORF"/></e>
-      <e><p><l><s n="parol"/>v|tv|pass|neg</l><r><s n="pos"/>vblex<s n="trans"/>pass<s n="neg"/>neg</r></p><par n="V-MORF_V-MORF"/></e>
+      <e><p><l><s n="mi"/>v|tv</l><r><s n="pos"/>vblex</r></p><par n="V-MORF_V-MORF"/></e>
+      <e><p><l><s n="mi"/>v|tv|neg</l><r><s n="pos"/>vblex<s n="neg"/>neg</r></p><par n="V-MORF_V-MORF"/></e>
+      <e><p><l><s n="mi"/>v|tv|pass</l><r><s n="pos"/>vblex<s n="trans"/>pass<s n="neg"/>neg</r></p><par n="V-MORF_V-MORF"/></e>
+      <e><p><l><s n="mi"/>v|tv|pass|neg</l><r><s n="pos"/>vblex<s n="trans"/>pass<s n="neg"/>neg</r></p><par n="V-MORF_V-MORF"/></e>
     </pardef>
 
     <pardef n="V-IV_V">
-      <e><p><l><s n="parol"/>v|iv</l><r><s n="pos"/>vblex</r></p><par n="V-MORF_V-MORF"/></e>
-      <e><p><l><s n="parol"/>v|iv|neg</l><r><s n="pos"/>vblex<s n="neg"/>neg</r></p><par n="V-MORF_V-MORF"/></e>
+      <e><p><l><s n="mi"/>v|iv</l><r><s n="pos"/>vblex</r></p><par n="V-MORF_V-MORF"/></e>
+      <e><p><l><s n="mi"/>v|iv|neg</l><r><s n="pos"/>vblex<s n="neg"/>neg</r></p><par n="V-MORF_V-MORF"/></e>
     </pardef>
 
   </pardefs>
   <section id="IXA_moldaketak" type="standard">
       <!-- SECTION: Miscellaneous -->
-      <e><p><l>ма<s n="parol"/>qst</l><r></r></p></e>
-      <e><p><l>шы<s n="parol"/>emph</l><r></r></p></e>
-      <e><p><l>шығар<s n="parol"/>mod</l><r></r></p></e>
+      <e><p><l>ма<s n="mi"/>qst</l><r></r></p></e>
+      <e><p><l>шы<s n="mi"/>emph</l><r></r></p></e>
+      <e><p><l>шығар<s n="mi"/>mod</l><r></r></p></e>
 
       <!-- SECTION: Conjunctions -->
 
@@ -14204,10 +14204,10 @@
       <e><p><l>жоқ</l><r>no<s n="sense"/>0</r></p><par n="IJ_IJ"/></e>
 
       <!-- SECTION: Punctuation -->
-      <e><re>[.!\?]</re><p><l><s n="parol"/>sent</l><r><s n="pos"/>sent</r></p></e>
-      <e><p><l>,<s n="parol"/>cm</l><r>,<s n="pos"/>cm</r></p></e>
-      <e><p><l>&amp;#34;<s n="parol"/>sent</l><r>"<s n="pos"/>sent</r></p></e>
-      <e><p><l>&#34;<s n="parol"/>sent</l><r>"<s n="pos"/>sent</r></p></e>
-      <e><p><l>"<s n="parol"/>sent</l><r>"<s n="pos"/>sent</r></p></e>
+      <e><re>[.!\?]</re><p><l><s n="mi"/>sent</l><r><s n="pos"/>sent</r></p></e>
+      <e><p><l>,<s n="mi"/>cm</l><r>,<s n="pos"/>cm</r></p></e>
+      <e><p><l>&amp;#34;<s n="mi"/>sent</l><r>"<s n="pos"/>sent</r></p></e>
+      <e><p><l>&#34;<s n="mi"/>sent</l><r>"<s n="pos"/>sent</r></p></e>
+      <e><p><l>"<s n="mi"/>sent</l><r>"<s n="pos"/>sent</r></p></e>
   </section>
 </dictionary>
