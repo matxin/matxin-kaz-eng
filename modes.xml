@@ -30,7 +30,7 @@
         <file name="kaz-eng.t1x.bin"/> 
       </program>
       <program name="matxin-linearise"> 
-        <file name="kaz-eng.l1x.dat"/>
+        <file name="matxin-kaz-eng.kaz-eng.l1x"/>
       </program>
     </pipeline>
   </mode>
@@ -44,7 +44,7 @@
         <file name="kaz-eng.t1x.bin"/> 
       </program>
       <program name="matxin-linearise"> 
-        <file name="kaz-eng.l1x.dat"/>
+        <file name="matxin-kaz-eng.kaz-eng.l1x"/>
       </program>
       <program name="matxin-generate"> 
         <file name="kaz-eng.gnx.bin"/> 

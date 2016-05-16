@@ -48,7 +48,7 @@
 </def-rule>
 
 <def-rule comment="Add a daughter node for the clitic genitive, but not if it's a pronoun or if it is in an existential construction">
-   <template match="//NODE[@cas='gen' and @pos != 'prn|pers' and ..//CHUNK/NODE[@slem='бар']]">
+   <template match="//NODE[@cas='gen' and @pos != 'prn|pers' and ..//NODE[@slem='бар']]">
      <copy>
        <apply-templates select="@* | *"/>
        <NODE lem="'s" pos="gen"/>
@@ -83,7 +83,7 @@
 
 <def-rule comment="Set the morphological information to gerund if the chunk is a ccomp or advcl">
 
-  <template match="//NODE[@pos = 'vblex' and contains(@smi, 'ger_') and ../@si = 'ccomp' or ../@si = 'advcl']">
+  <template match="//NODE[@pos = 'vblex' and (contains(@smi, 'ger_') or contains(@smi, 'gna_')) and (@si = 'ccomp' or @si = 'advcl')]">
     <copy>
        <copy-of select="@*[name()!='mi']"/>
        <attr name="mi">ger</attr>
@@ -93,13 +93,11 @@
 
 </def-rule>
 
-<def-rule comment="Set the morphological information to gerund if the chunk is a xcomp, ccomp or advcl">
+<def-rule comment="Set the morphological information to inf if the chunk is a xcomp, ccomp or advcl">
 
-  <template match="//NODE[@pos = 'vblex' and contains(@smi, 'ger') and ../@si = 'ccomp' or ../@si = 'advcl' or ../@si = 'xcomp']">
+  <template match="//NODE[@pos = 'vblex' and contains(@smi, 'ger') and (@si = 'ccomp' or @si = 'advcl' or @si = 'xcomp')]">
     <copy>
-       <copy-of select="@*[name()!='mi']"/>
-       <attr name="mi">inf</attr>
-       <apply-templates select="@*[name()!='mi'] | *"/>
+       <apply-templates select="@* | *"/>
        <NODE lem="to" pos="to"/>
     </copy>
   </template>
@@ -152,6 +150,16 @@
     </copy>
   </template>
 
+  <template match="//NODE[@slem = 'отыр' and @pos = 'vaux' and parent::NODE/@mi = 'ger' ]">
+    <copy>
+       <copy-of select="@*[name()!='lem' and name()!='pos' and name()!='tam']"/>
+       <attr name="lem">be</attr>
+       <attr name="pos">vbser</attr>
+       <attr name="tam">pri</attr>
+       <apply-templates select="@*[name()!='lem' and name()!='pos' and name()!='tam'] | *"/>
+    </copy>
+  </template>
+
 </def-rule>
 
 <def-rule>
@@ -195,10 +203,10 @@
        <attr name="lem">have</attr>
        <attr name="pos">vblex</attr>
        <choose>
-         <when test="..//CHUNK[@si='subj']/NODE/@px = 'sg1'">
+         <when test="..//NODE[@si='subj' and @px = 'sg1']">
            <attr name="pers">p1</attr><attr name="num">sg</attr>
          </when>
-         <when test="..//CHUNK[@si='subj']/NODE/@px = 'sp3'">
+         <when test="..//NODE[@si='subj' and @px = 'sp3']">
            <attr name="pers">p3</attr><attr name="num">ND</attr>
          </when>
          <otherwise> 
@@ -211,7 +219,7 @@
     </copy>
   </template>
 
-  <template match="CHUNK[@si='subj' and ../NODE/@slem = 'бар' and contains(../NODE/@smi, 'adj')]">
+  <template match="NODE[@si='subj' and ../NODE/@slem = 'бар' and contains(../NODE/@smi, 'adj')]">
     <copy>
        <copy-of select="@*[name()!='si']"/>
        <attr name="si">obj</attr>
@@ -219,17 +227,17 @@
     </copy>
   </template>
 
-  <template match="CHUNK[@si='root' and NODE[@slem = 'бар' and NODE/@pos = 'vbser']]">
+<!--
+  <template match="NODE[@si='root' and NODE[@slem = 'бар' and NODE/@pos = 'vbser']]">
     <copy>
        <apply-templates select="@* | *"/>
-       <CHUNK>
        <attr name="si">subj</attr>
-       <copy-of select="CHUNK[@si='subj']/NODE/NODE[@cas='gen']"/>
-       </CHUNK>
+       <copy-of select="NODE[@si='subj']/NODE/NODE[@cas='gen']"/>
     </copy>
   </template>
+-->
 
-  <template match="NODE[@cas='gen' and ..//CHUNK/NODE/@slem = 'бар']">
+  <template match="NODE[@cas='gen' and ..//NODE/@slem = 'бар']">
     <copy>
        <copy-of select="@*[name()!='cas']"/>
        <attr name="cas">nom</attr>
@@ -237,26 +245,6 @@
     </copy>
   </template>
 
-</def-rule>
-
-<def-rule comment="Translate жоқ with dependent copula to have and drop the copula">
-
-  <template match="//NODE[@slem = 'жоқ' and NODE/@pos = 'vbser']">
-    <copy>
-       <copy-of select="@*[name()!='tam' and name()!='lem' and name()!='pos']"/>
-       <attr name="lem">have</attr>
-       <attr name="pos">vblex</attr>
-       <choose>
-         <when test="..//CHUNK[@si='subj']/NODE/@px = 'sp3'">
-           <attr name="pers">p3</attr>
-           <attr name="num">ND</attr>
-         </when>
-       </choose>
-       <attr name="tam"><value-of select="NODE/@tam"/></attr>
-       <apply-templates select="@*[name()!='tam' and name()!='lem' and name()!='pos']"/>
-       <NODE lem="not" pos="adv"/>
-    </copy>
-  </template>
 </def-rule>
 
 <def-rule comment="Remove the possessive from a node if a daughter node is in genitive">
@@ -332,47 +320,77 @@
 
 </def-rule>
 
+<!--
 <def-rule comment="Turn question word -ма into 'do'">
 
-
- <template match="//CHUNK[@si='disc' and NODE[@slem = 'ма' and @smi='qst']]">
+ <template match="//NODE[@si='disc' and @slem = 'ма' and @smi='qst']]">
     <copy>
-       <copy-of select="@*[name()!='si']"/>
-       <attr name="si">do-aux</attr>
-       <apply-templates select="@*[name()!='si']"/>
        <NODE>
          <attr name="lem">do</attr>
+         <attr name="si">do-aux</attr>
          <attr name="pos">vbdo</attr>
          <attr name="tam"><value-of select="../../CHUNK[@si='root' or @si='ccomp']/NODE[@tam !='']/@tam"/></attr>
          <attr name="pers"><value-of select="../../CHUNK[@si='root' or @si='ccomp']/NODE[@pers !='']/@pers"/></attr>
          <attr name="num"><value-of select="../../CHUNK[@si='root' or @si='ccomp']/NODE[@num!='']/@num"/></attr>
        </NODE>
+       <apply-templates select="@* | *"/>
     </copy>
   </template>
 
 </def-rule>
+-->
 
 <def-rule comment="Add a subject of there is no other one">
 
- <template match="//CHUNK[@si='root' and not(CHUNK[@si='subj'])]">
+ <template match="//NODE[@si='root' and not(NODE[@si='subj'])]">
     <copy>
        <apply-templates select="@* | *"/>
-       <CHUNK>
-         <attr name="type">sn</attr>
-         <attr name="si">subj</attr>
          <NODE>
            <attr name="lem"></attr>
+           <attr name="si">subj</attr>
            <attr name="pos">prn|pers</attr>
            <attr name="pers">PD</attr>
            <attr name="gen">GD</attr>
            <attr name="num">ND</attr>
-           <attr name="cas">CD</attr>
+           <attr name="cas">nom</attr>
          </NODE>
-       </CHUNK>
     </copy>
 
   </template>
 
 </def-rule>
+
+<!-- TRY AND FIND THE SUBJECT -->
+
+<def-rule comment="If we still didn't find the subject">
+
+ <template match="//NODE[@si='subj' and @pers = 'PD' and @gen='GD' and @num='ND']">
+    <copy>
+         <NODE>
+           <attr name="lem">it</attr>
+           <attr name="si">subj</attr>
+           <attr name="pos">prn|pers</attr>
+           <attr name="pers">p3</attr>
+           <attr name="gen">nt</attr>
+           <attr name="num">sg</attr>
+           <attr name="cas">nom</attr>
+         </NODE>
+       <apply-templates select="*"/>
+    </copy>
+
+  </template>
+
+</def-rule>
+
+
+  <!-- Quitar nodos que no tengan lema -->
+
+  <def-rule id="" comment="">
+    <template match="//NODE[@lem='']">
+        <apply-templates select="*"/>
+    </template> 
+  </def-rule>
+
+
 
 </transfer>
