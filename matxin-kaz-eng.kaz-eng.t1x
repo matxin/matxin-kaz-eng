@@ -361,7 +361,6 @@
 
 <def-rule comment="Restructure tree headed by керек">
 
-
   <template match="//NODE[@slem='керек' and @si='root']">
      <copy>
      <copy-of select="./NODE[@si='subj']/@*[name()!='si']"/>
@@ -372,22 +371,30 @@
            <attr name="tam"><value-of select=".//NODE[@si='cop']/@tam"/></attr>
            <copy-of select="@*[name()!='si' and name()!='lem' and name()!='pos' and name()!='tam']"/>
      </NODE>
-     <apply-templates select="*"/>
+     <apply-templates select="*[@si!='cop']"/>
      </copy>
   </template>
 
-  <template match="NODE[@si='aux']/NODE[@si='subj']">
+  <template match="//NODE[@si='subj' and @lem = //NODE[@si='root']/@lem]">
      <copy>
      <apply-templates select="*"/>
      </copy>
   </template>
+
+  <template match="//NODE[@slem='керек']//NODE[@si='cop']">
+     <copy>
+           <attr name="mi">inf</attr>
+     <apply-templates select="@*[name()!='mi'] | *"/>
+     </copy>
+  </template>
+
 
 </def-rule>
 
 
 <def-rule comment="Add a subject of there is no other one">
 
- <template match="//NODE[@si='root' and not(NODE[@si='subj'])]">
+ <template match="//NODE[@si='root' and not(.//NODE[@si='subj'])]">
     <copy>
        <apply-templates select="@* | *"/>
          <NODE>

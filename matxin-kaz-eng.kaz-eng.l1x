@@ -9,6 +9,7 @@ si='root'					si='subj'	.*?	x2.x1
 #si='root'					si='punct'	.*?	x1.x2
 pos='vblex'					si='ccomp'	.*?	x1.x2
 si='root'					si='ccomp'	.*?	x1.x2
+si='subj'					si='aux'	.*?	x1.x2
 #si='root'					si='xcomp'	.*?	x1.x2
 si='root'					si='obj'	.*?	x1.x2
 #si='root'					si='conj'	.*?	x1.x2
