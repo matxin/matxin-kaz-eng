@@ -289,7 +289,7 @@
     <pardef n="V-TV_V">
       <e><p><l><s n="mi"/>v|tv</l><r><s n="pos"/>vblex</r></p><par n="V-MORF_V-MORF"/></e>
       <e><p><l><s n="mi"/>v|tv|neg</l><r><s n="pos"/>vblex<s n="neg"/>neg</r></p><par n="V-MORF_V-MORF"/></e>
-      <e><p><l><s n="mi"/>v|tv|pass</l><r><s n="pos"/>vblex<s n="trans"/>pass<s n="neg"/>neg</r></p><par n="V-MORF_V-MORF"/></e>
+      <e><p><l><s n="mi"/>v|tv|pass</l><r><s n="pos"/>vblex<s n="trans"/>pass</r></p><par n="V-MORF_V-MORF"/></e>
       <e><p><l><s n="mi"/>v|tv|pass|neg</l><r><s n="pos"/>vblex<s n="trans"/>pass<s n="neg"/>neg</r></p><par n="V-MORF_V-MORF"/></e>
     </pardef>
 
@@ -12896,6 +12896,7 @@
       <e><p><l>ескір</l><r>age<s n="sense"/>0</r></p><par n="V-IV_V"/></e>
       <e><p><l>есті</l><r>hear<s n="sense"/>0</r></p><par n="V-TV_V"/></e>
       <e><p><l>есті</l><r>sound<s n="sense"/>0</r></p><par n="V-TV_V"/></e>
+      <e><p><l>есіт</l><r>hear<s n="sense"/>0</r></p><par n="V-TV_V"/></e>
       <e><p><l>еңбекте</l><r>creep<s n="sense"/>0</r></p><par n="V-IV_V"/></e>
       <e><p><l>еңбекте</l><r>toil<s n="sense"/>0</r></p><par n="V-IV_V"/></e>
       <e><p><l>еңкей</l><r>incline<s n="sense"/>0</r></p><par n="V-IV_V"/></e>

@@ -118,6 +118,25 @@
 </def-rule>
 
 
+<def-rule comment="Translate passive">
+
+  <template match="//NODE[@trans = 'pass']">
+    <copy>
+       <attr name="mi">pp</attr>
+       <apply-templates select="@*[name()!='mi'] | *"/>
+       <NODE>
+       <attr name="lem">be</attr>
+       <attr name="pos">vbser</attr>
+       <attr name="tam"><value-of select="@tam"/></attr>
+       <attr name="pers"><value-of select="@pers"/></attr>
+       <attr name="num"><value-of select="@num"/></attr>
+       </NODE>
+    </copy>
+  </template>
+
+</def-rule>
+
+
 <def-rule comment="Set the translation of the verb 'тұр' and 'жат' to 'be' if it is in present tense and there is a previous gerund">
 
   <template match="//NODE[@slem = 'тұр' and @pos = 'vaux' and parent::NODE/@mi = 'ger' ]">
