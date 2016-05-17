@@ -12742,9 +12742,9 @@
       <e><p><l>блокта</l><r>blog<s n="sense"/>0</r></p><par n="V-TV_V"/></e>
       <e><p><l>бойкотта</l><r>boycott<s n="sense"/>0</r></p><par n="V-TV_V"/></e>
       <e><p><l>бол</l><r>be<s n="sense"/>0</r></p><par n="V-IV_V"/></e>
-      <e><p><l>бол</l><r>become<s n="sense"/>0</r></p><par n="V-IV_V"/></e>
-      <e><p><l>бол</l><r>happen<s n="sense"/>0</r></p><par n="V-IV_V"/></e>
-      <e><p><l>бол</l><r>occur<s n="sense"/>0</r></p><par n="V-IV_V"/></e>
+      <!--<e><p><l>бол</l><r>become<s n="sense"/>0</r></p><par n="V-IV_V"/></e>-->
+      <!--<e><p><l>бол</l><r>happen<s n="sense"/>0</r></p><par n="V-IV_V"/></e>-->
+      <!--<e><p><l>бол</l><r>occur<s n="sense"/>0</r></p><par n="V-IV_V"/></e>-->
       <e><p><l>болжа</l><r>anticipate<s n="sense"/>0</r></p><par n="V-TV_V"/></e>
       <e><p><l>болжа</l><r>foresee<s n="sense"/>0</r></p><par n="V-TV_V"/></e>
       <e><p><l>болжа</l><r>predict<s n="sense"/>0</r></p><par n="V-TV_V"/></e>
