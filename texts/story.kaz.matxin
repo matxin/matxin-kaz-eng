@@ -1,0 +1,674 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<corpus>
+
+<SENTENCE ord="1" alloc="0">
+   <NODE ord="2" alloc="0" form="_" lem="қайда" mi="adv|itg" si="root">
+    <NODE ord="1" alloc="0" form="АЗАМАТ" lem="Азамат" mi="np|ant|m|nom" si="subj"/>
+    <NODE ord="3" alloc="0" form="_" lem="е" mi="cop|aor|p3|sg" si="cop"/>
+    <NODE ord="4" alloc="0" form="?" lem="?" mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="2" alloc="0">
+   <NODE ord="4" alloc="0" form="_" lem="бақша" mi="n|loc" si="root">
+    <NODE ord="3" alloc="0" form="Айгүл" lem="Айгүл" mi="np|ant|f|nom" si="subj">
+     <NODE ord="1" alloc="0" form="Азамат" lem="Азамат" mi="np|ant|m|nom" si="conj"/>
+     <NODE ord="2" alloc="0" form="пен" lem="мен" mi="cnjcoo" si="cc"/>
+    </NODE>
+    <NODE ord="5" alloc="0" form="_" lem="е" mi="cop|aor|p3|pl" si="cop"/>
+    <NODE ord="6" alloc="0" form="." lem="." mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="3" alloc="0">
+   <NODE ord="4" alloc="0" form="_" lem="жақсы" mi="adj" si="root">
+    <NODE ord="1" alloc="0" form="Ауа райы" lem="ауа райы" mi="n|nom" si="subj"/>
+    <NODE ord="2" alloc="0" form="бүгін" lem="бүгін" mi="adv" si="advmod"/>
+    <NODE ord="3" alloc="0" form="әбден" lem="әбден" mi="adv" si="advmod"/>
+    <NODE ord="5" alloc="0" form="_" lem="е" mi="cop|aor|p3|sg" si="cop"/>
+    <NODE ord="6" alloc="0" form="," lem="," mi="cm" si="punct"/>
+    <NODE ord="7" alloc="0" form="жылы" lem="жылы" mi="adj" si="remnant"/>
+    <NODE ord="8" alloc="0" form="." lem="." mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="4" alloc="0">
+   <NODE ord="4" alloc="0" form="суық" lem="суық" mi="adj" si="root">
+    <NODE ord="1" alloc="0" form="Бірақ" lem="бірақ" mi="cnjcoo" si="cc"/>
+    <NODE ord="2" alloc="0" form="кеше" lem="кеше" mi="adv" si="advmod"/>
+    <NODE ord="3" alloc="0" form="өте" lem="өте" mi="adv" si="advmod"/>
+    <NODE ord="5" alloc="0" form="еді" lem="е" mi="cop|ifi|p3|sg" si="cop"/>
+    <NODE ord="6" alloc="0" form="!" lem="!" mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="5" alloc="0">
+   <NODE ord="4" alloc="0" form="ойнай" lem="ойна" mi="v|tv|prc_impf" si="root">
+    <NODE ord="1" alloc="0" form="Осы себептен" lem="осы себептен" mi="cnjadv" si="cc"/>
+    <NODE ord="2" alloc="0" form="олар" lem="олар" mi="prn|pers|p3|pl|nom" si="subj"/>
+    <NODE ord="3" alloc="0" form="далада" lem="дала" mi="n|loc" si="nmod"/>
+    <NODE ord="5" alloc="0" form="алмады" lem="ал" mi="vaux|neg|ifi|p3|pl" si="aux"/>
+    <NODE ord="6" alloc="0" form="." lem="." mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="6" alloc="0">
+   <NODE ord="14" alloc="0" form="ойнайды" lem="ойна" mi="v|tv|aor|p3|pl" si="root">
+    <NODE ord="5" alloc="0" form="жақсы көреді" lem="жақсы көр" mi="v|tv|aor|p3|pl" si="parataxis">
+     <NODE ord="3" alloc="0" form="Айгүл" lem="Айгүл" mi="np|ant|f|nom" si="subj">
+      <NODE ord="1" alloc="0" form="Азамат" lem="Азамат" mi="np|ant|m|nom" si="conj"/>
+      <NODE ord="2" alloc="0" form="пен" lem="мен" mi="cnjcoo" si="cc"/>
+     </NODE>
+     <NODE ord="4" alloc="0" form="ойнағанды" lem="ойна" mi="v|tv|ger_past|acc" si="ccomp"/>
+    </NODE>
+    <NODE ord="6" alloc="0" form="," lem="," mi="cm" si="punct"/>
+    <NODE ord="7" alloc="0" form="олар" lem="олар" mi="prn|pers|p3|pl|nom" si="subj"/>
+    <NODE ord="8" alloc="0" form="әрдайым" lem="әрдайым" mi="adv" si="advmod"/>
+    <NODE ord="12" alloc="0" form="бақшада" lem="бақша" mi="n|loc" si="nmod">
+     <NODE ord="11" alloc="0" form="алдындағы" lem="алд" mi="n|px3sp|loc|attr" si="amod">
+      <NODE ord="10" alloc="0" form="үйдің" lem="үй" mi="n|gen" si="nmod:poss">
+       <NODE ord="9" alloc="0" form="үлкен" lem="үлкен" mi="adj" si="amod"/>
+      </NODE>
+     </NODE>
+    </NODE>
+    <NODE ord="13" alloc="0" form="бірге" lem="бірге" mi="adv" si="advmod"/>
+    <NODE ord="15" alloc="0" form="." lem="." mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="7" alloc="0">
+   <NODE ord="5" alloc="0" form="_" lem="бала" mi="n|nom" si="root">
+    <NODE ord="1" alloc="0" form="Азамат" lem="Азамат" mi="np|ant|m|nom" si="subj"/>
+    <NODE ord="3" alloc="0" form="жасар" lem="жасар" mi="adj" si="amod">
+     <NODE ord="2" alloc="0" form="алты" lem="алты" mi="num" si="nummod"/>
+    </NODE>
+    <NODE ord="4" alloc="0" form="кішкентай" lem="кішкентай" mi="adj" si="amod"/>
+    <NODE ord="6" alloc="0" form="_" lem="е" mi="cop|aor|p3|sg" si="cop"/>
+    <NODE ord="7" alloc="0" form="." lem="." mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="8" alloc="0">
+   <NODE ord="8" alloc="0" form="_" lem="жас" mi="n|loc" si="root">
+    <NODE ord="3" alloc="0" form="_" lem="қарындас" mi="n|px3sp|nom" si="parataxis">
+     <NODE ord="1" alloc="0" form="Қыз" lem="қыз" mi="n|nom" si="subj"/>
+     <NODE ord="2" alloc="0" form="оның" lem="ол" mi="prn|pers|p3|sg|gen" si="nmod:poss"/>
+     <NODE ord="4" alloc="0" form="_" lem="е" mi="cop|aor|p3|sg" si="cop"/>
+    </NODE>
+    <NODE ord="5" alloc="0" form="," lem="," mi="cm" si="punct"/>
+    <NODE ord="6" alloc="0" form="ол" lem="ол" mi="prn|pers|p3|sg|nom" si="subj"/>
+    <NODE ord="7" alloc="0" form="бес" lem="бес" mi="num" si="nummod"/>
+    <NODE ord="9" alloc="0" form="_" lem="е" mi="cop|aor|p3|sg" si="cop"/>
+    <NODE ord="10" alloc="0" form="." lem="." mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="9" alloc="0">
+   <NODE ord="11" alloc="0" form="_" lem="бақша" mi="n|loc" si="root">
+    <NODE ord="5" alloc="0" form="_" lem="бар" mi="adj|subst|nom" si="parataxis">
+     <NODE ord="4" alloc="0" form="күшігі" lem="күшік" mi="n|px3sp|nom" si="subj">
+      <NODE ord="1" alloc="0" form="Азаматтың" lem="Азамат" mi="np|ant|m|gen" si="nmod:poss"/>
+      <NODE ord="2" alloc="0" form="кішкентай" lem="кішкентай" mi="adj" si="amod"/>
+      <NODE ord="3" alloc="0" form="бір" lem="бір" mi="det|ind" si="det"/>
+     </NODE>
+     <NODE ord="6" alloc="0" form="_" lem="е" mi="cop|aor|p3|sg" si="cop"/>
+    </NODE>
+    <NODE ord="7" alloc="0" form="," lem="," mi="cm" si="punct"/>
+    <NODE ord="8" alloc="0" form="қазір" lem="қазір" mi="adv" si="advmod"/>
+    <NODE ord="9" alloc="0" form="_" lem="ол" mi="prn|pers|p3|sg|nom" si="subj">
+     <NODE ord="10" alloc="0" form="_" lem="да" mi="postadv" si="advmod"/>
+    </NODE>
+    <NODE ord="12" alloc="0" form="_" lem="е" mi="cop|aor|p3|sg" si="cop"/>
+    <NODE ord="13" alloc="0" form="." lem="." mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="10" alloc="0">
+   <NODE ord="4" alloc="0" form="жақсы көреді" lem="жақсы көр" mi="v|tv|aor|p3|sg" si="root">
+    <NODE ord="1" alloc="0" form="Күшік" lem="күшік" mi="n|nom" si="subj"/>
+    <NODE ord="3" alloc="0" form="ойнағанды" lem="ойна" mi="v|tv|ger_past|acc" si="ccomp">
+     <NODE ord="2" alloc="0" form="балалармен" lem="бала" mi="n|pl|ins" si="nmod"/>
+    </NODE>
+    <NODE ord="5" alloc="0" form="." lem="." mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="11" alloc="0">
+   <NODE ord="4" alloc="0" form="_" lem="қуанышты" mi="adj" si="root">
+    <NODE ord="1" alloc="0" form="Күшігі" lem="күшік" mi="n|px3sp|nom" si="subj"/>
+    <NODE ord="2" alloc="0" form="қазір" lem="қазір" mi="adv" si="advmod"/>
+    <NODE ord="3" alloc="0" form="өте" lem="өте" mi="adv" si="advmod"/>
+    <NODE ord="5" alloc="0" form="_" lem="е" mi="cop|aor|p3|sg" si="cop"/>
+    <NODE ord="6" alloc="0" form="." lem="." mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="12" alloc="0">
+   <NODE ord="4" alloc="0" form="_" lem="бар" mi="adj" si="root">
+    <NODE ord="1" alloc="0" form="Ал" lem="ал" mi="cnjcoo" si="cc"/>
+    <NODE ord="3" alloc="0" form="күшігі" lem="күшік" mi="n|px3sp|nom" si="subj">
+     <NODE ord="2" alloc="0" form="Айгүлдің" lem="Айгүл" mi="np|ant|f|gen" si="nmod:poss"/>
+    </NODE>
+    <NODE ord="5" alloc="0" form="_" lem="е" mi="cop|aor|p3|sg" si="cop"/>
+    <NODE ord="6" alloc="0" form="_" lem="ма" mi="qst" si="disc"/>
+    <NODE ord="7" alloc="0" form="?" lem="?" mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="13" alloc="0">
+   <NODE ord="10" alloc="0" form="_" lem="бар" mi="adj" si="root">
+    <NODE ord="5" alloc="0" form="_" lem="жоқ" mi="adj" si="conj">
+     <NODE ord="1" alloc="0" form="Жоқ" lem="жоқ" mi="ij" si="disc">
+      <NODE ord="2" alloc="0" form="," lem="," mi="cm" si="punct"/>
+     </NODE>
+     <NODE ord="4" alloc="0" form="күшігі" lem="күшік" mi="n|px3sp|nom" si="subj">
+      <NODE ord="3" alloc="0" form="Айгүлдің" lem="Айгүл" mi="np|ant|f|gen" si="nmod:poss"/>
+     </NODE>
+     <NODE ord="6" alloc="0" form="_" lem="е" mi="cop|aor|p3|sg" si="cop"/>
+    </NODE>
+    <NODE ord="7" alloc="0" form="," lem="," mi="cm" si="punct"/>
+    <NODE ord="9" alloc="0" form="мысығы" lem="мысық" mi="n|px3sp|nom" si="subj">
+     <NODE ord="8" alloc="0" form="оның" lem="ол" mi="prn|pers|p3|sg|gen" si="nmod:poss"/>
+    </NODE>
+    <NODE ord="11" alloc="0" form="_" lem="е" mi="cop|aor|p3|sg" si="cop"/>
+    <NODE ord="12" alloc="0" form="." lem="." mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="14" alloc="0">
+   <NODE ord="5" alloc="0" form="ұйықтап" lem="ұйықта" mi="v|iv|prc_perf" si="root">
+    <NODE ord="1" alloc="0" form="Бірақ" lem="бірақ" mi="cnjcoo" si="cc"/>
+    <NODE ord="2" alloc="0" form="мысығы" lem="мысық" mi="n|px3sp|nom" si="subj"/>
+    <NODE ord="3" alloc="0" form="үйде" lem="үй" mi="n|loc" si="nmod"/>
+    <NODE ord="4" alloc="0" form="," lem="," mi="cm" si="punct"/>
+    <NODE ord="6" alloc="0" form="жатыр" lem="жат" mi="vaux|pres|p3|sg" si="aux"/>
+    <NODE ord="7" alloc="0" form="." lem="." mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="15" alloc="0">
+   <NODE ord="13" alloc="0" form="қарап" lem="қара" mi="v|tv|prc_perf" si="root">
+    <NODE ord="3" alloc="0" form="мысығымен" lem="мысық" mi="n|px3sp|ins" si="nmod"/>
+    <NODE ord="4" alloc="0" form="бірге" lem="бірге" mi="adv" si="advmod"/>
+    <NODE ord="5" alloc="0" form="үйде" lem="үй" mi="n|loc" si="nmod"/>
+    <NODE ord="6" alloc="0" form="," lem="," mi="cm" si="punct"/>
+    <NODE ord="7" alloc="0" form="ол" lem="ол" mi="prn|pers|p3|sg|nom" si="subj">
+     <NODE ord="2" alloc="0" form="анасы" lem="ана" mi="n|px3sp|nom" si="remnant">
+      <NODE ord="1" alloc="0" form="Олардың" lem="олар" mi="prn|pers|p3|pl|gen" si="nmod:poss"/>
+     </NODE>
+    </NODE>
+    <NODE ord="12" alloc="0" form="ойнағанына" lem="ойна" mi="v|tv|ger_past|px3sp|dat" si="ccomp">
+     <NODE ord="8" alloc="0" form="терезеден" lem="терезе" mi="n|abl" si="nmod"/>
+     <NODE ord="11" alloc="0" form="Айгүлдің" lem="Айгүл" mi="np|ant|f|gen" si="subj">
+      <NODE ord="9" alloc="0" form="Азамат" lem="Азамат" mi="np|ant|m|nom" si="conj"/>
+      <NODE ord="10" alloc="0" form="пен" lem="мен" mi="cnjcoo" si="cc"/>
+     </NODE>
+    </NODE>
+    <NODE ord="14" alloc="0" form="тұр" lem="тұр" mi="vaux|pres|p3|sg" si="aux"/>
+    <NODE ord="15" alloc="0" form="." lem="." mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="16" alloc="0">
+   <NODE ord="17" alloc="0" form="жасырынып" lem="жасырын" mi="v|iv|prc_perf" si="root">
+    <NODE ord="9" alloc="0" form="бара" lem="бар" mi="v|iv|prc_impf" si="parataxis">
+     <NODE ord="1" alloc="0" form="Азамат" lem="Азамат" mi="np|ant|m|nom" si="subj"/>
+     <NODE ord="2" alloc="0" form="ескі" lem="ескі" mi="adj" si="amod"/>
+     <NODE ord="8" alloc="0" form="жүгіріп" lem="жүгір" mi="v|iv|gna_perf" si="advcl">
+      <NODE ord="5" alloc="0" form="ағашқа" lem="ағаш" mi="n|dat" si="nmod">
+       <NODE ord="3" alloc="0" form="үлкен" lem="үлкен" mi="adj" si="amod"/>
+       <NODE ord="4" alloc="0" form="бір" lem="бір" mi="det|ind" si="det"/>
+       <NODE ord="6" alloc="0" form="қарай" lem="қарай" mi="post" si="case"/>
+      </NODE>
+      <NODE ord="7" alloc="0" form="қатты" lem="қатты" mi="adj|advl" si="advmod"/>
+     </NODE>
+     <NODE ord="10" alloc="0" form="жатыр" lem="жат" mi="vaux|pres|p3|sg" si="aux"/>
+    </NODE>
+    <NODE ord="11" alloc="0" form="," lem="," mi="cm" si="punct"/>
+    <NODE ord="12" alloc="0" form="ол" lem="ол" mi="prn|pers|p3|sg|nom" si="subj"/>
+    <NODE ord="15" alloc="0" form="артына" lem="арт" mi="n|px3sp|dat" si="nmod">
+     <NODE ord="14" alloc="0" form="ағаштың" lem="ағаш" mi="n|gen" si="nmod:poss">
+      <NODE ord="13" alloc="0" form="сол" lem="сол" mi="det|dem" si="det"/>
+     </NODE>
+    </NODE>
+    <NODE ord="16" alloc="0" form="Айгүлден" lem="Айгүл" mi="np|ant|f|abl" si="nmod"/>
+    <NODE ord="18" alloc="0" form="жатыр" lem="жат" mi="vaux|pres|p3|sg" si="aux"/>
+    <NODE ord="19" alloc="0" form="." lem="." mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="17" alloc="0">
+   <NODE ord="4" alloc="0" form="_" lem="біл" mi="v|tv|aor|p2|frm|sg" si="root">
+    <NODE ord="1" alloc="0" form="Не" lem="не" mi="prn|itg|nom" si="nmod">
+     <NODE ord="2" alloc="0" form="үшін" lem="үшін" mi="post" si="case"/>
+     <NODE ord="3" alloc="0" form="екенін" lem="е" mi="cop|ger_past|px3sp|acc" si="obj"/>
+    </NODE>
+    <NODE ord="5" alloc="0" form="_" lem="ма" mi="qst" si="disc"/>
+    <NODE ord="6" alloc="0" form="?" lem="?" mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="18" alloc="0">
+   <NODE ord="4" alloc="0" form="жауып" lem="жап" mi="v|tv|prc_perf" si="root">
+    <NODE ord="1" alloc="0" form="Айгүл" lem="Айгүл" mi="np|ant|f|nom" si="subj"/>
+    <NODE ord="2" alloc="0" form="қолымен" lem="қол" mi="n|px3sp|ins" si="nmod"/>
+    <NODE ord="3" alloc="0" form="көздерін" lem="көз" mi="n|pl|px3sp|acc" si="obj"/>
+    <NODE ord="5" alloc="0" form="отыр" lem="отыр" mi="vaux|pres|p3|sg" si="aux"/>
+    <NODE ord="6" alloc="0" form="." lem="." mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="19" alloc="0">
+   <NODE ord="7" alloc="0" form="санап" lem="сана" mi="v|tv|prc_perf" si="root">
+    <NODE ord="3" alloc="0" form="көріп" lem="көр" mi="v|tv|prc_perf" si="parataxis">
+     <NODE ord="1" alloc="0" form="Ол" lem="ол" mi="prn|pers|p3|sg|nom" si="subj"/>
+     <NODE ord="2" alloc="0" form="еш нәрсені" lem="ешнәрсе" mi="prn|neg|acc" si="obj"/>
+     <NODE ord="4" alloc="0" form="тұрған жоқ" lem="тұр" mi="vaux|neg|ifi|p3|sg" si="aux"/>
+     <NODE ord="5" alloc="0" form="," lem="," mi="cm" si="punct"/>
+    </NODE>
+    <NODE ord="6" alloc="0" form="ол" lem="ол" mi="prn|pers|p3|sg|nom" si="subj"/>
+    <NODE ord="8" alloc="0" form="жатыр" lem="жат" mi="vaux|pres|p3|sg" si="aux"/>
+    <NODE ord="9" alloc="0" form="." lem="." mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="20" alloc="0">
+   <NODE ord="4" alloc="0" form="бүйтіп" lem="бүйт" mi="v|tv|prc_perf" si="root">
+    <NODE ord="1" alloc="0" form="Ол" lem="ол" mi="prn|pers|p3|sg|nom" si="subj"/>
+    <NODE ord="2" alloc="0" form="не" lem="не" mi="prn|itg|nom" si="nmod">
+     <NODE ord="3" alloc="0" form="үшін" lem="үшін" mi="post" si="case"/>
+    </NODE>
+    <NODE ord="5" alloc="0" form="жатыр" lem="жат" mi="vaux|pres|p3|sg" si="aux"/>
+    <NODE ord="6" alloc="0" form="?" lem="?" mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="21" alloc="0">
+   <NODE ord="6" alloc="0" form="істеп" lem="істе" mi="v|tv|prc_perf" si="root">
+    <NODE ord="1" alloc="0" form="Ал" lem="ал" mi="cnjcoo" si="cc"/>
+    <NODE ord="2" alloc="0" form="Азамат" lem="Азамат" mi="np|ant|m|nom" si="subj"/>
+    <NODE ord="4" alloc="0" form="жанында" lem="жан" mi="n|px3sp|loc" si="nmod">
+     <NODE ord="3" alloc="0" form="ағаштың" lem="ағаш" mi="n|gen" si="nmod:poss"/>
+    </NODE>
+    <NODE ord="5" alloc="0" form="не" lem="не" mi="prn|itg|nom" si="obj"/>
+    <NODE ord="7" alloc="0" form="жатыр" lem="жат" mi="vaux|pres|p3|sg" si="aux"/>
+    <NODE ord="8" alloc="0" form="?" lem="?" mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="22" alloc="0">
+   <NODE ord="2" alloc="0" form="_" lem="ойын" mi="n|nom" si="root">
+    <NODE ord="1" alloc="0" form="Бұл" lem="бұл" mi="prn|dem|nom" si="subj"/>
+    <NODE ord="3" alloc="0" form="_" lem="е" mi="cop|aor|p3|sg" si="cop"/>
+    <NODE ord="4" alloc="0" form="." lem="." mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="23" alloc="0">
+   <NODE ord="6" alloc="0" form="қарады" lem="қара" mi="v|tv|ifi|p3|sg" si="root">
+    <NODE ord="1" alloc="0" form="Айгүл" lem="Айгүл" mi="np|ant|f|nom" si="subj"/>
+    <NODE ord="2" alloc="0" form="санап" lem="сана" mi="v|tv|prc_perf" si="advcl">
+     <NODE ord="3" alloc="0" form="біткеннен" lem="біт" mi="vaux|ger_past|abl" si="aux">
+      <NODE ord="4" alloc="0" form="кейін" lem="кейін" mi="post" si="case"/>
+     </NODE>
+    </NODE>
+    <NODE ord="5" alloc="0" form="айналасына" lem="айнала" mi="n|px3sp|dat" si="obj"/>
+    <NODE ord="7" alloc="0" form="." lem="." mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="24" alloc="0">
+   <NODE ord="14" alloc="0" form="іздеп" lem="ізде" mi="v|tv|prc_perf" si="root">
+    <NODE ord="1" alloc="0" form="Ол" lem="ол" mi="prn|pers|p3|sg|nom" si="subj"/>
+    <NODE ord="13" alloc="0" form="деп" lem="де" mi="v|tv|gna_perf" si="advcl">
+     <NODE ord="9" alloc="0" form="_" lem="көр" mi="v|tv|ifi|p2|pl" si="ccomp">
+      <NODE ord="2" alloc="0" form="&amp;#34;" lem="&amp;#34;" mi="sent" si="punct"/>
+      <NODE ord="6" alloc="0" form="кетті" lem="кет" mi="v|iv|ifi|p3|sg" si="parataxis">
+       <NODE ord="3" alloc="0" form="Азамат" lem="Азамат" mi="np|ant|m|nom" si="subj"/>
+       <NODE ord="5" alloc="0" form="жерге" lem="жер" mi="n|dat" si="nmod">
+        <NODE ord="4" alloc="0" form="қай" lem="қай" mi="det|itg" si="det"/>
+       </NODE>
+       <NODE ord="7" alloc="0" form="?" lem="?" mi="sent" si="punct"/>
+      </NODE>
+      <NODE ord="8" alloc="0" form="Оны" lem="ол" mi="prn|pers|p3|sg|acc" si="obj"/>
+      <NODE ord="10" alloc="0" form="_" lem="ма" mi="qst" si="disc"/>
+      <NODE ord="11" alloc="0" form="?" lem="?" mi="sent" si="punct"/>
+      <NODE ord="12" alloc="0" form="&amp;#34;" lem="&amp;#34;" mi="sent" si="punct"/>
+     </NODE>
+    </NODE>
+    <NODE ord="15" alloc="0" form="жатыр" lem="жат" mi="vaux|pres|p3|sg" si="aux"/>
+    <NODE ord="16" alloc="0" form="." lem="." mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="25" alloc="0">
+   <NODE ord="5" alloc="0" form="білмейді" lem="біл" mi="v|tv|neg|aor|p3|sg" si="root">
+    <NODE ord="1" alloc="0" form="Айгүл" lem="Айгүл" mi="np|ant|f|nom" si="subj"/>
+    <NODE ord="3" alloc="0" form="қайда" lem="қайда" mi="adv|itg" si="ccomp">
+     <NODE ord="2" alloc="0" form="Азаматтың" lem="Азамат" mi="np|ant|m|gen" si="subj"/>
+     <NODE ord="4" alloc="0" form="екенін" lem="е" mi="cop|ger_past|px3sp|acc" si="cop"/>
+    </NODE>
+    <NODE ord="6" alloc="0" form="." lem="." mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="26" alloc="0">
+   <NODE ord="9" alloc="0" form="сұрайды" lem="сұра" mi="v|tv|aor|p3|sg" si="root">
+    <NODE ord="1" alloc="0" form="Күшіктен" lem="күшік" mi="n|abl" si="nmod"/>
+    <NODE ord="8" alloc="0" form="деп" lem="де" mi="v|tv|gna_perf" si="advcl">
+     <NODE ord="4" alloc="0" form="_" lem="көр" mi="v|tv|ifi|p2|sg" si="ccomp">
+      <NODE ord="2" alloc="0" form="&amp;#34;" lem="&amp;#34;" mi="sent" si="punct"/>
+      <NODE ord="3" alloc="0" form="Азаматты" lem="Азамат" mi="np|ant|m|acc" si="obj"/>
+      <NODE ord="5" alloc="0" form="_" lem="ма" mi="qst" si="disc"/>
+      <NODE ord="6" alloc="0" form="?" lem="?" mi="sent" si="punct"/>
+      <NODE ord="7" alloc="0" form="&amp;#34;" lem="&amp;#34;" mi="sent" si="punct"/>
+     </NODE>
+    </NODE>
+    <NODE ord="10" alloc="0" form="." lem="." mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="27" alloc="0">
+   <NODE ord="6" alloc="0" form="сөйлей" lem="сөйле" mi="v|tv|prc_impf" si="root">
+    <NODE ord="1" alloc="0" form="Ал" lem="ал" mi="cnjcoo" si="cc"/>
+    <NODE ord="2" alloc="0" form="күшік" lem="күшік" mi="n|nom" si="subj">
+     <NODE ord="3" alloc="0" form="," lem="," mi="cm" si="punct"/>
+     <NODE ord="4" alloc="0" form="әлбетте" lem="әлбетте" mi="adv" si="disc"/>
+     <NODE ord="5" alloc="0" form="," lem="," mi="cm" si="punct"/>
+    </NODE>
+    <NODE ord="7" alloc="0" form="алмайды" lem="ал" mi="vaux|neg|aor|p3|sg" si="aux"/>
+    <NODE ord="8" alloc="0" form="." lem="." mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="28" alloc="0">
+   <NODE ord="6" alloc="0" form="жауап ала" lem="жауап ал" mi="v|tv|prc_impf" si="root">
+    <NODE ord="1" alloc="0" form="Демек" lem="демек" mi="cnjadv" si="cc">
+     <NODE ord="2" alloc="0" form="," lem="," mi="cm" si="punct"/>
+    </NODE>
+    <NODE ord="3" alloc="0" form="Айгүл" lem="Айгүл" mi="np|ant|f|nom" si="subj"/>
+    <NODE ord="5" alloc="0" form="сұрағына" lem="сұрақ" mi="n|px3sp|dat" si="nmod">
+     <NODE ord="4" alloc="0" form="өз" lem="өз" mi="det|ref" si="det"/>
+    </NODE>
+    <NODE ord="7" alloc="0" form="алмайды" lem="ал" mi="vaux|neg|aor|p3|sg" si="aux"/>
+    <NODE ord="8" alloc="0" form="." lem="." mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="29" alloc="0">
+   <NODE ord="6" alloc="0" form="жауап ала" lem="жауап ал" mi="v|tv|prc_impf" si="root">
+    <NODE ord="1" alloc="0" form="Адамдар" lem="адам" mi="n|pl|nom" si="subj"/>
+    <NODE ord="3" alloc="0" form="сөйлескенде" lem="сөйлес" mi="v|iv|ger_past|loc" si="advcl">
+     <NODE ord="2" alloc="0" form="итпен" lem="ит" mi="n|ins" si="nmod"/>
+    </NODE>
+    <NODE ord="4" alloc="0" form="одан" lem="ол" mi="prn|dem|abl" si="nmod"/>
+    <NODE ord="5" alloc="0" form="еш қашан" lem="еш қашан" mi="adv" si="advmod"/>
+    <NODE ord="7" alloc="0" form="алмайды" lem="ал" mi="vaux|neg|aor|p3|sg" si="aux"/>
+    <NODE ord="8" alloc="0" form="!" lem="!" mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="30" alloc="0">
+   <NODE ord="5" alloc="0" form="қарайды" lem="қара" mi="v|tv|aor|p3|sg" si="root">
+    <NODE ord="1" alloc="0" form="Айгүл" lem="Айгүл" mi="np|ant|f|nom" si="subj"/>
+    <NODE ord="4" alloc="0" form="анасына" lem="ана" mi="n|px3sp|dat" si="obj">
+     <NODE ord="3" alloc="0" form="тұрған" lem="тұр" mi="v|iv|gpr_past" si="acl">
+      <NODE ord="2" alloc="0" form="терезеде" lem="терезе" mi="n|loc" si="nmod"/>
+     </NODE>
+    </NODE>
+    <NODE ord="6" alloc="0" form="." lem="." mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="31" alloc="0">
+   <NODE ord="12" alloc="0" form="ойлайды" lem="ойла" mi="v|tv|aor|p3|sg" si="root">
+    <NODE ord="1" alloc="0" form="Айгүл" lem="Айгүл" mi="np|ant|f|nom" si="subj"/>
+    <NODE ord="4" alloc="0" form="көріп" lem="көр" mi="v|tv|gna_perf" si="advcl">
+     <NODE ord="3" alloc="0" form="жымиғанын" lem="жыми" mi="v|iv|ger_past|px3sp|acc" si="ccomp">
+      <NODE ord="2" alloc="0" form="анасының" lem="ана" mi="n|px3sp|gen" si="subj"/>
+     </NODE>
+    </NODE>
+    <NODE ord="11" alloc="0" form="деп" lem="де" mi="v|tv|gna_perf" si="advcl">
+     <NODE ord="10" alloc="0" form="біледі" lem="біл" mi="v|tv|aor|p3|sg" si="ccomp">
+      <NODE ord="5" alloc="0" form="ол" lem="ол" mi="prn|pers|p3|sg|nom" si="subj"/>
+      <NODE ord="9" alloc="0" form="кеткенін" lem="кет" mi="v|iv|ger_past|px3sp|acc" si="ccomp">
+       <NODE ord="6" alloc="0" form="Азаматтың" lem="Азамат" mi="np|ant|m|gen" si="subj"/>
+       <NODE ord="8" alloc="0" form="жерге" lem="жер" mi="n|dat" si="nmod">
+        <NODE ord="7" alloc="0" form="қай" lem="қай" mi="det|itg" si="det"/>
+       </NODE>
+      </NODE>
+     </NODE>
+    </NODE>
+    <NODE ord="13" alloc="0" form="." lem="." mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="32" alloc="0">
+   <NODE ord="11" alloc="0" form="сұрайды" lem="сұра" mi="v|tv|aor|p3|sg" si="root">
+    <NODE ord="10" alloc="0" form="деп" lem="де" mi="v|tv|gna_perf" si="advcl">
+     <NODE ord="6" alloc="0" form="_" lem="айт" mi="v|tv|imp|p2|sg" si="ccomp">
+      <NODE ord="3" alloc="0" form="_" lem="қайда" mi="adv|itg" si="ccomp">
+       <NODE ord="2" alloc="0" form="Азамат" lem="Азамат" mi="np|ant|m|nom" si="subj"/>
+       <NODE ord="4" alloc="0" form="_" lem="е" mi="cop|aor|p3|sg" si="cop"/>
+       <NODE ord="5" alloc="0" form="," lem="," mi="cm" si="punct">
+        <NODE ord="1" alloc="0" form="&amp;#34;" lem="&amp;#34;" mi="sent" si="punct"/>
+       </NODE>
+      </NODE>
+      <NODE ord="7" alloc="0" form="_" lem="шы" mi="emph" si="disc"/>
+      <NODE ord="8" alloc="0" form="!" lem="!" mi="sent" si="punct"/>
+      <NODE ord="9" alloc="0" form="&amp;#34;" lem="&amp;#34;" mi="sent" si="punct"/>
+     </NODE>
+    </NODE>
+    <NODE ord="12" alloc="0" form="." lem="." mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="33" alloc="0">
+   <NODE ord="11" alloc="0" form="жауап береді" lem="жауап бер" mi="v|iv|aor|p3|sg" si="root">
+    <NODE ord="9" alloc="0" form="деп" lem="де" mi="v|tv|gna_perf" si="advcl">
+     <NODE ord="6" alloc="0" form="айта" lem="айт" mi="v|tv|prc_impf" si="ccomp">
+      <NODE ord="1" alloc="0" form="&amp;#34;" lem="&amp;#34;" mi="sent" si="punct"/>
+      <NODE ord="2" alloc="0" form="Жоқ" lem="жоқ" mi="ij" si="disc">
+       <NODE ord="3" alloc="0" form="," lem="," mi="cm" si="punct"/>
+      </NODE>
+      <NODE ord="4" alloc="0" form="Айгүл" lem="Айгүл" mi="np|ant|f|nom" si="voc">
+       <NODE ord="5" alloc="0" form="," lem="," mi="cm" si="punct"/>
+      </NODE>
+      <NODE ord="7" alloc="0" form="алмаймын" lem="ал" mi="vaux|neg|aor|p1|sg" si="aux"/>
+      <NODE ord="8" alloc="0" form="&amp;#34;" lem="&amp;#34;" mi="sent" si="punct"/>
+     </NODE>
+    </NODE>
+    <NODE ord="10" alloc="0" form="анасы" lem="ана" mi="n|px3sp|nom" si="subj"/>
+    <NODE ord="12" alloc="0" form="." lem="." mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="34" alloc="0">
+   <NODE ord="7" alloc="0" form="айтқысы" lem="айт" mi="v|tv|prc_vol|p3|sg" si="root">
+    <NODE ord="1" alloc="0" form="Ол" lem="ол" mi="prn|pers|p3|sg|nom" si="subj"/>
+    <NODE ord="5" alloc="0" form="_" lem="біл" mi="v|tv|gna_cond|p3|sg" si="advcl">
+     <NODE ord="3" alloc="0" form="қайда" lem="қайда" mi="adv|itg" si="ccomp">
+      <NODE ord="2" alloc="0" form="Азаматтың" lem="Азамат" mi="np|ant|m|gen" si="subj"/>
+      <NODE ord="4" alloc="0" form="екенін" lem="е" mi="cop|ger_past|px3sp|acc" si="cop"/>
+     </NODE>
+     <NODE ord="6" alloc="0" form="_" lem="да" mi="postadv" si="advmod"/>
+    </NODE>
+    <NODE ord="8" alloc="0" form="келген жоқ" lem="кел" mi="vaux|neg|ifi|p3|sg" si="aux"/>
+    <NODE ord="9" alloc="0" form="." lem="." mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="35" alloc="0">
+   <NODE ord="5" alloc="0" form="басып" lem="бас" mi="v|iv|prc_perf" si="root">
+    <NODE ord="1" alloc="0" form="Айгүл" lem="Айгүл" mi="np|ant|f|nom" si="subj"/>
+    <NODE ord="3" alloc="0" form="ішінде" lem="іш" mi="n|px3sp|loc" si="nmod">
+     <NODE ord="2" alloc="0" form="бақшаның" lem="бақша" mi="n|gen" si="nmod:poss"/>
+    </NODE>
+    <NODE ord="4" alloc="0" form="ақырын" lem="ақырын" mi="adj|advl" si="advmod"/>
+    <NODE ord="6" alloc="0" form="жүр" lem="жүр" mi="vaux|pres|p3|sg" si="aux"/>
+    <NODE ord="7" alloc="0" form="." lem="." mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="36" alloc="0">
+   <NODE ord="4" alloc="0" form="әрекет етіп" lem="әрекет ет" mi="v|iv|prc_perf" si="root">
+    <NODE ord="1" alloc="0" form="Әлі де болса" lem="әлі де болса" mi="adv" si="advmod"/>
+    <NODE ord="3" alloc="0" form="табуға" lem="тап" mi="v|tv|ger|dat" si="xcomp">
+     <NODE ord="2" alloc="0" form="Азаматты" lem="Азамат" mi="np|ant|m|acc" si="obj"/>
+    </NODE>
+    <NODE ord="5" alloc="0" form="жүр" lem="жүр" mi="vaux|pres|p3|sg" si="aux"/>
+    <NODE ord="6" alloc="0" form="." lem="." mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="37" alloc="0">
+   <NODE ord="11" alloc="0" form="_" lem="жоқ" mi="adj" si="root">
+    <NODE ord="5" alloc="0" form="қарап" lem="қара" mi="v|tv|prc_perf" si="conj">
+     <NODE ord="4" alloc="0" form="астына" lem="аст" mi="n|px3sp|dat" si="obj">
+      <NODE ord="3" alloc="0" form="орындықтардың" lem="орындық" mi="n|pl|gen" si="nmod:poss">
+       <NODE ord="1" alloc="0" form="Үстел" lem="үстел" mi="n|nom" si="conj"/>
+       <NODE ord="2" alloc="0" form="және" lem="және" mi="cnjcoo" si="cc"/>
+      </NODE>
+     </NODE>
+     <NODE ord="6" alloc="0" form="жатыр" lem="жат" mi="vaux|pres|p3|sg" si="aux"/>
+    </NODE>
+    <NODE ord="7" alloc="0" form="," lem="," mi="cm" si="punct"/>
+    <NODE ord="8" alloc="0" form="бірақ" lem="бірақ" mi="cnjcoo" si="cc"/>
+    <NODE ord="9" alloc="0" form="Азамат" lem="Азамат" mi="np|ant|m|nom" si="subj"/>
+    <NODE ord="10" alloc="0" form="онда" lem="ол" mi="prn|dem|loc" si="advmod"/>
+    <NODE ord="12" alloc="0" form="_" lem="е" mi="cop|aor|p3|sg" si="cop"/>
+    <NODE ord="13" alloc="0" form="." lem="." mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="38" alloc="0">
+   <NODE ord="9" alloc="0" form="таба" lem="тап" mi="v|tv|prc_impf" si="root">
+    <NODE ord="1" alloc="0" form="Ол" lem="ол" mi="prn|pers|p3|sg|nom" si="subj"/>
+    <NODE ord="4" alloc="0" form="қарап" lem="қара" mi="v|tv|prc_perf" si="conj">
+     <NODE ord="3" alloc="0" form="жерді" lem="жер" mi="n|acc" si="obj">
+      <NODE ord="2" alloc="0" form="барлық" lem="барлық" mi="det|qnt" si="det"/>
+     </NODE>
+     <NODE ord="5" alloc="0" form="жүр" lem="жүр" mi="vaux|pres|p3|sg" si="aux"/>
+    </NODE>
+    <NODE ord="6" alloc="0" form="," lem="," mi="cm" si="punct"/>
+    <NODE ord="7" alloc="0" form="бірақ" lem="бірақ" mi="cnjcoo" si="cc"/>
+    <NODE ord="8" alloc="0" form="Азаматты" lem="Азамат" mi="np|ant|m|acc" si="obj"/>
+    <NODE ord="10" alloc="0" form="алмай" lem="ал" mi="vaux|neg|prc_impf" si="aux"/>
+    <NODE ord="11" alloc="0" form="жатыр" lem="жат" mi="vaux|pres|p3|sg" si="aux"/>
+    <NODE ord="12" alloc="0" form="." lem="." mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="39" alloc="0">
+   <NODE ord="14" alloc="0" form="шығып" lem="шық" mi="v|iv|prc_perf" si="root">
+    <NODE ord="1" alloc="0" form="Одан" lem="ол" mi="prn|dem|abl" si="nmod">
+     <NODE ord="2" alloc="0" form="кейін" lem="кейін" mi="post" si="case"/>
+    </NODE>
+    <NODE ord="6" alloc="0" form="естиді" lem="есті" mi="v|tv|aor|p3|sg" si="conj">
+     <NODE ord="3" alloc="0" form="ол" lem="ол" mi="prn|pers|p3|sg|nom" si="subj"/>
+     <NODE ord="5" alloc="0" form="дыбысты" lem="дыбыс" mi="n|acc" si="obj">
+      <NODE ord="4" alloc="0" form="бір" lem="бір" mi="det|ind" si="det"/>
+     </NODE>
+    </NODE>
+    <NODE ord="7" alloc="0" form="," lem="," mi="cm" si="punct"/>
+    <NODE ord="9" alloc="0" form="дыбыс" lem="дыбыс" mi="n|nom" si="subj">
+     <NODE ord="8" alloc="0" form="ол" lem="ол" mi="det|dem" si="det"/>
+    </NODE>
+    <NODE ord="13" alloc="0" form="артынан" lem="арт" mi="n|px3sp|abl" si="nmod">
+     <NODE ord="12" alloc="0" form="ағаштың" lem="ағаш" mi="n|gen" si="nmod:poss">
+      <NODE ord="10" alloc="0" form="ескі" lem="ескі" mi="adj" si="amod"/>
+      <NODE ord="11" alloc="0" form="үлкен" lem="үлкен" mi="adj" si="amod"/>
+     </NODE>
+    </NODE>
+    <NODE ord="15" alloc="0" form="жатыр" lem="жат" mi="vaux|pres|p3|sg" si="aux"/>
+    <NODE ord="16" alloc="0" form="." lem="." mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="40" alloc="0">
+   <NODE ord="3" alloc="0" form="_" lem="Азамат" mi="np|ant|m|nom" si="root">
+    <NODE ord="1" alloc="0" form="Мүмкін" lem="мүмкін" mi="adj|advl" si="advmod"/>
+    <NODE ord="2" alloc="0" form="бұл" lem="бұл" mi="prn|dem|nom" si="subj"/>
+    <NODE ord="4" alloc="0" form="_" lem="е" mi="cop|aor|p3|sg" si="cop"/>
+    <NODE ord="5" alloc="0" form="_" lem="шығар" mi="mod" si="disc"/>
+    <NODE ord="6" alloc="0" form="?" lem="?" mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="41" alloc="0">
+   <NODE ord="4" alloc="0" form="естіледі" lem="есіт" mi="v|tv|pass|aor|p3|sg" si="root">
+    <NODE ord="2" alloc="0" form="дыбыс" lem="дыбыс" mi="n|nom" si="subj">
+     <NODE ord="1" alloc="0" form="Ол" lem="ол" mi="det|dem" si="det"/>
+    </NODE>
+    <NODE ord="3" alloc="0" form="қайта" lem="қайта" mi="adv" si="advmod"/>
+    <NODE ord="5" alloc="0" form="!" lem="!" mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="42" alloc="0">
+   <NODE ord="4" alloc="0" form="тыңдайды" lem="тыңда" mi="v|tv|aor|p3|sg" si="root">
+    <NODE ord="1" alloc="0" form="Айгүл" lem="Айгүл" mi="np|ant|f|nom" si="subj"/>
+    <NODE ord="2" alloc="0" form="оны" lem="ол" mi="prn|dem|acc" si="obj"/>
+    <NODE ord="3" alloc="0" form="ақырын" lem="ақырын" mi="adj|advl" si="advmod"/>
+    <NODE ord="5" alloc="0" form="." lem="." mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="43" alloc="0">
+   <NODE ord="5" alloc="0" form="_" lem="құс" mi="n|nom" si="root">
+    <NODE ord="1" alloc="0" form="Ол" lem="ол" mi="prn|pers|p3|sg|nom" si="subj"/>
+    <NODE ord="2" alloc="0" form="_" lem="аң" mi="n|nom" si="conj"/>
+    <NODE ord="3" alloc="0" form="_" lem="да" mi="cnjcoo" si="cc"/>
+    <NODE ord="4" alloc="0" form="," lem="," mi="cm" si="punct"/>
+    <NODE ord="6" alloc="0" form="_" lem="да" mi="cnjcoo" si="cc"/>
+    <NODE ord="7" alloc="0" form="емес" lem="е" mi="cop|neg|aor|p3|sg" si="cop"/>
+    <NODE ord="8" alloc="0" form="." lem="." mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="44" alloc="0">
+   <NODE ord="6" alloc="0" form="ести" lem="есті" mi="v|tv|prc_impf" si="root">
+    <NODE ord="1" alloc="0" form="Ол" lem="ол" mi="prn|pers|p3|sg|nom" si="subj"/>
+    <NODE ord="2" alloc="0" form="енді" lem="енді" mi="adv" si="advmod"/>
+    <NODE ord="4" alloc="0" form="дыбысты" lem="дыбыс" mi="n|acc" si="obj">
+     <NODE ord="3" alloc="0" form="ол" lem="ол" mi="det|dem" si="det"/>
+    </NODE>
+    <NODE ord="5" alloc="0" form="анығырақ" lem="анық" mi="adj|comp|advl" si="advmod"/>
+    <NODE ord="7" alloc="0" form="бастады" lem="баста" mi="vaux|ifi|p3|sg" si="aux"/>
+    <NODE ord="8" alloc="0" form="." lem="." mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="45" alloc="0">
+   <NODE ord="4" alloc="0" form="_" lem="керек" mi="adj" si="root">
+    <NODE ord="2" alloc="0" form="Азамат" lem="Азамат" mi="np|ant|m|nom" si="subj">
+     <NODE ord="1" alloc="0" form="Бұл" lem="бұл" mi="prn|dem|nom" si="subj"/>
+     <NODE ord="3" alloc="0" form="болу" lem="бол" mi="v|iv|ger|nom" si="cop"/>
+    </NODE>
+    <NODE ord="5" alloc="0" form="_" lem="е" mi="cop|aor|p3|sg" si="cop"/>
+    <NODE ord="6" alloc="0" form="!" lem="!" mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="46" alloc="0">
+   <NODE ord="7" alloc="0" form="көрінеді" lem="көрін" mi="v|iv|aor|p3|sg" si="root">
+    <NODE ord="1" alloc="0" form="Одан" lem="ол" mi="prn|dem|abl" si="nmod">
+     <NODE ord="2" alloc="0" form="кейін" lem="кейін" mi="post" si="case"/>
+    </NODE>
+    <NODE ord="3" alloc="0" form="оған" lem="ол" mi="prn|dem|dat" si="nmod"/>
+    <NODE ord="6" alloc="0" form="қол" lem="қол" mi="n|nom" si="subj">
+     <NODE ord="4" alloc="0" form="кішкентай" lem="кішкентай" mi="adj" si="amod"/>
+     <NODE ord="5" alloc="0" form="бір" lem="бір" mi="det|ind" si="det"/>
+    </NODE>
+    <NODE ord="8" alloc="0" form="." lem="." mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="47" alloc="0">
+   <NODE ord="7" alloc="0" form="көреді" lem="көр" mi="v|tv|aor|p3|sg" si="root">
+    <NODE ord="2" alloc="0" form="келгенде" lem="кел" mi="v|iv|ger_past|loc" si="advcl">
+     <NODE ord="1" alloc="0" form="Жақынырақ" lem="жақын" mi="adj|comp|advl" si="advmod"/>
+    </NODE>
+    <NODE ord="3" alloc="0" form="ол" lem="ол" mi="prn|pers|p3|sg|nom" si="subj"/>
+    <NODE ord="5" alloc="0" form="_" lem="бас" mi="n|px3sp|acc" si="obj">
+     <NODE ord="4" alloc="0" form="оның" lem="ол" mi="prn|pers|p3|sg|gen" si="nmod:poss"/>
+     <NODE ord="6" alloc="0" form="_" lem="да" mi="postadv" si="advmod"/>
+    </NODE>
+    <NODE ord="8" alloc="0" form="." lem="." mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="48" alloc="0">
+   <NODE ord="7" alloc="0" form="күледі" lem="күл" mi="v|iv|aor|p3|sg" si="root">
+    <NODE ord="6" alloc="0" form="деп" lem="де" mi="v|tv|gna_perf" si="advcl">
+     <NODE ord="3" alloc="0" form="таптым" lem="тап" mi="v|tv|ifi|p1|sg" si="ccomp">
+      <NODE ord="1" alloc="0" form="&amp;#34;" lem="&amp;#34;" mi="sent" si="punct"/>
+      <NODE ord="2" alloc="0" form="Сені" lem="сен" mi="prn|pers|p2|sg|acc" si="obj"/>
+      <NODE ord="4" alloc="0" form="!" lem="!" mi="sent" si="punct"/>
+      <NODE ord="5" alloc="0" form="&amp;#34;" lem="&amp;#34;" mi="sent" si="punct"/>
+     </NODE>
+    </NODE>
+    <NODE ord="8" alloc="0" form="." lem="." mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+<SENTENCE ord="49" alloc="0">
+   <NODE ord="16" alloc="0" form="болды" lem="бол" mi="v|iv|ifi|p3|sg" si="root">
+    <NODE ord="7" alloc="0" form="келе" lem="кел" mi="v|iv|prc_impf" si="parataxis">
+     <NODE ord="1" alloc="0" form="Олар" lem="олар" mi="prn|pers|p3|pl|nom" si="subj">
+      <NODE ord="2" alloc="0" form="_" lem="екеу" mi="num|coll|subst|px3sp|nom" si="appos">
+       <NODE ord="3" alloc="0" form="_" lem="да" mi="postadv" si="advmod"/>
+      </NODE>
+     </NODE>
+     <NODE ord="4" alloc="0" form="көңілді" lem="көңілді" mi="adj|advl" si="advmod"/>
+     <NODE ord="5" alloc="0" form="үйге" lem="үй" mi="n|dat" si="nmod">
+      <NODE ord="6" alloc="0" form="қарай" lem="қарай" mi="post" si="case"/>
+     </NODE>
+     <NODE ord="8" alloc="0" form="жатыр" lem="жат" mi="vaux|pres|p3|sg" si="aux"/>
+    </NODE>
+    <NODE ord="9" alloc="0" form="," lem="," mi="cm" si="punct"/>
+    <NODE ord="15" alloc="0" form="уақыт" lem="уақыт" mi="n|nom" si="subj">
+     <NODE ord="14" alloc="0" form="ішетін" lem="іш" mi="v|tv|gpr_impf" si="acl">
+      <NODE ord="11" alloc="0" form="жеп" lem="же" mi="v|tv|gna_perf" si="advcl">
+       <NODE ord="10" alloc="0" form="бір нәрсе" lem="бір нәрсе" mi="prn|ind|nom" si="obj"/>
+       <NODE ord="12" alloc="0" form="," lem="," mi="cm" si="punct"/>
+      </NODE>
+      <NODE ord="13" alloc="0" form="су" lem="су" mi="n|nom" si="obj"/>
+     </NODE>
+    </NODE>
+    <NODE ord="17" alloc="0" form="!" lem="!" mi="sent" si="punct"/>
+   </NODE>
+</SENTENCE>
+</corpus>
